@@ -1,0 +1,1100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12B8ED99-4BFA-457D-93BA-FFD968B1262A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FIPSGuideTool</RootNamespace>
+    <AssemblyName>FIPSGuideTool</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\Syrah\Public\Penumbra Applications\Penumbra FIPS Guide Tool\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1373BB4AF378FC7545626019373CC1F85F6A2BE6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FIPSGuideTool_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActiveComponents.Designer.cs">
+      <DependentUpon>ActiveComponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRolesServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRolesServices.Designer.cs">
+      <DependentUpon>AddRolesServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AES.Designer.cs">
+      <DependentUpon>AES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Algorithms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algorithms.Designer.cs">
+      <DependentUpon>Algorithms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppKeyEstablishment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppKeyEstablishment.Designer.cs">
+      <DependentUpon>AppKeyEstablishment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedRNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovedRNG.Designer.cs">
+      <DependentUpon>ApprovedRNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBC_AES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBC_AES.Designer.cs">
+      <DependentUpon>CBC_AES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBC_TDES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBC_TDES.Designer.cs">
+      <DependentUpon>CBC_TDES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CCM.Designer.cs">
+      <DependentUpon>CCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFB_AES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CFB_AES.Designer.cs">
+      <DependentUpon>CFB_AES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFB_TDES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CFB_TDES.Designer.cs">
+      <DependentUpon>CFB_TDES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMAC.Designer.cs">
+      <DependentUpon>CMAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CondSelfTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CondSelfTests.Designer.cs">
+      <DependentUpon>CondSelfTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrypticTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrypticTool.Designer.cs">
+      <DependentUpon>CrypticTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTR_AES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTR_AES.Designer.cs">
+      <DependentUpon>CTR_AES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlInputPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtrlInputPorts.Designer.cs">
+      <DependentUpon>CtrlInputPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTR_TDES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTR_TDES.Designer.cs">
+      <DependentUpon>CTR_TDES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="DataInputPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInputPorts.Designer.cs">
+      <DependentUpon>DataInputPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataOutputPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataOutputPorts.Designer.cs">
+      <DependentUpon>DataOutputPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignAssuranceAssertions.cs" />
+    <Compile Include="DesignAssuranceAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignAssuranceAS_TE.Designer.cs">
+      <DependentUpon>DesignAssuranceAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DRBG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DRBG.Designer.cs">
+      <DependentUpon>DRBG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSA.Designer.cs">
+      <DependentUpon>DSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECB_AES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECB_AES.Designer.cs">
+      <DependentUpon>ECB_AES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECB_TDES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECB_TDES.Designer.cs">
+      <DependentUpon>ECB_TDES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECDSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECDSA.Designer.cs">
+      <DependentUpon>ECDSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECDSA_KeyPair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECDSA_KeyPair.Designer.cs">
+      <DependentUpon>ECDSA_KeyPair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECDSA_KeyVal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECDSA_KeyVal.Designer.cs">
+      <DependentUpon>ECDSA_KeyVal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECDSA_SigGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECDSA_SigGen.Designer.cs">
+      <DependentUpon>ECDSA_SigGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECDSA_SigVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ECDSA_SigVer.Designer.cs">
+      <DependentUpon>ECDSA_SigVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMI_EMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMI_EMC.Designer.cs">
+      <DependentUpon>EMI_EMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMI_EMCAssertions.cs" />
+    <Compile Include="EMI_EMC_AS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMI_EMC_AS_TE.Designer.cs">
+      <DependentUpon>EMI_EMC_AS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcludedComponents.Designer.cs">
+      <DependentUpon>ExcludedComponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIPSGuideTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIPSGuideTool.Designer.cs">
+      <DependentUpon>FIPSGuideTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSM_AS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSM_AS_TE.Designer.cs">
+      <DependentUpon>FSM_AS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullyCustomIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullyCustomIC.Designer.cs">
+      <DependentUpon>FullyCustomIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FWVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FWVersion.Designer.cs">
+      <DependentUpon>FWVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSA_KeyPair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSA_KeyPair.Designer.cs">
+      <DependentUpon>DSA_KeyPair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCM.Designer.cs">
+      <DependentUpon>GCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HMAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMAC.Designer.cs">
+      <DependentUpon>HMAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KASECC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KASECC.Designer.cs">
+      <DependentUpon>KASECC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KASFFC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KASFFC.Designer.cs">
+      <DependentUpon>KASFFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KDF108.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KDF108.Designer.cs">
+      <DependentUpon>KDF108.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KDF135.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KDF135.Designer.cs">
+      <DependentUpon>KDF135.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyEstabSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyEstabSec.Designer.cs">
+      <DependentUpon>KeyEstabSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyGenSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyGenSec.Designer.cs">
+      <DependentUpon>KeyGenSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyList.Designer.cs">
+      <DependentUpon>KeyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyManagementAssertions.cs" />
+    <Compile Include="KeyProtStratg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyProtStratg.Designer.cs">
+      <DependentUpon>KeyProtStratg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyWrap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyWrap.Designer.cs">
+      <DependentUpon>KeyWrap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyManagementAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyManagementAS_TE.Designer.cs">
+      <DependentUpon>KeyManagementAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MitigationAttacksAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MitigationAttacksAS_TE.Designer.cs">
+      <DependentUpon>MitigationAttacksAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifFWSW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifFWSW.Designer.cs">
+      <DependentUpon>ModifFWSW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleSpecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleSpecs.Designer.cs">
+      <DependentUpon>ModuleSpecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nonApprovedRNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nonApprovedRNG.Designer.cs">
+      <DependentUpon>nonApprovedRNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nonModifFWSW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nonModifFWSW.Designer.cs">
+      <DependentUpon>nonModifFWSW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFB_AES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFB_AES.Designer.cs">
+      <DependentUpon>OFB_AES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OFB_TDES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OFB_TDES.Designer.cs">
+      <DependentUpon>OFB_TDES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpEnvironmentAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpEnvironmentAS_TE.Designer.cs">
+      <DependentUpon>OpEnvironmentAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpTesting.Designer.cs">
+      <DependentUpon>OpTesting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherComponents.Designer.cs">
+      <DependentUpon>OtherComponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherSelfTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherSelfTests.Designer.cs">
+      <DependentUpon>OtherSelfTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhysExtConnector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhysExtConnector.Designer.cs">
+      <DependentUpon>PhysExtConnector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhysicalSecurityAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhysicalSecurityAS_TE.Designer.cs">
+      <DependentUpon>PhysicalSecurityAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopulateDesignAssurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopulateDesignAssurance.Designer.cs">
+      <DependentUpon>PopulateDesignAssurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopulateFSM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopulateFSM.Designer.cs">
+      <DependentUpon>PopulateFSM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopulateMitigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopulateMitigation.Designer.cs">
+      <DependentUpon>PopulateMitigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortsAndInterfaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PortsAndInterfaces.Designer.cs">
+      <DependentUpon>PortsAndInterfaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortsInterfacesAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PortsInterfacesAS_TE.Designer.cs">
+      <DependentUpon>PortsInterfacesAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PQG_Gen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PQG_Gen.Designer.cs">
+      <DependentUpon>PQG_Gen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PQG_Ver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PQG_Ver.Designer.cs">
+      <DependentUpon>PQG_Ver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processors.Designer.cs">
+      <DependentUpon>Processors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PubKeyEntryMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PubKeyEntryMethod.Designer.cs">
+      <DependentUpon>PubKeyEntryMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PubKeyProtection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PubKeyProtection.Designer.cs">
+      <DependentUpon>PubKeyProtection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PwrInputPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PwrInputPorts.Designer.cs">
+      <DependentUpon>PwrInputPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PwrOnSelfTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PwrOnSelfTests.Designer.cs">
+      <DependentUpon>PwrOnSelfTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PwrSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PwrSupply.Designer.cs">
+      <DependentUpon>PwrSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RAM.Designer.cs">
+      <DependentUpon>RAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RolesServicesAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RolesServicesAS_TE.Designer.cs">
+      <DependentUpon>RolesServicesAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ROMFlash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROMFlash.Designer.cs">
+      <DependentUpon>ROMFlash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA.Designer.cs">
+      <DependentUpon>RSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_ComponentTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_ComponentTest.Designer.cs">
+      <DependentUpon>RSA_ComponentTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_KeyGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_KeyGen.Designer.cs">
+      <DependentUpon>RSA_KeyGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_LegacyTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_LegacyTests.Designer.cs">
+      <DependentUpon>RSA_LegacyTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_SigGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_SigGen.Designer.cs">
+      <DependentUpon>RSA_SigGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_SigGen_PKCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_SigGen_PKCS.Designer.cs">
+      <DependentUpon>RSA_SigGen_PKCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_SigGen_PSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_SigGen_PSS.Designer.cs">
+      <DependentUpon>RSA_SigGen_PSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_SigVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_SigVer.Designer.cs">
+      <DependentUpon>RSA_SigVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_SigVer_PKCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_SigVer_PKCS.Designer.cs">
+      <DependentUpon>RSA_SigVer_PKCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSA_SigVer_PSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSA_SigVer_PSS.Designer.cs">
+      <DependentUpon>RSA_SigVer_PSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveUsrerParameters.cs" />
+    <Compile Include="Seed_SeedKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seed_SeedKey.Designer.cs">
+      <DependentUpon>Seed_SeedKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfTests.Designer.cs">
+      <DependentUpon>SelfTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSMAssertions.cs" />
+    <Compile Include="KeyManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyManagement.Designer.cs">
+      <DependentUpon>KeyManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MitigationOtherAttacksAssertions.cs" />
+    <Compile Include="OpEnvironment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpEnvironment.Designer.cs">
+      <DependentUpon>OpEnvironment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpEnvironmentAssertions.cs" />
+    <Compile Include="PhysicalSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhysicalSecurity.Designer.cs">
+      <DependentUpon>PhysicalSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhysicalSecurityAssertions.cs" />
+    <Compile Include="PortsInterfacesAssertions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolesAndServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RolesAndServices.Designer.cs">
+      <DependentUpon>RolesAndServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RolesServicesAssertions.cs" />
+    <Compile Include="SelfTestsAssertions.cs" />
+    <Compile Include="SelfTestsAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfTestsAS_TE.Designer.cs">
+      <DependentUpon>SelfTestsAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemiCustomIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemiCustomIC.Designer.cs">
+      <DependentUpon>SemiCustomIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesForAuthRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServicesForAuthRole.Designer.cs">
+      <DependentUpon>ServicesForAuthRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SHA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SHA.Designer.cs">
+      <DependentUpon>SHA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SHS.Designer.cs">
+      <DependentUpon>SHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SigGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SigGen.Designer.cs">
+      <DependentUpon>SigGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SigVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SigVer.Designer.cs">
+      <DependentUpon>SigVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecificationsAssertions.cs" />
+    <Compile Include="SpecificationsAS_TE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecificationsAS_TE.Designer.cs">
+      <DependentUpon>SpecificationsAS_TE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusOutputPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusOutputPorts.Designer.cs">
+      <DependentUpon>StatusOutputPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Triple_DES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Triple_DES.Designer.cs">
+      <DependentUpon>Triple_DES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleInfo.Designer.cs">
+      <DependentUpon>ModuleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnauthenticatedService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnauthenticatedService.Designer.cs">
+      <DependentUpon>UnauthenticatedService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTS.Designer.cs">
+      <DependentUpon>XTS.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActiveComponents.resx">
+      <DependentUpon>ActiveComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRolesServices.resx">
+      <DependentUpon>AddRolesServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AES.resx">
+      <DependentUpon>AES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Algorithms.resx">
+      <DependentUpon>Algorithms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppKeyEstablishment.resx">
+      <DependentUpon>AppKeyEstablishment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApprovedRNG.resx">
+      <DependentUpon>ApprovedRNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBC_AES.resx">
+      <DependentUpon>CBC_AES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CBC_TDES.resx">
+      <DependentUpon>CBC_TDES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCM.resx">
+      <DependentUpon>CCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CFB_AES.resx">
+      <DependentUpon>CFB_AES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CFB_TDES.resx">
+      <DependentUpon>CFB_TDES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMAC.resx">
+      <DependentUpon>CMAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CondSelfTests.resx">
+      <DependentUpon>CondSelfTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrypticTool.resx">
+      <DependentUpon>CrypticTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTR_AES.resx">
+      <DependentUpon>CTR_AES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlInputPorts.resx">
+      <DependentUpon>CtrlInputPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTR_TDES.resx">
+      <DependentUpon>CTR_TDES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInputPorts.resx">
+      <DependentUpon>DataInputPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataOutputPorts.resx">
+      <DependentUpon>DataOutputPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignAssuranceAS_TE.resx">
+      <DependentUpon>DesignAssuranceAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DRBG.resx">
+      <DependentUpon>DRBG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSA.resx">
+      <DependentUpon>DSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECB_AES.resx">
+      <DependentUpon>ECB_AES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECB_TDES.resx">
+      <DependentUpon>ECB_TDES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECDSA.resx">
+      <DependentUpon>ECDSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECDSA_KeyPair.resx">
+      <DependentUpon>ECDSA_KeyPair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECDSA_KeyVal.resx">
+      <DependentUpon>ECDSA_KeyVal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECDSA_SigGen.resx">
+      <DependentUpon>ECDSA_SigGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECDSA_SigVer.resx">
+      <DependentUpon>ECDSA_SigVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMI_EMC.resx">
+      <DependentUpon>EMI_EMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMI_EMC_AS_TE.resx">
+      <DependentUpon>EMI_EMC_AS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcludedComponents.resx">
+      <DependentUpon>ExcludedComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIPSGuideTool.resx">
+      <DependentUpon>FIPSGuideTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSM_AS_TE.resx">
+      <DependentUpon>FSM_AS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullyCustomIC.resx">
+      <DependentUpon>FullyCustomIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FWVersion.resx">
+      <DependentUpon>FWVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSA_KeyPair.resx">
+      <DependentUpon>DSA_KeyPair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCM.resx">
+      <DependentUpon>GCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMAC.resx">
+      <DependentUpon>HMAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KASECC.resx">
+      <DependentUpon>KASECC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KASFFC.resx">
+      <DependentUpon>KASFFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KDF108.resx">
+      <DependentUpon>KDF108.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KDF135.resx">
+      <DependentUpon>KDF135.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyEstabSec.resx">
+      <DependentUpon>KeyEstabSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyGenSec.resx">
+      <DependentUpon>KeyGenSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyList.resx">
+      <DependentUpon>KeyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyManagementAS_TE.resx">
+      <DependentUpon>KeyManagementAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyProtStratg.resx">
+      <DependentUpon>KeyProtStratg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyWrap.resx">
+      <DependentUpon>KeyWrap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MitigationAttacksAS_TE.resx">
+      <DependentUpon>MitigationAttacksAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifFWSW.resx">
+      <DependentUpon>ModifFWSW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleSpecs.resx">
+      <DependentUpon>ModuleSpecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyManagement.resx">
+      <DependentUpon>KeyManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nonApprovedRNG.resx">
+      <DependentUpon>nonApprovedRNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nonModifFWSW.resx">
+      <DependentUpon>nonModifFWSW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFB_AES.resx">
+      <DependentUpon>OFB_AES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OFB_TDES.resx">
+      <DependentUpon>OFB_TDES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpEnvironment.resx">
+      <DependentUpon>OpEnvironment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpEnvironmentAS_TE.resx">
+      <DependentUpon>OpEnvironmentAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpTesting.resx">
+      <DependentUpon>OpTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherComponents.resx">
+      <DependentUpon>OtherComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherSelfTests.resx">
+      <DependentUpon>OtherSelfTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysExtConnector.resx">
+      <DependentUpon>PhysExtConnector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalSecurity.resx">
+      <DependentUpon>PhysicalSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalSecurityAS_TE.resx">
+      <DependentUpon>PhysicalSecurityAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopulateDesignAssurance.resx">
+      <DependentUpon>PopulateDesignAssurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopulateFSM.resx">
+      <DependentUpon>PopulateFSM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopulateMitigation.resx">
+      <DependentUpon>PopulateMitigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PortsAndInterfaces.resx">
+      <DependentUpon>PortsAndInterfaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PortsInterfacesAS_TE.resx">
+      <DependentUpon>PortsInterfacesAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PQG_Gen.resx">
+      <DependentUpon>PQG_Gen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PQG_Ver.resx">
+      <DependentUpon>PQG_Ver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processors.resx">
+      <DependentUpon>Processors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PubKeyEntryMethod.resx">
+      <DependentUpon>PubKeyEntryMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PubKeyProtection.resx">
+      <DependentUpon>PubKeyProtection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PwrInputPorts.resx">
+      <DependentUpon>PwrInputPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PwrOnSelfTests.resx">
+      <DependentUpon>PwrOnSelfTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PwrSupply.resx">
+      <DependentUpon>PwrSupply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RAM.resx">
+      <DependentUpon>RAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RolesAndServices.resx">
+      <DependentUpon>RolesAndServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RolesServicesAS_TE.resx">
+      <DependentUpon>RolesServicesAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ROMFlash.resx">
+      <DependentUpon>ROMFlash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA.resx">
+      <DependentUpon>RSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_ComponentTest.resx">
+      <DependentUpon>RSA_ComponentTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_KeyGen.resx">
+      <DependentUpon>RSA_KeyGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_LegacyTests.resx">
+      <DependentUpon>RSA_LegacyTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_SigGen.resx">
+      <DependentUpon>RSA_SigGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_SigGen_PKCS.resx">
+      <DependentUpon>RSA_SigGen_PKCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_SigGen_PSS.resx">
+      <DependentUpon>RSA_SigGen_PSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_SigVer.resx">
+      <DependentUpon>RSA_SigVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_SigVer_PKCS.resx">
+      <DependentUpon>RSA_SigVer_PKCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSA_SigVer_PSS.resx">
+      <DependentUpon>RSA_SigVer_PSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seed_SeedKey.resx">
+      <DependentUpon>Seed_SeedKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfTests.resx">
+      <DependentUpon>SelfTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfTestsAS_TE.resx">
+      <DependentUpon>SelfTestsAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemiCustomIC.resx">
+      <DependentUpon>SemiCustomIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServicesForAuthRole.resx">
+      <DependentUpon>ServicesForAuthRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHA.resx">
+      <DependentUpon>SHA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHS.resx">
+      <DependentUpon>SHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SigGen.resx">
+      <DependentUpon>SigGen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SigVer.resx">
+      <DependentUpon>SigVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecificationsAS_TE.resx">
+      <DependentUpon>SpecificationsAS_TE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusOutputPorts.resx">
+      <DependentUpon>StatusOutputPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Triple_DES.resx">
+      <DependentUpon>Triple_DES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleInfo.resx">
+      <DependentUpon>ModuleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnauthenticatedService.resx">
+      <DependentUpon>UnauthenticatedService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTS.resx">
+      <DependentUpon>XTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FIPSGuideTool_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
