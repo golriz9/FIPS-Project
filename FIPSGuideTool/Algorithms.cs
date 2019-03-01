@@ -124,25 +124,25 @@ namespace FIPSGuideTool
 			KeyWrap_cert = Properties.Settings.Default.KeyWrap_cert.ToString();
 			CVL_cert = Properties.Settings.Default.CVL_cert.ToString();
 
-			textBox_certTDES.Text = TDES_cert;
-			textBox_certAES.Text = AES_cert;
-			textBox_certSHS.Text = SHS_cert;
-			textBox_certSHA3.Text = SHA_3_cert;
-			textBox_certDRBG.Text = DRBG_cert;
-			textBox_certDSA.Text = DSA_cert;
-			textBox_certECDSA.Text = ECDSA_cert;
-			textBox_certRSA.Text = RSA_cert;
-			textBox_certHMAC.Text = HMAC_cert;
-			textBox_certCCM.Text = CCM_cert;
-			textBox_certCMAC.Text = CMAC_cert;
-			textBox_certKASFFC.Text = KAS_FFC_cert;
-			textBox_certKASECC.Text = KAS_ECC_cert;
-			textBox_certGCM.Text = GCM_cert;
-			textBox_certXTS.Text = XTS_cert;
-			textBox_certKDF108.Text = KDF_108_cert;
-			textBox_certKDF135.Text = KDF_135_cert;
+			textBox_certTDES.Text    = TDES_cert;
+			textBox_certAES.Text     = AES_cert;
+			textBox_certSHS.Text     = SHS_cert;
+			textBox_certSHA3.Text    = SHA_3_cert;
+			textBox_certDRBG.Text    = DRBG_cert;
+			textBox_certDSA.Text     = DSA_cert;
+			textBox_certECDSA.Text   = ECDSA_cert;
+			textBox_certRSA.Text     = RSA_cert;
+			textBox_certHMAC.Text    = HMAC_cert;
+			textBox_certCCM.Text     = CCM_cert;
+			textBox_certCMAC.Text    = CMAC_cert;
+			textBox_certKASFFC.Text  = KAS_FFC_cert;
+			textBox_certKASECC.Text  = KAS_ECC_cert;
+			textBox_certGCM.Text     = GCM_cert;
+			textBox_certXTS.Text     = XTS_cert;
+			textBox_certKDF108.Text  = KDF_108_cert;
+			textBox_certKDF135.Text  = KDF_135_cert;
 			textBox_certKeyWrap.Text = KeyWrap_cert;
-			textBox_certCVL.Text = CVL_cert;
+			textBox_certCVL.Text     = CVL_cert;
 
 			if (TDES == "True")
 			{
@@ -356,59 +356,65 @@ namespace FIPSGuideTool
 			}
 
 			string temp = textBox_Algs.Text;
-			string[] tempVec = temp.Split(';');
-			string newtemp1;
-			int i = 0;
-			foreach (string temp1 in tempVec)
+			if (temp == "")
 			{
-				char[] tempChar = temp1.ToCharArray();
 
-				if (tempChar[0] == 32)
-				{
-					newtemp1 = temp1.TrimStart(tempChar[0]);
-					//string s = new string(tempChar);		
-					tempVec[i] = newtemp1;
-				}
-				i = i + 1;
-			}			
-			List<string> algs = AlphabetizeAlgs(tempVec);
-
-			StringBuilder builder = new StringBuilder();
-			for (int i1 = 0; i1 < tempVec.Length; i1++)
-			{
-				if (i1 == tempVec.Length - 1)
-				{
-					builder.Append(algs[i1]);
-				}
-				else
-				{
-					builder.Append(algs[i1]).Append("; ");
-				}
 			}
-			string temp2 = builder.ToString(); // Get string from StringBuilder
-
-			textBox_Algs.Text = "";
-			textBox_Algs.Text = temp2;
-
-			connection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + FIPSGuideTool.strfilepath + ";Persist Security Info=False;";
-			connection.Open();
-			command.Connection = connection;
-
-			command.CommandText = "SELECT * FROM GeneralVendorInfo";
-			dataSearch = command.ExecuteReader();
-
-			string OtherAlgs;
-			
-			while (dataSearch.Read())
+			else
 			{
-				OtherAlgs = dataSearch.GetValue(11).ToString();
-				txtBox_OtherAlgs.Text = OtherAlgs;
-			}			
-			dataSearch.Close();
-			//txtBox_OtherAlgs.Text = OtherAlgs;
+				string[] tempVec = temp.Split(';');
+				string newtemp1;
+				int i = 0;
+				foreach (string temp1 in tempVec)
+				{
+					char[] tempChar = temp1.ToCharArray();
 
-			connection.Close();
+					if (tempChar[0] == 32)
+					{
+						newtemp1 = temp1.TrimStart(tempChar[0]);
+						//string s = new string(tempChar);		
+						tempVec[i] = newtemp1;
+					}
+					i = i + 1;
+				}
+				List<string> algs = AlphabetizeAlgs(tempVec);
 
+				StringBuilder builder = new StringBuilder();
+				for (int i1 = 0; i1 < tempVec.Length; i1++)
+				{
+					if (i1 == tempVec.Length - 1)
+					{
+						builder.Append(algs[i1]);
+					}
+					else
+					{
+						builder.Append(algs[i1]).Append("; ");
+					}
+				}
+				string temp2 = builder.ToString(); // Get string from StringBuilder
+
+				textBox_Algs.Text = "";
+				textBox_Algs.Text = temp2;
+
+				connection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + FIPSGuideTool.strfilepath + ";Persist Security Info=False;";
+				connection.Open();
+				command.Connection = connection;
+
+				command.CommandText = "SELECT * FROM GeneralVendorInfo";
+				dataSearch = command.ExecuteReader();
+
+				string OtherAlgs;
+
+				while (dataSearch.Read())
+				{
+					OtherAlgs = dataSearch.GetValue(11).ToString();
+					txtBox_OtherAlgs.Text = OtherAlgs;
+				}
+				dataSearch.Close();
+				//txtBox_OtherAlgs.Text = OtherAlgs;
+
+				connection.Close();
+			}
 		}
 
 		private void Algorithms_Load(object sender, EventArgs e)
@@ -815,12 +821,22 @@ namespace FIPSGuideTool
 				connection.Open();
 				command.Connection = connection;
 				string Algs_txt = textBox_Algs.Text;
-				command.CommandText = "UPDATE GeneralVendorInfo SET FIPSAlgorithms='" + Algs_txt + "'";
-				command.ExecuteNonQuery();
+				if (Algs_txt == "")
+				{}
+				else
+				{
+					command.CommandText = "UPDATE GeneralVendorInfo SET FIPSAlgorithms='" + Algs_txt + "'";
+					command.ExecuteNonQuery();
+				}				
 
 				string AllowedAlgs_txt = txtBox_OtherAlgs.Text;
-				command.CommandText = "UPDATE GeneralVendorInfo SET OtherAlgorithms='" + AllowedAlgs_txt + "'";
-				command.ExecuteNonQuery();
+				if (AllowedAlgs_txt == "")
+				{ }
+				else
+				{
+					command.CommandText = "UPDATE GeneralVendorInfo SET OtherAlgorithms='" + AllowedAlgs_txt + "'";
+					command.ExecuteNonQuery();
+				}
 
 				connection.Close();
 

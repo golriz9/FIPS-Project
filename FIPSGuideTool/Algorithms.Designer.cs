@@ -114,7 +114,7 @@
 			this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_refresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_refresh.Location = new System.Drawing.Point(12, 743);
+			this.btn_refresh.Location = new System.Drawing.Point(12, 611);
 			this.btn_refresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_refresh.Name = "btn_refresh";
 			this.btn_refresh.Size = new System.Drawing.Size(216, 81);
@@ -127,7 +127,7 @@
 			// 
 			this.textBox_Algs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.textBox_Algs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox_Algs.Location = new System.Drawing.Point(12, 843);
+			this.textBox_Algs.Location = new System.Drawing.Point(12, 711);
 			this.textBox_Algs.Multiline = true;
 			this.textBox_Algs.Name = "textBox_Algs";
 			this.textBox_Algs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -139,7 +139,7 @@
 			// 
 			this.txtBox_OtherAlgs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.txtBox_OtherAlgs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBox_OtherAlgs.Location = new System.Drawing.Point(1153, 843);
+			this.txtBox_OtherAlgs.Location = new System.Drawing.Point(1153, 711);
 			this.txtBox_OtherAlgs.Multiline = true;
 			this.txtBox_OtherAlgs.Name = "txtBox_OtherAlgs";
 			this.txtBox_OtherAlgs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -152,7 +152,7 @@
 			this.textBox1.BackColor = System.Drawing.Color.Olive;
 			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(1153, 788);
+			this.textBox1.Location = new System.Drawing.Point(1153, 656);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
@@ -982,7 +982,7 @@
 			this.panel1.Controls.Add(this.groupBox6);
 			this.panel1.Location = new System.Drawing.Point(16, 12);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(2274, 845);
+			this.panel1.Size = new System.Drawing.Size(2484, 845);
 			this.panel1.TabIndex = 143;
 			// 
 			// Algorithms
@@ -991,7 +991,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.Olive;
-			this.ClientSize = new System.Drawing.Size(2302, 1156);
+			this.ClientSize = new System.Drawing.Size(1924, 1076);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.txtBox_OtherAlgs);
 			this.Controls.Add(this.panel1);

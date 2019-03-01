@@ -35,6 +35,8 @@ namespace FIPSGuideTool
 		{
 			InitializeComponent();
 			this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+			FormBorderStyle = FormBorderStyle.FixedDialog;
+			btn_reset_cryptic.Visible = false;
 		}
 
 		private void FIPSGuideTool_Load(object sender, EventArgs e)

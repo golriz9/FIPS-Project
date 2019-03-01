@@ -203,11 +203,11 @@
 			// 
 			// btn_browseCryptic
 			// 
-			this.btn_browseCryptic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_browseCryptic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btn_browseCryptic.BackColor = System.Drawing.Color.Teal;
 			this.btn_browseCryptic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_browseCryptic.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_browseCryptic.Location = new System.Drawing.Point(1469, 1049);
+			this.btn_browseCryptic.Location = new System.Drawing.Point(21, 1067);
 			this.btn_browseCryptic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_browseCryptic.Name = "btn_browseCryptic";
 			this.btn_browseCryptic.Size = new System.Drawing.Size(235, 112);
@@ -218,11 +218,11 @@
 			// 
 			// btn_exit
 			// 
-			this.btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_exit.Location = new System.Drawing.Point(75, 1049);
+			this.btn_exit.Location = new System.Drawing.Point(1522, 1067);
 			this.btn_exit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_exit.Name = "btn_exit";
 			this.btn_exit.Size = new System.Drawing.Size(235, 112);
@@ -245,11 +245,11 @@
 			// 
 			// btn_reset_cryptic
 			// 
-			this.btn_reset_cryptic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_reset_cryptic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btn_reset_cryptic.BackColor = System.Drawing.Color.Maroon;
 			this.btn_reset_cryptic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_reset_cryptic.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_reset_cryptic.Location = new System.Drawing.Point(1209, 1049);
+			this.btn_reset_cryptic.Location = new System.Drawing.Point(292, 1067);
 			this.btn_reset_cryptic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_reset_cryptic.Name = "btn_reset_cryptic";
 			this.btn_reset_cryptic.Size = new System.Drawing.Size(235, 112);
