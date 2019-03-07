@@ -355,8 +355,10 @@ namespace FIPSGuideTool
 				btn_CompVL.Enabled = false;
 			}
 
-			string temp = textBox_Algs.Text;
-			if (temp == "")
+			string temp              = textBox_Algs.Text;
+			string temp_allowedAlgs = txtBox_OtherAlgs.Text;
+
+			if (temp == "" || temp_allowedAlgs == "")
 			{
 
 			}
@@ -410,6 +412,7 @@ namespace FIPSGuideTool
 					OtherAlgs = dataSearch.GetValue(11).ToString();
 					txtBox_OtherAlgs.Text = OtherAlgs;
 				}
+
 				dataSearch.Close();
 				//txtBox_OtherAlgs.Text = OtherAlgs;
 
