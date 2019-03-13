@@ -53,5 +53,20 @@ namespace FIPSGuideTool
 			f1.ShowDialog();
 			UpdateFormColor(color_FSM);
 		}
+
+		private void btn_MjrStates_Click(object sender, EventArgs e)
+		{
+			MajorStates f1 = new MajorStates();
+			f1.ShowDialog();
+		}
+
+		private void btn_TE010802_Click(object sender, EventArgs e)
+		{
+			textBoxTE040508.Visible = true;
+			FSMAssertions f1 = new FSMAssertions();
+			f1.populateFSMLevel1234();
+
+			textBoxTE040508.Text = FSMAssertions.txt_TE040508;
+		}
 	}
 }

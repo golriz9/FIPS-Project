@@ -37,11 +37,13 @@ namespace FIPSGuideTool
 			this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 			FormBorderStyle = FormBorderStyle.FixedDialog;
 			btn_reset_cryptic.Visible = false;
+			btn_ModuleInfo.Visible    = false;
+			//btn_Entropy.Enabled       = false;
 		}
 
 		private void FIPSGuideTool_Load(object sender, EventArgs e)
-		{							
-			strfilepath = Properties.Settings.Default.DBPath.ToString();
+		{
+			strfilepath = Properties.Settings.Default.DBPath1.ToString();
 			connection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + strfilepath + ";Persist Security Info=False;";
 			//JsonfilePathStr = Properties.Settings.Default.JsonfilePathStr.ToString();
 
@@ -147,7 +149,7 @@ namespace FIPSGuideTool
 			{
 				strfilepath = openFileDlg.FileName;
 				//Properties.Settings.Default.Upgrade();
-				Properties.Settings.Default.DBPath = strfilepath;
+				Properties.Settings.Default.DBPath1 = strfilepath;
 				Properties.Settings.Default.Save();
 			}
 			else
@@ -463,6 +465,17 @@ namespace FIPSGuideTool
 
 		private void btn_Entropy_Click(object sender, EventArgs e)
 		{
+			if (CheckConnection.Text == "")
+			{
+				string m1 = "Please browse the desired cryptic tool.";
+				MessageBox.Show(m1);
+			}
+			else if (CheckConnection.Text == strfilepath)
+			{
+				Entropy f4 = new Entropy();
+				//this.Hide();
+				f4.ShowDialog();
+			}
 
 		}
 	}

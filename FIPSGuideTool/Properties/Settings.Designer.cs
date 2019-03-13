@@ -26,18 +26,6 @@ namespace FIPSGuideTool.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string DBPath {
-            get {
-                return ((string)(this["DBPath"]));
-            }
-            set {
-                this["DBPath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string SpecSecurityLevel {
             get {
                 return ((string)(this["SpecSecurityLevel"]));
@@ -10508,6 +10496,186 @@ namespace FIPSGuideTool.Properties {
             }
             set {
                 this["IssuedDate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TE040508_MajorStates {
+            get {
+                return ((string)(this["TE040508_MajorStates"]));
+            }
+            set {
+                this["TE040508_MajorStates"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DBPath1 {
+            get {
+                return ((string)(this["DBPath1"]));
+            }
+            set {
+                this["DBPath1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string NoBitsGenNDRNG {
+            get {
+                return ((string)(this["NoBitsGenNDRNG"]));
+            }
+            set {
+                this["NoBitsGenNDRNG"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string NoBitsEntropyInput {
+            get {
+                return ((string)(this["NoBitsEntropyInput"]));
+            }
+            set {
+                this["NoBitsEntropyInput"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string NoBitsNonce {
+            get {
+                return ((string)(this["NoBitsNonce"]));
+            }
+            set {
+                this["NoBitsNonce"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string NoBitsAdditInput {
+            get {
+                return ((string)(this["NoBitsAdditInput"]));
+            }
+            set {
+                this["NoBitsAdditInput"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string NoBitsPersonalStr {
+            get {
+                return ((string)(this["NoBitsPersonalStr"]));
+            }
+            set {
+                this["NoBitsPersonalStr"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AlgDRBGDepends {
+            get {
+                return ((string)(this["AlgDRBGDepends"]));
+            }
+            set {
+                this["AlgDRBGDepends"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DRBGOutputLength {
+            get {
+                return ((string)(this["DRBGOutputLength"]));
+            }
+            set {
+                this["DRBGOutputLength"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MinEntropy {
+            get {
+                return ((string)(this["MinEntropy"]));
+            }
+            set {
+                this["MinEntropy"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MaxEntropy {
+            get {
+                return ((string)(this["MaxEntropy"]));
+            }
+            set {
+                this["MaxEntropy"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DRBG_Type {
+            get {
+                return ((string)(this["DRBG_Type"]));
+            }
+            set {
+                this["DRBG_Type"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DerivFunc {
+            get {
+                return ((string)(this["DerivFunc"]));
+            }
+            set {
+                this["DerivFunc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string StandardEntropy {
+            get {
+                return ((string)(this["StandardEntropy"]));
+            }
+            set {
+                this["StandardEntropy"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FullEntropyOutput {
+            get {
+                return ((string)(this["FullEntropyOutput"]));
+            }
+            set {
+                this["FullEntropyOutput"] = value;
             }
         }
     }

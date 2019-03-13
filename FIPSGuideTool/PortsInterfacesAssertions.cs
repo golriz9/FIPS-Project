@@ -81,35 +81,163 @@ namespace FIPSGuideTool
 				connection.Open();
 				command.Connection = connection;
 
-				CoatingType = CoatingType.Replace("'", "\''");
-				DataIn = DataIn.Replace("'", "\''");
-				DataOut = DataOut.Replace("'", "\''");
-				CtrlIn = CtrlIn.Replace("'", "\''");
-				PwrIn = PwrIn.Replace("'", "\''");
-				TE020401_1 = TE020401_1.Replace("'", "\''");
-				TE020401_2 = TE020401_2.Replace("'", "\''");
-				TE020401_3 = TE020401_3.Replace("'", "\''");
-				TE020401_4 = TE020401_4.Replace("'", "\''");
-				TE020401_5 = TE020401_5.Replace("'", "\''");
-				ExtInputDevice = ExtInputDevice.Replace("'", "\''");
-				TE020501_1 = TE020501_1.Replace("'", "\''");
-				TE020501_2 = TE020501_2.Replace("'", "\''");
-				TE020501_3 = TE020501_3.Replace("'", "\''");
-				TE020501_4 = TE020501_4.Replace("'", "\''");
-				ExtOutputDevice = ExtOutputDevice.Replace("'", "\''");
-				TE020701_1 = TE020701_1.Replace("'", "\''");
-				TE020701_2 = TE020701_2.Replace("'", "\''");
-				TE020701_3 = TE020701_3.Replace("'", "\''");
-				ExtCtrlDevice = ExtCtrlDevice.Replace("'", "\''");
-				StatusOut = StatusOut.Replace("'", "\''");
-				TE020801_1 = TE020801_1.Replace("'", "\''");
-				TE020801_2 = TE020801_2.Replace("'", "\''");
-				TE020801_3 = TE020801_3.Replace("'", "\''");
-				TE020901_1 = TE020901_1.Replace("'", "\''");
-				TE020901_2 = TE020901_2.Replace("'", "\''");
-				txt_TE021302 = txt_TE021302.Replace("'", "\''");
-				txt_AS0216 = txt_AS0216.Replace("'", "\''");
-				txt_AS0217 = txt_AS0217.Replace("'", "\''");
+				if (CoatingType != null)
+				{
+					CoatingType = CoatingType.Replace("'", "\''");
+				}
+
+				if (DataIn != null)
+				{
+					DataIn = DataIn.Replace("'", "\''");
+				}
+
+				if (DataOut != null)
+				{
+					DataOut = DataOut.Replace("'", "\''");
+				}
+
+				if (CtrlIn != null)
+				{
+					CtrlIn = CtrlIn.Replace("'", "\''");
+				}
+
+				if (PwrIn != null)
+				{
+					PwrIn = PwrIn.Replace("'", "\''");
+				}
+
+				if (TE020401_1 != null)
+				{
+					TE020401_1 = TE020401_1.Replace("'", "\''");
+				}
+
+				if (TE020401_2 != null)
+				{					
+					TE020401_2 = TE020401_2.Replace("'", "\''");				
+				}
+
+				if (TE020401_3 != null)
+				{
+					TE020401_3 = TE020401_3.Replace("'", "\''");				
+				}
+
+				if (TE020401_4 != null)
+				{					
+					TE020401_4 = TE020401_4.Replace("'", "\''");				
+				}
+
+				if (TE020401_5 != null)
+				{				
+					TE020401_5 = TE020401_5.Replace("'", "\''");					
+				}
+
+				if (ExtInputDevice != null)
+				{				
+					ExtInputDevice = ExtInputDevice.Replace("'", "\''");
+				}
+
+				if (TE020501_1 != null)
+				{
+					TE020501_1 = TE020501_1.Replace("'", "\''");				
+				}
+
+				if (TE020501_2 != null)
+				{
+					TE020501_2 = TE020501_2.Replace("'", "\''");				
+				}
+
+
+				if (TE020501_3 != null)
+				{				
+					TE020501_3 = TE020501_3.Replace("'", "\''");		
+				}
+
+				if (TE020501_4 != null)
+				{					
+					TE020501_4 = TE020501_4.Replace("'", "\''");					
+				}
+
+				if (ExtOutputDevice != null)
+				{
+					ExtOutputDevice = ExtOutputDevice.Replace("'", "\''");	
+				}
+
+				if (TE020701_1 != null)
+				{					
+					TE020701_1 = TE020701_1.Replace("'", "\''");					
+				}
+
+				if (TE020701_2 != null)
+				{					
+					TE020701_2 = TE020701_2.Replace("'", "\''");
+				}
+
+				if (TE020701_3 != null)
+				{
+					TE020701_3 = TE020701_3.Replace("'", "\''");				
+				}
+				
+				if (ExtCtrlDevice != null)
+				{					
+					ExtCtrlDevice = ExtCtrlDevice.Replace("'", "\''");				
+				}
+
+				if (StatusOut != null)
+				{					
+					StatusOut = StatusOut.Replace("'", "\''");				
+				}
+
+				if (TE020801_1 != null)
+				{
+					TE020801_1 = TE020801_1.Replace("'", "\''");				
+				}
+
+
+				if (TE020801_2 != null)
+				{					
+					TE020801_2 = TE020801_2.Replace("'", "\''");					
+				}
+
+
+				if (TE020801_3 != null)
+				{					
+					TE020801_3 = TE020801_3.Replace("'", "\''");
+					TE020901_1 = TE020901_1.Replace("'", "\''");
+					TE020901_2 = TE020901_2.Replace("'", "\''");
+					txt_TE021302 = txt_TE021302.Replace("'", "\''");
+					txt_AS0216 = txt_AS0216.Replace("'", "\''");
+					txt_AS0217 = txt_AS0217.Replace("'", "\''");
+				}
+
+				if (TE020901_1 != null)
+				{					
+					TE020901_1 = TE020901_1.Replace("'", "\''");
+					TE020901_2 = TE020901_2.Replace("'", "\''");
+					txt_TE021302 = txt_TE021302.Replace("'", "\''");
+					txt_AS0216 = txt_AS0216.Replace("'", "\''");
+					txt_AS0217 = txt_AS0217.Replace("'", "\''");
+				}
+
+				if (TE020901_2 != null)
+				{					
+					TE020901_2 = TE020901_2.Replace("'", "\''");
+				}
+
+				if (txt_TE021302 != null)
+				{					
+					txt_TE021302 = txt_TE021302.Replace("'", "\''");
+				}
+
+				if (txt_AS0216 != null)
+				{
+					txt_AS0216 = txt_AS0216.Replace("'", "\''");
+				}
+
+				if (txt_AS0217 != null)
+				{					
+					txt_AS0217 = txt_AS0217.Replace("'", "\''");
+				}
+
 
 				if (Embodiment == "Single Chip")
 				{

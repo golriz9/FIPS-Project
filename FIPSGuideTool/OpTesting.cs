@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace FIPSGuideTool
 {
@@ -35,6 +36,7 @@ namespace FIPSGuideTool
 		public static string KeyWrap;
 		public static string CVL;
 
+		string txtFilePath;
 		private OleDbConnection connection = new OleDbConnection();
 		OleDbCommand command = new OleDbCommand();
 		OleDbDataReader dataSearch;
@@ -1651,6 +1653,36 @@ namespace FIPSGuideTool
 		{
 			OtherSelfTests f1 = new OtherSelfTests();
 			f1.ShowDialog();
+		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{					
+
+			if (txtFilePath != null)
+			{
+				StreamWriter file = new StreamWriter(txtFilePath, true);
+				file.WriteLine(txtBox_TestNotes.Text);
+				file.Close();
+			}
+			else
+			{
+				string m1 = "Please choose a file to write to.";
+				MessageBox.Show(m1);
+			}			
+		}
+
+		private void btn_browsetxtFile_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog openFileDlg = new OpenFileDialog();
+
+			if (openFileDlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+			{
+				txtFilePath = openFileDlg.FileName;
+			}
+			else
+			{
+				txtFilePath = null;
+			}
 		}
 	}
 }

@@ -121,7 +121,7 @@
 			this.panel1.Controls.Add(this.checkBox1);
 			this.panel1.Location = new System.Drawing.Point(4, 166);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(2141, 846);
+			this.panel1.Size = new System.Drawing.Size(1916, 846);
 			this.panel1.TabIndex = 17;
 			// 
 			// radioButton2
@@ -190,7 +190,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Olive;
-			this.ClientSize = new System.Drawing.Size(2149, 1016);
+			this.ClientSize = new System.Drawing.Size(1924, 1016);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btn_PwrIn);
 			this.Controls.Add(this.btn_StatusOut);

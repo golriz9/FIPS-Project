@@ -54,6 +54,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "ModifFWSW";
 			this.Text = "Modifiable FW/SW";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModifFWSW_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ModifFWSW_FormClosed);
 			this.Load += new System.EventHandler(this.ModifFWSW_Load);
 			this.ResumeLayout(false);

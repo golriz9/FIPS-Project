@@ -73,6 +73,7 @@
 			this.txtBox_TE071001 = new System.Windows.Forms.TextBox();
 			this.txtBox_TE070901 = new System.Windows.Forms.TextBox();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.btn_Entropy = new System.Windows.Forms.Button();
 			this.checkBox_ManuEnt_SpltKnlg = new System.Windows.Forms.CheckBox();
 			this.checkBox_ManuEnt_encrp = new System.Windows.Forms.CheckBox();
 			this.checkBox_AutoMethod = new System.Windows.Forms.CheckBox();
@@ -170,10 +171,11 @@
 			// 
 			// btn_protectionStratg
 			// 
+			this.btn_protectionStratg.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_protectionStratg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_protectionStratg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_protectionStratg.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_protectionStratg.Location = new System.Drawing.Point(1088, 20);
+			this.btn_protectionStratg.Location = new System.Drawing.Point(960, 20);
 			this.btn_protectionStratg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_protectionStratg.Name = "btn_protectionStratg";
 			this.btn_protectionStratg.Size = new System.Drawing.Size(320, 115);
@@ -185,10 +187,11 @@
 			// 
 			// btn_PubKeyProtec
 			// 
+			this.btn_PubKeyProtec.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_PubKeyProtec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_PubKeyProtec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_PubKeyProtec.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_PubKeyProtec.Location = new System.Drawing.Point(1088, 142);
+			this.btn_PubKeyProtec.Location = new System.Drawing.Point(960, 142);
 			this.btn_PubKeyProtec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_PubKeyProtec.Name = "btn_PubKeyProtec";
 			this.btn_PubKeyProtec.Size = new System.Drawing.Size(320, 115);
@@ -204,7 +207,7 @@
 			this.btn_TE070101.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE070101.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE070101.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE070101.Location = new System.Drawing.Point(1774, 20);
+			this.btn_TE070101.Location = new System.Drawing.Point(1629, 103);
 			this.btn_TE070101.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE070101.Name = "btn_TE070101";
 			this.btn_TE070101.Size = new System.Drawing.Size(240, 76);
@@ -225,7 +228,7 @@
 			this.txtBox_TE070101.Name = "txtBox_TE070101";
 			this.txtBox_TE070101.ReadOnly = true;
 			this.txtBox_TE070101.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE070101.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE070101.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE070101.TabIndex = 184;
 			this.txtBox_TE070101.UseWaitCursor = true;
 			// 
@@ -235,7 +238,7 @@
 			this.btn_TE070201.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE070201.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE070201.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE070201.Location = new System.Drawing.Point(1774, 106);
+			this.btn_TE070201.Location = new System.Drawing.Point(1629, 189);
 			this.btn_TE070201.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE070201.Name = "btn_TE070201";
 			this.btn_TE070201.Size = new System.Drawing.Size(240, 76);
@@ -256,16 +259,17 @@
 			this.txtBox_TE070201.Name = "txtBox_TE070201";
 			this.txtBox_TE070201.ReadOnly = true;
 			this.txtBox_TE070201.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE070201.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE070201.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE070201.TabIndex = 186;
 			this.txtBox_TE070201.UseWaitCursor = true;
 			// 
 			// btn_PubKeyEntryMethod
 			// 
+			this.btn_PubKeyEntryMethod.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_PubKeyEntryMethod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_PubKeyEntryMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_PubKeyEntryMethod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_PubKeyEntryMethod.Location = new System.Drawing.Point(1088, 264);
+			this.btn_PubKeyEntryMethod.Location = new System.Drawing.Point(960, 264);
 			this.btn_PubKeyEntryMethod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_PubKeyEntryMethod.Name = "btn_PubKeyEntryMethod";
 			this.btn_PubKeyEntryMethod.Size = new System.Drawing.Size(320, 115);
@@ -307,7 +311,7 @@
 			this.btn_TE070202.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE070202.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE070202.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE070202.Location = new System.Drawing.Point(1774, 192);
+			this.btn_TE070202.Location = new System.Drawing.Point(1629, 275);
 			this.btn_TE070202.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE070202.Name = "btn_TE070202";
 			this.btn_TE070202.Size = new System.Drawing.Size(240, 76);
@@ -323,7 +327,7 @@
 			this.btn_TE070301.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE070301.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE070301.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE070301.Location = new System.Drawing.Point(1774, 278);
+			this.btn_TE070301.Location = new System.Drawing.Point(1629, 361);
 			this.btn_TE070301.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE070301.Name = "btn_TE070301";
 			this.btn_TE070301.Size = new System.Drawing.Size(240, 76);
@@ -339,7 +343,7 @@
 			this.btn_TE070801.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE070801.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE070801.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE070801.Location = new System.Drawing.Point(1774, 363);
+			this.btn_TE070801.Location = new System.Drawing.Point(1629, 446);
 			this.btn_TE070801.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE070801.Name = "btn_TE070801";
 			this.btn_TE070801.Size = new System.Drawing.Size(240, 76);
@@ -355,7 +359,7 @@
 			this.btn_TE070802.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE070802.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE070802.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE070802.Location = new System.Drawing.Point(1774, 449);
+			this.btn_TE070802.Location = new System.Drawing.Point(1629, 532);
 			this.btn_TE070802.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE070802.Name = "btn_TE070802";
 			this.btn_TE070802.Size = new System.Drawing.Size(240, 76);
@@ -371,7 +375,7 @@
 			this.btn_TE070901.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE070901.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE070901.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE070901.Location = new System.Drawing.Point(1774, 535);
+			this.btn_TE070901.Location = new System.Drawing.Point(1629, 618);
 			this.btn_TE070901.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE070901.Name = "btn_TE070901";
 			this.btn_TE070901.Size = new System.Drawing.Size(240, 76);
@@ -387,7 +391,7 @@
 			this.btn_TE071001.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE071001.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE071001.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE071001.Location = new System.Drawing.Point(1774, 621);
+			this.btn_TE071001.Location = new System.Drawing.Point(1629, 704);
 			this.btn_TE071001.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE071001.Name = "btn_TE071001";
 			this.btn_TE071001.Size = new System.Drawing.Size(240, 76);
@@ -403,7 +407,7 @@
 			this.btn_TE071301.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE071301.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE071301.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE071301.Location = new System.Drawing.Point(1774, 707);
+			this.btn_TE071301.Location = new System.Drawing.Point(1629, 790);
 			this.btn_TE071301.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE071301.Name = "btn_TE071301";
 			this.btn_TE071301.Size = new System.Drawing.Size(240, 76);
@@ -419,7 +423,7 @@
 			this.btn_TE071701.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE071701.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE071701.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE071701.Location = new System.Drawing.Point(1774, 792);
+			this.btn_TE071701.Location = new System.Drawing.Point(1629, 875);
 			this.btn_TE071701.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE071701.Name = "btn_TE071701";
 			this.btn_TE071701.Size = new System.Drawing.Size(240, 76);
@@ -435,7 +439,7 @@
 			this.btn_TE071702.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE071702.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE071702.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE071702.Location = new System.Drawing.Point(1774, 879);
+			this.btn_TE071702.Location = new System.Drawing.Point(1629, 962);
 			this.btn_TE071702.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE071702.Name = "btn_TE071702";
 			this.btn_TE071702.Size = new System.Drawing.Size(240, 76);
@@ -451,7 +455,7 @@
 			this.btn_TE071901.BackColor = System.Drawing.Color.Maroon;
 			this.btn_TE071901.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_TE071901.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE071901.Location = new System.Drawing.Point(1774, 964);
+			this.btn_TE071901.Location = new System.Drawing.Point(1629, 1047);
 			this.btn_TE071901.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_TE071901.Name = "btn_TE071901";
 			this.btn_TE071901.Size = new System.Drawing.Size(240, 76);
@@ -472,7 +476,7 @@
 			this.txtBox_TE070202.Name = "txtBox_TE070202";
 			this.txtBox_TE070202.ReadOnly = true;
 			this.txtBox_TE070202.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE070202.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE070202.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE070202.TabIndex = 200;
 			this.txtBox_TE070202.UseWaitCursor = true;
 			// 
@@ -487,7 +491,7 @@
 			this.txtBox_TE070301.Name = "txtBox_TE070301";
 			this.txtBox_TE070301.ReadOnly = true;
 			this.txtBox_TE070301.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE070301.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE070301.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE070301.TabIndex = 201;
 			this.txtBox_TE070301.UseWaitCursor = true;
 			// 
@@ -502,7 +506,7 @@
 			this.txtBox_TE071901.Name = "txtBox_TE071901";
 			this.txtBox_TE071901.ReadOnly = true;
 			this.txtBox_TE071901.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE071901.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE071901.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE071901.TabIndex = 202;
 			this.txtBox_TE071901.UseWaitCursor = true;
 			// 
@@ -517,7 +521,7 @@
 			this.txtBox_TE071702.Name = "txtBox_TE071702";
 			this.txtBox_TE071702.ReadOnly = true;
 			this.txtBox_TE071702.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE071702.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE071702.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE071702.TabIndex = 203;
 			this.txtBox_TE071702.UseWaitCursor = true;
 			// 
@@ -532,7 +536,7 @@
 			this.txtBox_TE071701.Name = "txtBox_TE071701";
 			this.txtBox_TE071701.ReadOnly = true;
 			this.txtBox_TE071701.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE071701.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE071701.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE071701.TabIndex = 204;
 			this.txtBox_TE071701.UseWaitCursor = true;
 			// 
@@ -547,16 +551,17 @@
 			this.txtBox_TE071301.Name = "txtBox_TE071301";
 			this.txtBox_TE071301.ReadOnly = true;
 			this.txtBox_TE071301.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE071301.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE071301.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE071301.TabIndex = 205;
 			this.txtBox_TE071301.UseWaitCursor = true;
 			// 
 			// btn_ApprovedRNG
 			// 
+			this.btn_ApprovedRNG.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_ApprovedRNG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_ApprovedRNG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_ApprovedRNG.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_ApprovedRNG.Location = new System.Drawing.Point(1417, 20);
+			this.btn_ApprovedRNG.Location = new System.Drawing.Point(1289, 20);
 			this.btn_ApprovedRNG.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_ApprovedRNG.Name = "btn_ApprovedRNG";
 			this.btn_ApprovedRNG.Size = new System.Drawing.Size(320, 115);
@@ -568,10 +573,11 @@
 			// 
 			// btn_CryptKeysList
 			// 
+			this.btn_CryptKeysList.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_CryptKeysList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_CryptKeysList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_CryptKeysList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_CryptKeysList.Location = new System.Drawing.Point(1088, 386);
+			this.btn_CryptKeysList.Location = new System.Drawing.Point(960, 386);
 			this.btn_CryptKeysList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_CryptKeysList.Name = "btn_CryptKeysList";
 			this.btn_CryptKeysList.Size = new System.Drawing.Size(320, 115);
@@ -583,10 +589,11 @@
 			// 
 			// btn_Seed
 			// 
+			this.btn_Seed.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_Seed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_Seed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_Seed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_Seed.Location = new System.Drawing.Point(1088, 508);
+			this.btn_Seed.Location = new System.Drawing.Point(960, 508);
 			this.btn_Seed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_Seed.Name = "btn_Seed";
 			this.btn_Seed.Size = new System.Drawing.Size(320, 115);
@@ -598,10 +605,11 @@
 			// 
 			// btn_nonAppRNG
 			// 
+			this.btn_nonAppRNG.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_nonAppRNG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_nonAppRNG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_nonAppRNG.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_nonAppRNG.Location = new System.Drawing.Point(1417, 142);
+			this.btn_nonAppRNG.Location = new System.Drawing.Point(1289, 142);
 			this.btn_nonAppRNG.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_nonAppRNG.Name = "btn_nonAppRNG";
 			this.btn_nonAppRNG.Size = new System.Drawing.Size(320, 115);
@@ -613,10 +621,11 @@
 			// 
 			// btn_KeyGenSec
 			// 
+			this.btn_KeyGenSec.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_KeyGenSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_KeyGenSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_KeyGenSec.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_KeyGenSec.Location = new System.Drawing.Point(1417, 264);
+			this.btn_KeyGenSec.Location = new System.Drawing.Point(1289, 264);
 			this.btn_KeyGenSec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_KeyGenSec.Name = "btn_KeyGenSec";
 			this.btn_KeyGenSec.Size = new System.Drawing.Size(320, 115);
@@ -628,10 +637,11 @@
 			// 
 			// btn_KeyEstbSec
 			// 
+			this.btn_KeyEstbSec.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_KeyEstbSec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_KeyEstbSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_KeyEstbSec.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_KeyEstbSec.Location = new System.Drawing.Point(1417, 386);
+			this.btn_KeyEstbSec.Location = new System.Drawing.Point(1289, 386);
 			this.btn_KeyEstbSec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_KeyEstbSec.Name = "btn_KeyEstbSec";
 			this.btn_KeyEstbSec.Size = new System.Drawing.Size(320, 115);
@@ -643,10 +653,11 @@
 			// 
 			// btn_AppKeyEstab
 			// 
+			this.btn_AppKeyEstab.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.btn_AppKeyEstab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btn_AppKeyEstab.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_AppKeyEstab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_AppKeyEstab.Location = new System.Drawing.Point(1417, 508);
+			this.btn_AppKeyEstab.Location = new System.Drawing.Point(1289, 508);
 			this.btn_AppKeyEstab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btn_AppKeyEstab.Name = "btn_AppKeyEstab";
 			this.btn_AppKeyEstab.Size = new System.Drawing.Size(320, 115);
@@ -667,7 +678,7 @@
 			this.txtBox_TE070801.Name = "txtBox_TE070801";
 			this.txtBox_TE070801.ReadOnly = true;
 			this.txtBox_TE070801.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE070801.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE070801.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE070801.TabIndex = 217;
 			this.txtBox_TE070801.UseWaitCursor = true;
 			// 
@@ -682,7 +693,7 @@
 			this.txtBox_TE070802.Name = "txtBox_TE070802";
 			this.txtBox_TE070802.ReadOnly = true;
 			this.txtBox_TE070802.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE070802.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE070802.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE070802.TabIndex = 218;
 			this.txtBox_TE070802.UseWaitCursor = true;
 			// 
@@ -697,7 +708,7 @@
 			this.txtBox_TE071001.Name = "txtBox_TE071001";
 			this.txtBox_TE071001.ReadOnly = true;
 			this.txtBox_TE071001.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE071001.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE071001.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE071001.TabIndex = 220;
 			this.txtBox_TE071001.UseWaitCursor = true;
 			// 
@@ -710,18 +721,16 @@
 			this.txtBox_TE070901.Location = new System.Drawing.Point(11, 652);
 			this.txtBox_TE070901.Multiline = true;
 			this.txtBox_TE070901.Name = "txtBox_TE070901";
-			this.txtBox_TE070901.ReadOnly = true;
 			this.txtBox_TE070901.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtBox_TE070901.Size = new System.Drawing.Size(1726, 562);
+			this.txtBox_TE070901.Size = new System.Drawing.Size(1586, 466);
 			this.txtBox_TE070901.TabIndex = 221;
 			this.txtBox_TE070901.UseWaitCursor = true;
 			// 
 			// panel1
 			// 
-			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel1.AutoScroll = true;
 			this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
+			this.panel1.Controls.Add(this.btn_Entropy);
 			this.panel1.Controls.Add(this.checkBox_ManuEnt_SpltKnlg);
 			this.panel1.Controls.Add(this.checkBox_ManuEnt_encrp);
 			this.panel1.Controls.Add(this.checkBox_AutoMethod);
@@ -769,10 +778,27 @@
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.checkBox_KeyEntryOutput);
 			this.panel1.Controls.Add(this.checkBox_KeyGen);
-			this.panel1.Location = new System.Drawing.Point(7, 7);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(2038, 1219);
+			this.panel1.Size = new System.Drawing.Size(1924, 1050);
 			this.panel1.TabIndex = 25;
+			// 
+			// btn_Entropy
+			// 
+			this.btn_Entropy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_Entropy.BackColor = System.Drawing.Color.Tan;
+			this.btn_Entropy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Entropy.ForeColor = System.Drawing.Color.Black;
+			this.btn_Entropy.Location = new System.Drawing.Point(1629, 20);
+			this.btn_Entropy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_Entropy.Name = "btn_Entropy";
+			this.btn_Entropy.Size = new System.Drawing.Size(240, 76);
+			this.btn_Entropy.TabIndex = 226;
+			this.btn_Entropy.Text = "Entropy";
+			this.btn_Entropy.UseVisualStyleBackColor = false;
+			this.btn_Entropy.UseWaitCursor = true;
+			this.btn_Entropy.Click += new System.EventHandler(this.btn_Entropy_Click);
 			// 
 			// checkBox_ManuEnt_SpltKnlg
 			// 
@@ -834,8 +860,9 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.Olive;
-			this.ClientSize = new System.Drawing.Size(2052, 1233);
+			this.ClientSize = new System.Drawing.Size(1924, 1050);
 			this.Controls.Add(this.panel1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -898,5 +925,6 @@
 		private System.Windows.Forms.CheckBox checkBox_AutoMethod;
 		private System.Windows.Forms.CheckBox checkBox_ManuEnt_SpltKnlg;
 		private System.Windows.Forms.CheckBox checkBox_ManuEnt_encrp;
+		private System.Windows.Forms.Button btn_Entropy;
 	}
 }

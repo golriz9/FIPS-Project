@@ -29,14 +29,27 @@ namespace FIPSGuideTool
 
 		private void OtherComponents_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			ModuleSpecs.TE010802_otherComponents = txtBox_otherComponents.Text;
-			TE010802_otherComponents = txtBox_otherComponents.Text;
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				ModuleSpecs.TE010802_otherComponents = txtBox_otherComponents.Text;
+				TE010802_otherComponents = txtBox_otherComponents.Text;
 
-			Properties.Settings.Default.TE010802_otherComponents = TE010802_otherComponents;
-			Properties.Settings.Default.Save();
+				Properties.Settings.Default.TE010802_otherComponents = TE010802_otherComponents;
+				Properties.Settings.Default.Save();
 
-			SpecificationsAssertions f1 = new SpecificationsAssertions();
-			f1.populateSpecLevel1234();
+				SpecificationsAssertions f1 = new SpecificationsAssertions();
+				f1.populateSpecLevel1234();
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 	}
 }

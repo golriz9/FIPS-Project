@@ -68,7 +68,12 @@ namespace FIPSGuideTool
 			tapeTE0553            = Properties.Settings.Default.tapeTE0553.ToString();
 
 			comboBox5.SelectedItem      = PhysicalSecurityLevel;
-			 
+
+			label5.Visible = false;
+			label6.Visible = true;
+			label4.Visible = false;
+			label3.Visible = false;
+
 			txtbox_coatingType_SC.Text  = CoatingType;
 
 			if (Embodiment == "Single_Chip")
@@ -227,7 +232,8 @@ namespace FIPSGuideTool
 		}
 
 		private void PhysicalSecurity_Load(object sender, EventArgs e)
-		{ }
+		{
+		}
 
 
 		private void panel1_Paint(object sender, PaintEventArgs e)

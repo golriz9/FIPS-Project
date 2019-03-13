@@ -23,20 +23,46 @@ namespace FIPSGuideTool
 
 		private void SemiCustomIC_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			ModuleSpecs.TE010802_SemiCustomIC = txtBox_SemiCustomIC.Text;
-			TE010802_SemiCustomIC = txtBox_SemiCustomIC.Text;
+			//ModuleSpecs.TE010802_SemiCustomIC = txtBox_SemiCustomIC.Text;
+			//TE010802_SemiCustomIC = txtBox_SemiCustomIC.Text;
 
-			Properties.Settings.Default.TE010802_SemiCustomIC = TE010802_SemiCustomIC;
-			Properties.Settings.Default.Save();
+			//Properties.Settings.Default.TE010802_SemiCustomIC = TE010802_SemiCustomIC;
+			//Properties.Settings.Default.Save();
 
-			SpecificationsAssertions f1 = new SpecificationsAssertions();
-			f1.populateSpecLevel1234();
+			//SpecificationsAssertions f1 = new SpecificationsAssertions();
+			//f1.populateSpecLevel1234();
 		}
 
 		private void SemiCustomIC_Load(object sender, EventArgs e)
 		{
 			TE010802_SemiCustomIC = Properties.Settings.Default.TE010802_SemiCustomIC.ToString();
 			txtBox_SemiCustomIC.Text = TE010802_SemiCustomIC;
+		}
+
+		private void SemiCustomIC_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				ModuleSpecs.TE010802_SemiCustomIC = txtBox_SemiCustomIC.Text;
+				TE010802_SemiCustomIC = txtBox_SemiCustomIC.Text;
+
+				Properties.Settings.Default.TE010802_SemiCustomIC = TE010802_SemiCustomIC;
+				Properties.Settings.Default.Save();
+
+				SpecificationsAssertions f1 = new SpecificationsAssertions();
+				f1.populateSpecLevel1234();
+
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 	}
 }

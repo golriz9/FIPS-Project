@@ -52,6 +52,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FWVersion";
 			this.Text = "FW Version";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FWVersion_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FWVersion_FormClosed);
 			this.Load += new System.EventHandler(this.FWVersion_Load);
 			this.ResumeLayout(false);

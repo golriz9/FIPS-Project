@@ -53,6 +53,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "FullyCustomIC";
 			this.Text = "Fully Custom IC";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FullyCustomIC_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FullyCustomIC_FormClosed);
 			this.Load += new System.EventHandler(this.FullyCustomIC_Load);
 			this.ResumeLayout(false);

@@ -282,7 +282,7 @@ namespace FIPSGuideTool
 			comboBox10.SelectedItem = DesignAssuranceSecurityLevel;
 			comboBox11.SelectedItem = MitigationAttacksSecurityLevel;
 			comboBox12.SelectedItem = ExComponents_YesNo;
-			comboBox13.SelectedItem = CoolingSys_YesNo;
+			comboBox_CoolingSys.SelectedItem = CoolingSys_YesNo;
 			//txt_ExComponents.Text   = TE010803_ExComponents;
 			txt_CoolingSys.Text     = TE010803_CoolingSys;
 
@@ -385,24 +385,6 @@ namespace FIPSGuideTool
 			f1.ShowDialog();
 		}
 
-		private void comboBox13_SelectedIndexChanged_1(object sender, EventArgs e)
-		{
-			if (comboBox13.SelectedItem.ToString() == "Yes")
-			{
-				txt_CoolingSys.Visible = true;
-				label27.Visible = true;
-				txt_CoolingSys.Text = "";
-				CoolingSys_YesNo    = "Yes";
-			}
-			else if (comboBox13.SelectedItem.ToString() == "No")
-			{
-				txt_CoolingSys.Visible = false;
-				label27.Visible = false;
-				txt_CoolingSys.Text = "N/A";
-				CoolingSys_YesNo = "No";
-			}
-		}
-
 		private void comboBox12_SelectedIndexChanged_1(object sender, EventArgs e)
 		{
 			//if (comboBox12.SelectedItem.ToString() == "Yes")
@@ -443,8 +425,10 @@ namespace FIPSGuideTool
 
 			textBoxTE010808.Text = SpecificationsAssertions.TE010808_txt;
 
-			textBoxTE010812.Text = SpecificationsAssertions.TE010812_txt;		
-						
+			textBoxTE010812.Text = SpecificationsAssertions.TE010812_txt;
+
+			textBoxTE010901.Text = SpecificationsAssertions.TE010808_txt;
+
 		}
 
 		private void btn_otherComponents_Click(object sender, EventArgs e)
@@ -748,7 +732,7 @@ namespace FIPSGuideTool
 					ExComponents_YesNo = comboBox12.SelectedItem.ToString();
 					Properties.Settings.Default.ExComponents_YesNo = ExComponents_YesNo;
 
-					CoolingSys_YesNo = comboBox13.SelectedItem.ToString();
+					CoolingSys_YesNo = comboBox_CoolingSys.SelectedItem.ToString();
 					Properties.Settings.Default.CoolingSys_YesNo = CoolingSys_YesNo;
 					Properties.Settings.Default.Save();
 
@@ -788,6 +772,7 @@ namespace FIPSGuideTool
 		{
 			textBoxTE010808.Visible = false;
 			textBoxTE010802.Visible = false;
+			textBoxTE010901.Visible = false;
 			textBoxTE010812.Visible = true;
 			SpecificationsAssertions f1 = new SpecificationsAssertions();
 			f1.populateSpecLevel1234();
@@ -798,6 +783,7 @@ namespace FIPSGuideTool
 		private void btn_TE010802_Click(object sender, EventArgs e)
 		{
 			textBoxTE010808.Visible = false;
+			textBoxTE010901.Visible = false;
 			textBoxTE010812.Visible = false;
 			textBoxTE010802.Visible = true;
 			SpecificationsAssertions f1 = new SpecificationsAssertions();
@@ -811,6 +797,7 @@ namespace FIPSGuideTool
 			textBoxTE010808.Visible = true;
 			textBoxTE010802.Visible = false;
 			textBoxTE010812.Visible = false;
+			textBoxTE010901.Visible = false;
 			SpecificationsAssertions f1 = new SpecificationsAssertions();
 			f1.populateSpecLevel1234();
 
@@ -881,6 +868,44 @@ namespace FIPSGuideTool
 				TE010808_excld = "N/A";
 
 				textBoxTE010812.Text = TE010808_excld;
+			}
+		}
+
+		private void btn_TE010901_Click(object sender, EventArgs e)
+		{
+			textBoxTE010808.Visible = false;
+			textBoxTE010901.Visible = true;
+			textBoxTE010802.Visible = false;
+			textBoxTE010812.Visible = false;
+			SpecificationsAssertions f1 = new SpecificationsAssertions();
+			f1.populateSpecLevel1234();
+
+			textBoxTE010901.Text = SpecificationsAssertions.TE010808_txt;
+		}
+
+		private void btn_save_Click(object sender, EventArgs e)
+		{
+			SpecificationsAssertions.TE010808_txt = textBoxTE010808.Text;
+			SpecificationsAssertions.TE010808_txt = textBoxTE010901.Text;
+			SpecificationsAssertions.TE010802_txt = textBoxTE010802.Text;
+			SpecificationsAssertions.TE010812_txt = textBoxTE010812.Text;
+		}
+
+		private void comboBox_CoolingSys_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (comboBox_CoolingSys.SelectedItem.ToString() == "Yes")
+			{
+				txt_CoolingSys.Visible = true;
+				label27.Visible = true;
+				txt_CoolingSys.Text = "";
+				CoolingSys_YesNo = "Yes";
+			}
+			else if (comboBox_CoolingSys.SelectedItem.ToString() == "No")
+			{
+				txt_CoolingSys.Visible = false;
+				label27.Visible = false;
+				txt_CoolingSys.Text = "N/A";
+				CoolingSys_YesNo = "No";
 			}
 		}
 	}

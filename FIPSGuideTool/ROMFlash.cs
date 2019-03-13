@@ -30,14 +30,39 @@ namespace FIPSGuideTool
 
 		private void ROMFlash_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			ModuleSpecs.TE010802_ROM = txtBox_ROMFlash.Text;
-			TE010802_ROM            = txtBox_ROMFlash.Text;			
+			//ModuleSpecs.TE010802_ROM = txtBox_ROMFlash.Text;
+			//TE010802_ROM            = txtBox_ROMFlash.Text;			
 
-			Properties.Settings.Default.TE010802_ROM = TE010802_ROM;
-			Properties.Settings.Default.Save();
+			//Properties.Settings.Default.TE010802_ROM = TE010802_ROM;
+			//Properties.Settings.Default.Save();
 
-			SpecificationsAssertions f1 = new SpecificationsAssertions();
-			f1.populateSpecLevel1234();
+			//SpecificationsAssertions f1 = new SpecificationsAssertions();
+			//f1.populateSpecLevel1234();
+		}
+
+		private void ROMFlash_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				ModuleSpecs.TE010802_ROM = txtBox_ROMFlash.Text;
+				TE010802_ROM = txtBox_ROMFlash.Text;
+
+				Properties.Settings.Default.TE010802_ROM = TE010802_ROM;
+				Properties.Settings.Default.Save();
+
+				SpecificationsAssertions f1 = new SpecificationsAssertions();
+				f1.populateSpecLevel1234();
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 	}
 }

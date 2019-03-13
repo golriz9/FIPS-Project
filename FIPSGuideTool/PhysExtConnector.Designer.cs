@@ -53,6 +53,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "PhysExtConnector";
 			this.Text = "Physical External Connector";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhysExtConnector_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PhysExtConnector_FormClosed);
 			this.Load += new System.EventHandler(this.PhysExtConnector_Load);
 			this.ResumeLayout(false);

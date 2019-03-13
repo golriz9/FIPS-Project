@@ -53,6 +53,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "RAM";
 			this.Text = "RAM";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RAM_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RAM_FormClosed);
 			this.Load += new System.EventHandler(this.RAM_Load);
 			this.ResumeLayout(false);

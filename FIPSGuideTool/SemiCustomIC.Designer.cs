@@ -53,6 +53,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "SemiCustomIC";
 			this.Text = "Semi-Custom IC";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SemiCustomIC_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SemiCustomIC_FormClosed);
 			this.Load += new System.EventHandler(this.SemiCustomIC_Load);
 			this.ResumeLayout(false);

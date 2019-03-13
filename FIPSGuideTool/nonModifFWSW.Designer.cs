@@ -54,6 +54,7 @@
 			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "nonModifFWSW";
 			this.Text = "Non-Modifiable FW/SW";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.nonModifFWSW_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.nonModifFWSW_FormClosed);
 			this.Load += new System.EventHandler(this.nonModifFWSW_Load);
 			this.ResumeLayout(false);

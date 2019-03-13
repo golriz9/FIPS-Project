@@ -29,18 +29,188 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpTesting));
-			this.listBox_OpTestTEs = new System.Windows.Forms.ListBox();
-			this.txtBox_TEs_OpTest = new System.Windows.Forms.TextBox();
-			this.txtBox_TEs_OpTest_Assessment = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.btn_save = new System.Windows.Forms.Button();
-			this.btn_POST = new System.Windows.Forms.Button();
-			this.btn_OtherSelfTest = new System.Windows.Forms.Button();
-			this.btn_CondSelftest = new System.Windows.Forms.Button();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.btn_browsetxtFile = new System.Windows.Forms.Button();
+			this.btn_Save2 = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
 			this.txtBox_TestNotes = new System.Windows.Forms.TextBox();
+			this.btn_CondSelftest = new System.Windows.Forms.Button();
+			this.btn_OtherSelfTest = new System.Windows.Forms.Button();
+			this.btn_POST = new System.Windows.Forms.Button();
+			this.btn_save = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txtBox_TEs_OpTest_Assessment = new System.Windows.Forms.TextBox();
+			this.txtBox_TEs_OpTest = new System.Windows.Forms.TextBox();
+			this.listBox_OpTestTEs = new System.Windows.Forms.ListBox();
+			this.panel1.SuspendLayout();
 			this.SuspendLayout();
+			// 
+			// panel1
+			// 
+			this.panel1.AutoScroll = true;
+			this.panel1.Controls.Add(this.btn_browsetxtFile);
+			this.panel1.Controls.Add(this.btn_Save2);
+			this.panel1.Controls.Add(this.label3);
+			this.panel1.Controls.Add(this.txtBox_TestNotes);
+			this.panel1.Controls.Add(this.btn_CondSelftest);
+			this.panel1.Controls.Add(this.btn_OtherSelfTest);
+			this.panel1.Controls.Add(this.btn_POST);
+			this.panel1.Controls.Add(this.btn_save);
+			this.panel1.Controls.Add(this.label2);
+			this.panel1.Controls.Add(this.label1);
+			this.panel1.Controls.Add(this.txtBox_TEs_OpTest_Assessment);
+			this.panel1.Controls.Add(this.txtBox_TEs_OpTest);
+			this.panel1.Controls.Add(this.listBox_OpTestTEs);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(1523, 1050);
+			this.panel1.TabIndex = 0;
+			// 
+			// btn_browsetxtFile
+			// 
+			this.btn_browsetxtFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_browsetxtFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_browsetxtFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_browsetxtFile.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_browsetxtFile.Location = new System.Drawing.Point(817, 785);
+			this.btn_browsetxtFile.Name = "btn_browsetxtFile";
+			this.btn_browsetxtFile.Size = new System.Drawing.Size(170, 66);
+			this.btn_browsetxtFile.TabIndex = 31;
+			this.btn_browsetxtFile.Text = "Browse";
+			this.btn_browsetxtFile.UseVisualStyleBackColor = false;
+			// 
+			// btn_Save2
+			// 
+			this.btn_Save2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_Save2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_Save2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Save2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_Save2.Location = new System.Drawing.Point(817, 857);
+			this.btn_Save2.Name = "btn_Save2";
+			this.btn_Save2.Size = new System.Drawing.Size(170, 66);
+			this.btn_Save2.TabIndex = 30;
+			this.btn_Save2.Text = "Save";
+			this.btn_Save2.UseVisualStyleBackColor = false;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(42, 717);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(170, 32);
+			this.label3.TabIndex = 29;
+			this.label3.Text = "Test Notes:";
+			// 
+			// txtBox_TestNotes
+			// 
+			this.txtBox_TestNotes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtBox_TestNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBox_TestNotes.Location = new System.Drawing.Point(42, 764);
+			this.txtBox_TestNotes.Multiline = true;
+			this.txtBox_TestNotes.Name = "txtBox_TestNotes";
+			this.txtBox_TestNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.txtBox_TestNotes.Size = new System.Drawing.Size(750, 240);
+			this.txtBox_TestNotes.TabIndex = 28;
+			// 
+			// btn_CondSelftest
+			// 
+			this.btn_CondSelftest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_CondSelftest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_CondSelftest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_CondSelftest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_CondSelftest.Location = new System.Drawing.Point(1186, 758);
+			this.btn_CondSelftest.Name = "btn_CondSelftest";
+			this.btn_CondSelftest.Size = new System.Drawing.Size(294, 120);
+			this.btn_CondSelftest.TabIndex = 27;
+			this.btn_CondSelftest.Text = "Conditional Self-Tests";
+			this.btn_CondSelftest.UseVisualStyleBackColor = false;
+			// 
+			// btn_OtherSelfTest
+			// 
+			this.btn_OtherSelfTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_OtherSelfTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_OtherSelfTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_OtherSelfTest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_OtherSelfTest.Location = new System.Drawing.Point(1186, 890);
+			this.btn_OtherSelfTest.Name = "btn_OtherSelfTest";
+			this.btn_OtherSelfTest.Size = new System.Drawing.Size(294, 120);
+			this.btn_OtherSelfTest.TabIndex = 26;
+			this.btn_OtherSelfTest.Text = "Other Self-Tests";
+			this.btn_OtherSelfTest.UseVisualStyleBackColor = false;
+			// 
+			// btn_POST
+			// 
+			this.btn_POST.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_POST.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_POST.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_POST.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_POST.Location = new System.Drawing.Point(1186, 626);
+			this.btn_POST.Name = "btn_POST";
+			this.btn_POST.Size = new System.Drawing.Size(294, 120);
+			this.btn_POST.TabIndex = 25;
+			this.btn_POST.Text = "Power-On Self-Tests";
+			this.btn_POST.UseVisualStyleBackColor = false;
+			// 
+			// btn_save
+			// 
+			this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_save.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_save.Location = new System.Drawing.Point(817, 427);
+			this.btn_save.Name = "btn_save";
+			this.btn_save.Size = new System.Drawing.Size(170, 66);
+			this.btn_save.TabIndex = 24;
+			this.btn_save.Text = "Save";
+			this.btn_save.UseVisualStyleBackColor = false;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(42, 381);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(246, 32);
+			this.label2.TabIndex = 23;
+			this.label2.Text = "Expected Result:";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(42, 40);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(198, 32);
+			this.label1.TabIndex = 22;
+			this.label1.Text = "Requirement:";
+			// 
+			// txtBox_TEs_OpTest_Assessment
+			// 
+			this.txtBox_TEs_OpTest_Assessment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtBox_TEs_OpTest_Assessment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBox_TEs_OpTest_Assessment.Location = new System.Drawing.Point(42, 427);
+			this.txtBox_TEs_OpTest_Assessment.Multiline = true;
+			this.txtBox_TEs_OpTest_Assessment.Name = "txtBox_TEs_OpTest_Assessment";
+			this.txtBox_TEs_OpTest_Assessment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.txtBox_TEs_OpTest_Assessment.Size = new System.Drawing.Size(750, 240);
+			this.txtBox_TEs_OpTest_Assessment.TabIndex = 21;
+			// 
+			// txtBox_TEs_OpTest
+			// 
+			this.txtBox_TEs_OpTest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtBox_TEs_OpTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBox_TEs_OpTest.Location = new System.Drawing.Point(42, 85);
+			this.txtBox_TEs_OpTest.Multiline = true;
+			this.txtBox_TEs_OpTest.Name = "txtBox_TEs_OpTest";
+			this.txtBox_TEs_OpTest.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.txtBox_TEs_OpTest.Size = new System.Drawing.Size(750, 240);
+			this.txtBox_TEs_OpTest.TabIndex = 20;
 			// 
 			// listBox_OpTestTEs
 			// 
@@ -115,133 +285,10 @@
             "TE09.45.03",
             "TE09.46.03",
             "TE10.03.02"});
-			this.listBox_OpTestTEs.Location = new System.Drawing.Point(1204, 40);
+			this.listBox_OpTestTEs.Location = new System.Drawing.Point(1218, 30);
 			this.listBox_OpTestTEs.Name = "listBox_OpTestTEs";
 			this.listBox_OpTestTEs.Size = new System.Drawing.Size(262, 548);
-			this.listBox_OpTestTEs.TabIndex = 2;
-			this.listBox_OpTestTEs.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-			// 
-			// txtBox_TEs_OpTest
-			// 
-			this.txtBox_TEs_OpTest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtBox_TEs_OpTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBox_TEs_OpTest.Location = new System.Drawing.Point(28, 64);
-			this.txtBox_TEs_OpTest.Multiline = true;
-			this.txtBox_TEs_OpTest.Name = "txtBox_TEs_OpTest";
-			this.txtBox_TEs_OpTest.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.txtBox_TEs_OpTest.Size = new System.Drawing.Size(750, 240);
-			this.txtBox_TEs_OpTest.TabIndex = 4;
-			// 
-			// txtBox_TEs_OpTest_Assessment
-			// 
-			this.txtBox_TEs_OpTest_Assessment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtBox_TEs_OpTest_Assessment.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBox_TEs_OpTest_Assessment.Location = new System.Drawing.Point(28, 406);
-			this.txtBox_TEs_OpTest_Assessment.Multiline = true;
-			this.txtBox_TEs_OpTest_Assessment.Name = "txtBox_TEs_OpTest_Assessment";
-			this.txtBox_TEs_OpTest_Assessment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.txtBox_TEs_OpTest_Assessment.Size = new System.Drawing.Size(750, 240);
-			this.txtBox_TEs_OpTest_Assessment.TabIndex = 5;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(28, 19);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(198, 32);
-			this.label1.TabIndex = 6;
-			this.label1.Text = "Requirement:";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(28, 360);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(246, 32);
-			this.label2.TabIndex = 7;
-			this.label2.Text = "Expected Result:";
-			// 
-			// btn_save
-			// 
-			this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_save.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_save.Location = new System.Drawing.Point(803, 406);
-			this.btn_save.Name = "btn_save";
-			this.btn_save.Size = new System.Drawing.Size(170, 66);
-			this.btn_save.TabIndex = 8;
-			this.btn_save.Text = "Save";
-			this.btn_save.UseVisualStyleBackColor = false;
-			this.btn_save.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// btn_POST
-			// 
-			this.btn_POST.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_POST.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_POST.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_POST.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_POST.Location = new System.Drawing.Point(1172, 633);
-			this.btn_POST.Name = "btn_POST";
-			this.btn_POST.Size = new System.Drawing.Size(294, 120);
-			this.btn_POST.TabIndex = 12;
-			this.btn_POST.Text = "Power-On Self-Tests";
-			this.btn_POST.UseVisualStyleBackColor = false;
-			this.btn_POST.Click += new System.EventHandler(this.btn_POST_Click);
-			// 
-			// btn_OtherSelfTest
-			// 
-			this.btn_OtherSelfTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_OtherSelfTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_OtherSelfTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_OtherSelfTest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_OtherSelfTest.Location = new System.Drawing.Point(1172, 897);
-			this.btn_OtherSelfTest.Name = "btn_OtherSelfTest";
-			this.btn_OtherSelfTest.Size = new System.Drawing.Size(294, 120);
-			this.btn_OtherSelfTest.TabIndex = 13;
-			this.btn_OtherSelfTest.Text = "Other Self-Tests";
-			this.btn_OtherSelfTest.UseVisualStyleBackColor = false;
-			this.btn_OtherSelfTest.Click += new System.EventHandler(this.button2_Click);
-			// 
-			// btn_CondSelftest
-			// 
-			this.btn_CondSelftest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_CondSelftest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_CondSelftest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_CondSelftest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_CondSelftest.Location = new System.Drawing.Point(1172, 765);
-			this.btn_CondSelftest.Name = "btn_CondSelftest";
-			this.btn_CondSelftest.Size = new System.Drawing.Size(294, 120);
-			this.btn_CondSelftest.TabIndex = 14;
-			this.btn_CondSelftest.Text = "Conditional Self-Tests";
-			this.btn_CondSelftest.UseVisualStyleBackColor = false;
-			this.btn_CondSelftest.Click += new System.EventHandler(this.btn_CondSelftest_Click);
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(28, 696);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(170, 32);
-			this.label3.TabIndex = 16;
-			this.label3.Text = "Test Notes:";
-			// 
-			// txtBox_TestNotes
-			// 
-			this.txtBox_TestNotes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtBox_TestNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBox_TestNotes.Location = new System.Drawing.Point(28, 743);
-			this.txtBox_TestNotes.Multiline = true;
-			this.txtBox_TestNotes.Name = "txtBox_TestNotes";
-			this.txtBox_TestNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.txtBox_TestNotes.Size = new System.Drawing.Size(750, 240);
-			this.txtBox_TestNotes.TabIndex = 15;
+			this.listBox_OpTestTEs.TabIndex = 19;
 			// 
 			// OpTesting
 			// 
@@ -249,39 +296,34 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.Olive;
-			this.ClientSize = new System.Drawing.Size(1523, 1078);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.txtBox_TestNotes);
-			this.Controls.Add(this.btn_CondSelftest);
-			this.Controls.Add(this.btn_OtherSelfTest);
-			this.Controls.Add(this.btn_POST);
-			this.Controls.Add(this.btn_save);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.txtBox_TEs_OpTest_Assessment);
-			this.Controls.Add(this.txtBox_TEs_OpTest);
-			this.Controls.Add(this.listBox_OpTestTEs);
+			this.ClientSize = new System.Drawing.Size(1523, 1050);
+			this.Controls.Add(this.panel1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "OpTesting";
 			this.Text = "Operational Testing";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OpTesting_FormClosing);
 			this.Load += new System.EventHandler(this.OpTesting_Load);
+			this.panel1.ResumeLayout(false);
+			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
-		private System.Windows.Forms.ListBox listBox_OpTestTEs;
-		private System.Windows.Forms.TextBox txtBox_TEs_OpTest;
-		private System.Windows.Forms.TextBox txtBox_TEs_OpTest_Assessment;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button btn_save;
-		private System.Windows.Forms.Button btn_POST;
-		private System.Windows.Forms.Button btn_OtherSelfTest;
-		private System.Windows.Forms.Button btn_CondSelftest;
+
+		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Button btn_browsetxtFile;
+		private System.Windows.Forms.Button btn_Save2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox txtBox_TestNotes;
+		private System.Windows.Forms.Button btn_CondSelftest;
+		private System.Windows.Forms.Button btn_OtherSelfTest;
+		private System.Windows.Forms.Button btn_POST;
+		private System.Windows.Forms.Button btn_save;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TextBox txtBox_TEs_OpTest_Assessment;
+		private System.Windows.Forms.TextBox txtBox_TEs_OpTest;
+		private System.Windows.Forms.ListBox listBox_OpTestTEs;
 	}
 }

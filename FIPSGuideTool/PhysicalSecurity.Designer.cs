@@ -181,7 +181,7 @@
 			this.Embodiment_tabs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Embodiment_tabs.Name = "Embodiment_tabs";
 			this.Embodiment_tabs.SelectedIndex = 0;
-			this.Embodiment_tabs.Size = new System.Drawing.Size(1757, 744);
+			this.Embodiment_tabs.Size = new System.Drawing.Size(1757, 761);
 			this.Embodiment_tabs.TabIndex = 12;
 			this.Embodiment_tabs.SelectedIndexChanged += new System.EventHandler(this.Embodiment_tabs_SelectedIndexChanged);
 			// 
@@ -195,16 +195,13 @@
 			this.Single_Chip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Single_Chip.Name = "Single_Chip";
 			this.Single_Chip.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.Single_Chip.Size = new System.Drawing.Size(1749, 699);
+			this.Single_Chip.Size = new System.Drawing.Size(1749, 716);
 			this.Single_Chip.TabIndex = 0;
 			this.Single_Chip.Text = "Single Chip    ";
 			this.Single_Chip.Click += new System.EventHandler(this.Single_Chip_Click);
 			// 
 			// panel1
 			// 
-			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
 			this.panel1.Controls.Add(this.label6);
 			this.panel1.Controls.Add(this.label4);
@@ -216,10 +213,11 @@
 			this.panel1.Controls.Add(this.checkBox_HoleSlit_SC);
 			this.panel1.Controls.Add(this.txtbox_coatingType_SC);
 			this.panel1.Controls.Add(this.label5);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(3, 2);
 			this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1718, 820);
+			this.panel1.Size = new System.Drawing.Size(1739, 708);
 			this.panel1.TabIndex = 22;
 			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
 			// 
@@ -526,7 +524,7 @@
 			this.Multi_Chip_Standalone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Multi_Chip_Standalone.Name = "Multi_Chip_Standalone";
 			this.Multi_Chip_Standalone.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.Multi_Chip_Standalone.Size = new System.Drawing.Size(1749, 699);
+			this.Multi_Chip_Standalone.Size = new System.Drawing.Size(1749, 716);
 			this.Multi_Chip_Standalone.TabIndex = 2;
 			this.Multi_Chip_Standalone.Text = "Multi Chip Standalone    ";
 			this.Multi_Chip_Standalone.Click += new System.EventHandler(this.Multi_Chip_Standalone_Click);
@@ -544,7 +542,7 @@
 			this.panel4.Location = new System.Drawing.Point(3, 2);
 			this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(1743, 695);
+			this.panel4.Size = new System.Drawing.Size(1743, 712);
 			this.panel4.TabIndex = 15;
 			this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
 			// 
@@ -572,7 +570,7 @@
 			this.panel5.Controls.Add(this.checkBox_MaintenRole_MCS);
 			this.panel5.Location = new System.Drawing.Point(27, 264);
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(1693, 417);
+			this.panel5.Size = new System.Drawing.Size(1693, 434);
 			this.panel5.TabIndex = 6;
 			// 
 			// panel3
@@ -740,7 +738,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Olive;
-			this.ClientSize = new System.Drawing.Size(1781, 1011);
+			this.ClientSize = new System.Drawing.Size(1781, 1028);
 			this.Controls.Add(this.radioButton3);
 			this.Controls.Add(this.radioButton1);
 			this.Controls.Add(this.radioButton2);
@@ -752,7 +750,6 @@
 			this.Controls.Add(this.label1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.MaximizeBox = false;
 			this.Name = "PhysicalSecurity";
 			this.Text = "Physical Security";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PhysicalSecurity_FormClosing);

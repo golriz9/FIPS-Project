@@ -162,8 +162,7 @@ namespace FIPSGuideTool
 		}
 	
 		private void KeyManagement_Load(object sender, EventArgs e)
-		{
-
+		{			
 		}
 
 		private void KeyManagement_FormClosing(object sender, FormClosingEventArgs e)
@@ -690,6 +689,12 @@ namespace FIPSGuideTool
 			{
 				ManualKeyEntry_spltKnlg = "False";
 			}
+		}
+
+		private void btn_Entropy_Click(object sender, EventArgs e)
+		{
+			Entropy f4 = new Entropy();
+			f4.ShowDialog();
 		}
 	}
 }

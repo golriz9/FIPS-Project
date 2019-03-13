@@ -17,6 +17,8 @@ namespace FIPSGuideTool
 		public static string MaintenanceRole_SC  = RolesAndServices.MaintenanceRole_SC;
 		public static string MaintenanceRole_MCE = RolesAndServices.MaintenanceRole_MCE;
 		public static string MaintenanceRole_MCS = RolesAndServices.MaintenanceRole_MCS;
+		public static string TE040508_MajorStates = MajorStates.TE040508_MajorStates;
+		public static string txt_TE040508;
 
 		string BypassCapability = RolesAndServices.BypassCapability;
 		string idleState        = RolesAndServices.idleState;
@@ -126,8 +128,11 @@ namespace FIPSGuideTool
 
 				string TE040507 = "The tester reviewed the descriptions of the states of the cryptographic module and determined that the descriptions clearly defined disjoint states. " +
 					"The tester verified that all possible combinations of data and control inputs could be partitioned into disjoint sets.";
-				string TE040508 = "The tester examined the cryptographic module, caused it to enter each of its major states. For each state that had a distinct indicator, the tester attempted" +
-					" to observe the indicator while the module was in the state. The expected indicator was observed.";
+		
+				string TE040508 = "During operational testing, the tester exercised the module, causing it to enter each of its major states. All states that had a distinct indicator" +
+					" allowed the indicator to be observed. States Include:" + Environment.NewLine + Environment.NewLine + MajorStates.TE040508_MajorStates;
+				txt_TE040508 = TE040508;
+
 				string TE040509 = "The tester verified that a chain of transitions from an initial power on state to each other state in the model existed that was not an initial power on state.";
 				string TE040510 = "The tester verified that a chain of transitions from each non-power off state to a power off state of the model existed.";
 				string TE040511 = "The tester verified that the actions of the finite state model, as the result of all possible data and control inputs, were defined.";

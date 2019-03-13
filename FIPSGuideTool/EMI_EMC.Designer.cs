@@ -30,12 +30,12 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EMI_EMC));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.txtBox_IssuedDate = new System.Windows.Forms.TextBox();
+			this.label3 = new System.Windows.Forms.Label();
 			this.txtbox_FCC_ID_No = new System.Windows.Forms.TextBox();
 			this.txtbox_FCC_Lab = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.txtBox_IssuedDate = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -56,24 +56,45 @@
 			this.panel1.Size = new System.Drawing.Size(1442, 368);
 			this.panel1.TabIndex = 5;
 			// 
+			// txtBox_IssuedDate
+			// 
+			this.txtBox_IssuedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBox_IssuedDate.Location = new System.Drawing.Point(741, 241);
+			this.txtBox_IssuedDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.txtBox_IssuedDate.Multiline = true;
+			this.txtBox_IssuedDate.Name = "txtBox_IssuedDate";
+			this.txtBox_IssuedDate.Size = new System.Drawing.Size(500, 77);
+			this.txtBox_IssuedDate.TabIndex = 10;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(341, 265);
+			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(158, 29);
+			this.label3.TabIndex = 9;
+			this.label3.Text = "Issued Date:";
+			// 
 			// txtbox_FCC_ID_No
 			// 
 			this.txtbox_FCC_ID_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtbox_FCC_ID_No.Location = new System.Drawing.Point(840, 135);
+			this.txtbox_FCC_ID_No.Location = new System.Drawing.Point(741, 135);
 			this.txtbox_FCC_ID_No.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.txtbox_FCC_ID_No.Multiline = true;
 			this.txtbox_FCC_ID_No.Name = "txtbox_FCC_ID_No";
-			this.txtbox_FCC_ID_No.Size = new System.Drawing.Size(571, 77);
+			this.txtbox_FCC_ID_No.Size = new System.Drawing.Size(500, 77);
 			this.txtbox_FCC_ID_No.TabIndex = 8;
 			// 
 			// txtbox_FCC_Lab
 			// 
 			this.txtbox_FCC_Lab.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtbox_FCC_Lab.Location = new System.Drawing.Point(840, 26);
+			this.txtbox_FCC_Lab.Location = new System.Drawing.Point(741, 26);
 			this.txtbox_FCC_Lab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.txtbox_FCC_Lab.Multiline = true;
 			this.txtbox_FCC_Lab.Name = "txtbox_FCC_Lab";
-			this.txtbox_FCC_Lab.Size = new System.Drawing.Size(571, 80);
+			this.txtbox_FCC_Lab.Size = new System.Drawing.Size(500, 80);
 			this.txtbox_FCC_Lab.TabIndex = 7;
 			// 
 			// label2
@@ -97,27 +118,6 @@
 			this.label1.Size = new System.Drawing.Size(483, 29);
 			this.label1.TabIndex = 5;
 			this.label1.Text = "Name of the FCC Accredited Laboratory:";
-			// 
-			// txtBox_IssuedDate
-			// 
-			this.txtBox_IssuedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBox_IssuedDate.Location = new System.Drawing.Point(840, 241);
-			this.txtBox_IssuedDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.txtBox_IssuedDate.Multiline = true;
-			this.txtBox_IssuedDate.Name = "txtBox_IssuedDate";
-			this.txtBox_IssuedDate.Size = new System.Drawing.Size(571, 77);
-			this.txtBox_IssuedDate.TabIndex = 10;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(341, 265);
-			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(158, 29);
-			this.label3.TabIndex = 9;
-			this.label3.Text = "Issued Date:";
 			// 
 			// EMI_EMC
 			// 

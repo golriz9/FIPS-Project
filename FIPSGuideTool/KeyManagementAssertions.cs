@@ -13,6 +13,21 @@ namespace FIPSGuideTool
 		private OleDbConnection connection = new OleDbConnection();
 		OleDbCommand command = new OleDbCommand();
 
+		public static string NoBitsGenNDRNG;
+		public static string NoBitsEntropyInput;
+		public static string NoBitsNonce;
+		public static string NoBitsAdditInput;
+		public static string NoBitsPersonalStr;
+		public static string AlgDRBGDepends;
+		public static string DRBGOutputLength;
+		public static string MinEntropy;
+		public static string MaxEntropy;
+		public static string DRBG_Type;
+		public static string DerivFunc;
+		public static string StandardEntropy;
+		public static string FullEntropyOutput;
+		public static string TE071301_txt;
+
 		string CSPProtcStratg = KeyManagement.CSPProtcStratg;
 		string PubKeyProtect = KeyManagement.PubKeyProtect;
 		string PubKeyEntry = KeyManagement.PubKeyEntry;
@@ -105,12 +120,18 @@ namespace FIPSGuideTool
 				" prevent unauthorized disclosure, unauthorized modification, and unauthorized substitution. These protections include:"
 				+ Environment.NewLine + Environment.NewLine + CSPProtcStratg;
 
-				CSPProtcStratg = CSPProtcStratg.Replace("'","\''");
-
+				if (CSPProtcStratg != null)
+				{
+					CSPProtcStratg = CSPProtcStratg.Replace("'", "\''");
+				}			
+				
 				TE070201 = "It was verified that vendor documentation describes how the public keys are protected from unauthorized" +
 					" modification and unauthorized substitution:" + Environment.NewLine + Environment.NewLine + PubKeyProtect;
 
-				PubKeyProtect = PubKeyProtect.Replace("'","\''");
+				if (PubKeyProtect != null)
+				{
+					PubKeyProtect = PubKeyProtect.Replace("'", "\''");
+				}				
 
 				TE070202 = "Upon performing operational testing and inspection of the module’s source code and review of " +
 				"proprietary and nonproprietary documentation, the tester identified the public keys entered into and stored within " +
@@ -120,29 +141,98 @@ namespace FIPSGuideTool
 				"during the re-key process (e.g. RenewPKMCertService, RenewPKMService) and attempted to load them into the module. The " +
 				"module indicated that the verification of the public key loading failed, and returned an error indicating that the " +
 				"service failed.";
-				PubKeyEntry = PubKeyEntry.Replace("'","\''");
+				if (PubKeyEntry != null)
+				{
+					PubKeyEntry = PubKeyEntry.Replace("'", "\''");
+				}
 
 				TE070301 = "The vendor documentation was reviewed and verified that it provided a list all cryptographic keys, " +
 				"cryptographic key components, and CSPs used by the module:" + Environment.NewLine + Environment.NewLine + CryptKeyList;
-				CryptKeyList = CryptKeyList.Replace("'","\''");
+				
+				if (CryptKeyList != null)
+				{
+					CryptKeyList = CryptKeyList.Replace("'", "\''");
+				}
 
+				if (RNG_employment != null)
+				{
+					RNG_employment = RNG_employment.Replace("'", "\''");
+				}
 
-				RNG_employment = RNG_employment.Replace("'","\''");
-				AppRNGFunc = AppRNGFunc.Replace("'","\''");
-				nonAppRNGFunc = nonAppRNGFunc.Replace("'","\''");
-				KeyGenSecurity = KeyGenSecurity.Replace("'","\''");
-				AppKeyEstab = AppKeyEstab.Replace("'","\''");
-				KeyEstabSecurity = KeyEstabSecurity.Replace("'","\''");
-				KeyEntryOutput = KeyEntryOutput.Replace("'","\''");
-				KeyGen = KeyGen.Replace("'","\''");
-				KeyEstablishment = KeyEstablishment.Replace("'","\''");
-				KeyStorage = KeyStorage.Replace("'","\''");
-				KeyZeroization = KeyZeroization.Replace("'","\''");
-				ManualKeyEntry = ManualKeyEntry.Replace("'","\''");
-				AutoKeyEntry = AutoKeyEntry.Replace("'","\''");
-				ManualKeyEntry_enc = ManualKeyEntry_enc.Replace("'","\''");
-				ManualKeyEntry_spltKnlg = ManualKeyEntry_spltKnlg.Replace("'","\''");
-				SplitKnowledge = SplitKnowledge.Replace("'","\''");
+				if (AppRNGFunc != null)
+				{
+					AppRNGFunc = AppRNGFunc.Replace("'", "\''");
+				}
+
+				if (nonAppRNGFunc != null)
+				{
+					nonAppRNGFunc = nonAppRNGFunc.Replace("'", "\''");
+				}
+
+				if (KeyGenSecurity != null)
+				{
+					KeyGenSecurity = KeyGenSecurity.Replace("'", "\''");
+				}
+
+				if (AppKeyEstab != null)
+				{
+					AppKeyEstab = AppKeyEstab.Replace("'", "\''");
+				}
+
+				if (KeyEstabSecurity != null)
+				{
+					KeyEstabSecurity = KeyEstabSecurity.Replace("'", "\''");
+				}
+
+				if (KeyEntryOutput != null)
+				{
+					KeyEntryOutput = KeyEntryOutput.Replace("'", "\''");
+				}
+
+				if (KeyGen != null)
+				{
+					KeyGen = KeyGen.Replace("'", "\''");
+				}
+
+				if (KeyEstablishment != null)
+				{
+					KeyEstablishment = KeyEstablishment.Replace("'", "\''");
+				}
+
+				if (KeyStorage != null)
+				{
+					KeyStorage = KeyStorage.Replace("'", "\''");
+				}
+
+				if (KeyZeroization != null)
+				{
+					KeyZeroization = KeyZeroization.Replace("'", "\''");
+				}
+
+				if (ManualKeyEntry != null)
+				{
+					ManualKeyEntry = ManualKeyEntry.Replace("'", "\''");
+				}
+
+				if (AutoKeyEntry != null)
+				{
+					AutoKeyEntry = AutoKeyEntry.Replace("'", "\''");
+				}
+
+				if (ManualKeyEntry_enc != null)
+				{
+					ManualKeyEntry_enc = ManualKeyEntry_enc.Replace("'", "\''");
+				}
+
+				if (ManualKeyEntry_spltKnlg != null)
+				{
+					ManualKeyEntry_spltKnlg = ManualKeyEntry_spltKnlg.Replace("'", "\''");
+				}
+
+				if (SplitKnowledge != null)
+				{
+					SplitKnowledge = SplitKnowledge.Replace("'", "\''");
+				}				
 
 				string TE070101_1 = "The tester verified that the vendor documentation describes the protection of its secret keys and CSPs." +
 					" The documentation describes how these keys and CSPs are protected with logical and physical security mechanisms that" +
@@ -212,9 +302,22 @@ namespace FIPSGuideTool
 					TE071102 = "The tester reviewed the vendor documentation and verified that the implemented key generation matches" +
 					" the specified Approved key generation method.";
 
-					TE071301 = "It was verified that the vendor provided documentation indicates how compromising the security of the key " +
-					"generation method requires at least as many operations as determining the value of the generated key." + Environment.NewLine +
-					KeyGenSecurity;
+					TE071301 = "The tester verified that the vendor provided documentation provides rationale stating how compromising the" +
+						" security of the key generation method (e.g., guessing the seed value to initialize the DRBG) shall require as " +
+						"least as many operations as determining the value of the generated key." + Environment.NewLine + Environment.NewLine +
+						"The vendor has provided documentation that explicitly details the architecture of the module's NDRNG. The NDRNG generates " + NoBitsGenNDRNG +
+						" bits to provide a " + NoBitsEntropyInput + "-bit entropy input, and " + NoBitsNonce + " bits for the nonce, " + NoBitsAdditInput +
+						" bits for the additional input, and " + NoBitsPersonalStr + " bits for the personalization string. This input is used to instantiate a "
+						+ MinEntropy + " and " + MaxEntropy + " bits of entropy. The output of the DRBG is " + DerivFunc + " entropic: " + DRBGOutputLength + " bit of entropy are "
+						+ AlgDRBGDepends + " " + DRBG_Type + "-DRBG " + DerivFunc + ", which is used to produce a " + DRBGOutputLength + "-bit output. Based on the " +
+						"vendor''s entropy claim and Penumbra''s assessment of the NDRNG output per " + StandardEntropy  + ", the output of the NDRNG is between "
+						+ MinEntropy + " and " + MaxEntropy + " bits of entropy. The output of the DRBG is " + FullEntropyOutput + " entropic: " + DRBGOutputLength + " bit of entropy are " +
+						"output. Guessing the values of the output of the " + DRBGOutputLength + "-bit DRBG requires 2^" + DRBGOutputLength + " operations. The " + NoBitsEntropyInput + 
+						"-bit seed has at least " + MinEntropy + 
+						"bits of entropy, therefore guessing the seed value requires 2^" + MinEntropy + "operations. " + Environment.NewLine +
+						"Please refer to the Penumbra generated Entropy Rationale document provided with this FIPS 140-2 report submission for further details.";
+
+					TE071301_txt = TE071301;
 
 					TE071302 = "The tester determined the accuracy of the rationale provided by the vendor and agrees that compromising" +
 					" the security of the key generation method (e.g., guessing the seed value to initialize the DRBG) will require as " +

@@ -54,6 +54,7 @@
 			this.Margin = new System.Windows.Forms.Padding(5);
 			this.Name = "ROMFlash";
 			this.Text = "ROM or Flash";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ROMFlash_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ROMFlash_FormClosed);
 			this.Load += new System.EventHandler(this.ROMFlash_Load);
 			this.ResumeLayout(false);
