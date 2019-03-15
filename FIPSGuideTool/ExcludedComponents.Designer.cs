@@ -51,7 +51,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "ExcludedComponents";
 			this.Text = "Excluded Components";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ExcludedComponents_FormClosed);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExcludedComponents_FormClosing);
 			this.Load += new System.EventHandler(this.ExcludedComponents_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

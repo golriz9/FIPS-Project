@@ -51,6 +51,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "AppKeyEstablishment";
 			this.Text = "Approved Key Establishment";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AppKeyEstablishment_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppKeyEstablishment_FormClosed);
 			this.Load += new System.EventHandler(this.AppKeyEstablishment_Load);
 			this.ResumeLayout(false);

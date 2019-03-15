@@ -52,6 +52,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "AddRolesServices";
 			this.Text = "Add Roles and Services";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddRolesServices_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddRolesServices_FormClosed);
 			this.Load += new System.EventHandler(this.AddRolesServices_Load);
 			this.ResumeLayout(false);

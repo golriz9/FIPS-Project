@@ -52,6 +52,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "KeyList";
 			this.Text = "Cryptographic Key List";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KeyList_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KeyList_FormClosed);
 			this.Load += new System.EventHandler(this.KeyList_Load);
 			this.ResumeLayout(false);

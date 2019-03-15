@@ -50,6 +50,7 @@
 			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel1.AutoScroll = true;
 			this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
 			this.panel1.Controls.Add(this.comboBox2);
 			this.panel1.Controls.Add(this.txt_DataIn);
@@ -208,7 +209,6 @@
 			this.ClientSize = new System.Drawing.Size(1942, 1209);
 			this.Controls.Add(this.panel1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MaximizeBox = false;
 			this.Name = "DataInputPorts";
 			this.Text = "Data Input Ports";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DataInputPorts_FormClosing);

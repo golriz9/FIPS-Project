@@ -51,6 +51,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "KeyEstabSec";
 			this.Text = "Key Establishment Security";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KeyEstabSec_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KeyEstabSec_FormClosed);
 			this.Load += new System.EventHandler(this.KeyEstabSec_Load);
 			this.ResumeLayout(false);

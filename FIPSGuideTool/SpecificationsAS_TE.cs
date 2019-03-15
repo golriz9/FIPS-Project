@@ -73,9 +73,11 @@ namespace FIPSGuideTool
 			// add columns
 			DT.Columns.Add("N/A", System.Type.GetType("System.Boolean"));
 			DT.Columns.Add("Pass", System.Type.GetType("System.Boolean"));
+			//DT.Columns.Add("ReVal", System.Type.GetType("System.Boolean"));
 			DT.Columns.Add("#", typeof(string));
 			DT.Columns.Add("Assertion/TE", typeof(string));
 			DT.Columns.Add("Assessment", typeof(string));
+			//DT.Columns.Add("Revalidation", typeof(string));
 
 			try
 			{
@@ -233,6 +235,14 @@ namespace FIPSGuideTool
 				dataGridView_ASTE.Columns[2].Width = 150;
 				dataGridView_ASTE.Columns[3].Width = 900;
 				dataGridView_ASTE.Columns[4].Width = 900;
+
+				//dataGridView_ASTE.Columns[0].Width = 70;
+				//dataGridView_ASTE.Columns[1].Width = 80;
+				//dataGridView_ASTE.Columns[2].Width = 80;
+				//dataGridView_ASTE.Columns[3].Width = 150;
+				//dataGridView_ASTE.Columns[4].Width = 900;
+				//dataGridView_ASTE.Columns[5].Width = 900;
+				//dataGridView_ASTE.Columns[6].Width = 900;
 
 				dataGridView_ASTE.Dock = DockStyle.Fill;
 				dataGridView_ASTE.DefaultCellStyle.WrapMode = DataGridViewTriState.True;

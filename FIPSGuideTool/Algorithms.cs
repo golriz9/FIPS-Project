@@ -536,153 +536,6 @@ namespace FIPSGuideTool
 			CVL_txt     = "CVL (Cert. #" + CVL_cert + ")";
 		}
 
-		private void btn_refresh_Click_1(object sender, EventArgs e)
-		{
-			SetCertTexts();
-
-			string temp = textBox_Algs.Text;
-			if (temp != "")
-			{
-				string[] tempVec = temp.Split(';');
-				string newtemp1;
-				int i = 0;
-				foreach (string temp1 in tempVec)
-				{
-					char[] tempChar = temp1.ToCharArray();
-
-					if (tempChar[0] == 32)
-					{
-						newtemp1 = temp1.TrimStart(tempChar[0]);
-						//string s = new string(tempChar);		
-						tempVec[i] = newtemp1;
-					}
-					i = i + 1;
-				}
-
-				for (int i1 = 0; i1 < tempVec.Length; i1++)
-				{
-					string[] tempVec2 = tempVec[i1].Split(' ');
-					if (tempVec2[0].Equals("Triple-DES"))
-					{
-						tempVec[i1] = TDES_txt;
-					}
-					else if (tempVec2[0].Equals("AES"))
-					{
-						tempVec[i1] = AES_txt;
-					}
-					else if (tempVec2[0].Equals("SHS"))
-					{
-						tempVec[i1] = SHS_txt;
-					}
-					else if (tempVec2[0].Equals("SHA"))
-					{
-						tempVec[i1] = SHA3_txt;
-					}
-					else if (tempVec2[0].Equals("DRBG"))
-					{
-						tempVec[i1] = DRBG_txt;
-					}
-					else if (tempVec2[0].Equals("DSA"))
-					{
-						tempVec[i1] = DSA2_txt;
-					}
-					else if (tempVec2[0].Equals("ECDSA"))
-					{
-						tempVec[i1] = ECDSA2_txt;
-					}
-					else if (tempVec2[0].Equals("RSA"))
-					{
-						tempVec[i1] = RSA2_txt;
-					}
-					else if (tempVec2[0].Equals("HMAC"))
-					{
-						tempVec[i1] = HMAC_txt;
-					}
-					else if (tempVec2[0].Equals("CCM"))
-					{
-						tempVec[i1] = CCM_txt;
-					}
-					else if (tempVec2[0].Equals("CMAC"))
-					{
-						tempVec[i1] = CMAC_txt;
-					}
-					else if (tempVec2[1].Equals("FFC"))
-					{
-						tempVec[i1] = KAS_FFC_txt;
-					}
-					else if (tempVec2[1].Equals("ECC"))
-					{
-						tempVec[i1] = KAS_ECC_txt;
-					}
-					else if (tempVec2[0].Equals("GCM"))
-					{
-						tempVec[i1] = GCM_txt;
-					}
-					else if (tempVec2[0].Equals("XTS"))
-					{
-						tempVec[i1] = XTS_txt;
-					}
-					else if (tempVec2[0].Equals("KDF"))
-					{
-						if (tempVec2[1].Equals("(SP800-108)"))
-						{
-							tempVec[i1] = KDF_108_txt;
-						}
-						else if (tempVec2[1].Equals("(SP800-135)"))
-						{
-							tempVec[i1] = KDF_135_txt;
-						}
-					}
-					//else if (tempVec2[1].Equals("(SP800-135)"))
-					//{
-					//	tempVec[i1] = KDF_135_txt;
-					//}
-					else if (tempVec2[0].Equals("Key"))
-					{
-						tempVec[i1] = KeyWrap_txt;
-					}
-					else if (tempVec2[0].Equals("CVL"))
-					{
-						tempVec[i1] = CVL_txt;
-					}
-				}
-
-				//// List of algorithms
-				//List<string> algs = new List<string>();
-
-				//for (int i1 = 0; i1 < tempVec.Length; i1++)
-				//{
-				//	algs.Add(tempVec[i1]);
-				//}
-
-				//algs.Sort();      // alphabetize
-
-				List<string> algs = AlphabetizeAlgs(tempVec);
-
-				StringBuilder builder = new StringBuilder();
-				for (int i1 = 0; i1 < tempVec.Length; i1++)
-				{
-					if (i1 == tempVec.Length - 1)
-					{
-						builder.Append(algs[i1]);
-					}
-					else
-					{
-						builder.Append(algs[i1]).Append("; ");
-					}
-				}
-				string temp2 = builder.ToString(); // Get string from StringBuilder
-
-				textBox_Algs.Text = "";
-				textBox_Algs.Text = temp2;
-			}
-			else
-			{
-
-			}
-
-		}
-
 		public List<string> AlphabetizeAlgs(string[]  tempVec)
 		{
 			// List of algorithms
@@ -870,7 +723,8 @@ namespace FIPSGuideTool
 		
 		private void btn_KeyWrap_Click(object sender, EventArgs e)
 		{
-
+			KeyWrap f1 = new KeyWrap();
+			f1.ShowDialog();
 		}
 
 		private void btn_TDES_Click(object sender, EventArgs e)
@@ -897,11 +751,6 @@ namespace FIPSGuideTool
 			f1.ShowDialog();
 		}
 
-		private void btn_SHA_Click_1(object sender, EventArgs e)
-		{
-			SHA f1 = new SHA();
-			f1.Show();
-		}
 
 		private void btn_DRBG_Click(object sender, EventArgs e)
 		{
@@ -960,11 +809,6 @@ namespace FIPSGuideTool
 		{
 			KASECC f1 = new KASECC();
 			f1.ShowDialog();
-		}
-
-		private void btn_KDF_Click_1(object sender, EventArgs e)
-		{
-
 		}
 
 		private void btn_CVL_Click(object sender, EventArgs e)
@@ -1852,10 +1696,7 @@ namespace FIPSGuideTool
 					}
 					textBox_Algs.Text = temp2;
 				}
-				//textBox_certDRBG.Text = "";
-				//DRBG_cert = textBox_certDRBG.Text.ToString();
-				//Properties.Settings.Default.DRBG_cert = DRBG_cert;
-				//Properties.Settings.Default.Save();
+		
 				textBox_certDRBG.Visible = false;
 			}
 		}
@@ -3033,7 +2874,7 @@ namespace FIPSGuideTool
 
 			if (checkBox_KDF135.Checked == true)
 			{
-				btn_KDF108.Enabled = true;
+				btn_KDF135.Enabled = true;
 				string temp = textBox_Algs.Text;
 				if (temp == "")
 				{
@@ -3077,7 +2918,7 @@ namespace FIPSGuideTool
 			}
 			else
 			{
-				btn_KDF108.Enabled = false;
+				btn_KDF135.Enabled = false;
 				string temp = textBox_Algs.Text;
 				if (temp == "")
 				{
@@ -3416,26 +3257,9 @@ namespace FIPSGuideTool
 
 		}
 
-		private void btn_CVL_Click_1(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void btn_KDF_Click_2(object sender, EventArgs e)
-		{
-			KDF108 f1 = new KDF108();
-			f1.ShowDialog();
-		}
-
 		private void btn_KDF135_Click(object sender, EventArgs e)
 		{
 			KDF135 f1 = new KDF135();
-			f1.ShowDialog();
-		}
-
-		private void btn_KeyWrap_Click_1(object sender, EventArgs e)
-		{
-			KeyWrap f1 = new KeyWrap();
 			f1.ShowDialog();
 		}
 
@@ -3958,7 +3782,165 @@ namespace FIPSGuideTool
 
 		}
 
-		private void textBox_certKDF108_TextChanged_1(object sender, EventArgs e)
+		private void btn_refresh_Click(object sender, EventArgs e)
+		{
+			SetCertTexts();
+
+			string temp = textBox_Algs.Text;
+			if (temp != "")
+			{
+				string[] tempVec = temp.Split(';');
+				string newtemp1;
+				int i = 0;
+				foreach (string temp1 in tempVec)
+				{
+					char[] tempChar = temp1.ToCharArray();
+
+					if (tempChar[0] == 32)
+					{
+						newtemp1 = temp1.TrimStart(tempChar[0]);
+						//string s = new string(tempChar);		
+						tempVec[i] = newtemp1;
+					}
+					i = i + 1;
+				}
+
+				for (int i1 = 0; i1 < tempVec.Length; i1++)
+				{
+					string[] tempVec2 = tempVec[i1].Split(' ');
+					if (tempVec2[0].Equals("Triple-DES"))
+					{
+						tempVec[i1] = TDES_txt;
+					}
+					else if (tempVec2[0].Equals("AES"))
+					{
+						tempVec[i1] = AES_txt;
+					}
+					else if (tempVec2[0].Equals("SHS"))
+					{
+						tempVec[i1] = SHS_txt;
+					}
+					else if (tempVec2[0].Equals("SHA"))
+					{
+						tempVec[i1] = SHA3_txt;
+					}
+					else if (tempVec2[0].Equals("DRBG"))
+					{
+						tempVec[i1] = DRBG_txt;
+					}
+					else if (tempVec2[0].Equals("DSA"))
+					{
+						tempVec[i1] = DSA2_txt;
+					}
+					else if (tempVec2[0].Equals("ECDSA"))
+					{
+						tempVec[i1] = ECDSA2_txt;
+					}
+					else if (tempVec2[0].Equals("RSA"))
+					{
+						tempVec[i1] = RSA2_txt;
+					}
+					else if (tempVec2[0].Equals("HMAC"))
+					{
+						tempVec[i1] = HMAC_txt;
+					}
+					else if (tempVec2[0].Equals("CCM"))
+					{
+						tempVec[i1] = CCM_txt;
+					}
+					else if (tempVec2[0].Equals("CMAC"))
+					{
+						tempVec[i1] = CMAC_txt;
+					}
+					else if (tempVec2[1].Equals("FFC"))
+					{
+						tempVec[i1] = KAS_FFC_txt;
+					}
+					else if (tempVec2[1].Equals("ECC"))
+					{
+						tempVec[i1] = KAS_ECC_txt;
+					}
+					else if (tempVec2[0].Equals("GCM"))
+					{
+						tempVec[i1] = GCM_txt;
+					}
+					else if (tempVec2[0].Equals("XTS"))
+					{
+						tempVec[i1] = XTS_txt;
+					}
+					else if (tempVec2[0].Equals("KDF"))
+					{
+						if (tempVec2[1].Equals("(SP800-108)"))
+						{
+							tempVec[i1] = KDF_108_txt;
+						}
+						else if (tempVec2[1].Equals("(SP800-135)"))
+						{
+							tempVec[i1] = KDF_135_txt;
+						}
+					}
+					//else if (tempVec2[1].Equals("(SP800-135)"))
+					//{
+					//	tempVec[i1] = KDF_135_txt;
+					//}
+					else if (tempVec2[0].Equals("Key"))
+					{
+						tempVec[i1] = KeyWrap_txt;
+					}
+					else if (tempVec2[0].Equals("CVL"))
+					{
+						tempVec[i1] = CVL_txt;
+					}
+				}
+
+				//// List of algorithms
+				//List<string> algs = new List<string>();
+
+				//for (int i1 = 0; i1 < tempVec.Length; i1++)
+				//{
+				//	algs.Add(tempVec[i1]);
+				//}
+
+				//algs.Sort();      // alphabetize
+
+				List<string> algs = AlphabetizeAlgs(tempVec);
+
+				StringBuilder builder = new StringBuilder();
+				for (int i1 = 0; i1 < tempVec.Length; i1++)
+				{
+					if (i1 == tempVec.Length - 1)
+					{
+						builder.Append(algs[i1]);
+					}
+					else
+					{
+						builder.Append(algs[i1]).Append("; ");
+					}
+				}
+				string temp2 = builder.ToString(); // Get string from StringBuilder
+
+				textBox_Algs.Text = "";
+				textBox_Algs.Text = temp2;
+			}
+			else
+			{
+
+			}
+		}
+
+		private void btn_SHA_Click(object sender, EventArgs e)
+		{
+			SHA f1 = new SHA();
+			f1.Show();
+		}
+
+		private void btn_KDF108_Click(object sender, EventArgs e)
+		{
+			KDF108 f1 = new KDF108();
+			f1.ShowDialog();
+		}
+
+		private void btn_CompVL_Click(object sender, EventArgs e)
 		{
 
 		}

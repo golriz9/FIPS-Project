@@ -281,7 +281,7 @@ namespace FIPSGuideTool
 			comboBox9.SelectedItem  = SelfTestsSecurityLevel;
 			comboBox10.SelectedItem = DesignAssuranceSecurityLevel;
 			comboBox11.SelectedItem = MitigationAttacksSecurityLevel;
-			comboBox12.SelectedItem = ExComponents_YesNo;
+			comboBox_ExcComponents.SelectedItem = ExComponents_YesNo;
 			comboBox_CoolingSys.SelectedItem = CoolingSys_YesNo;
 			//txt_ExComponents.Text   = TE010803_ExComponents;
 			txt_CoolingSys.Text     = TE010803_CoolingSys;
@@ -729,7 +729,7 @@ namespace FIPSGuideTool
 					TE010803_CoolingSys = txt_CoolingSys.Text;
 					Properties.Settings.Default.TE010803_CoolingSys = TE010803_CoolingSys;
 
-					ExComponents_YesNo = comboBox12.SelectedItem.ToString();
+					ExComponents_YesNo = comboBox_ExcComponents.SelectedItem.ToString();
 					Properties.Settings.Default.ExComponents_YesNo = ExComponents_YesNo;
 
 					CoolingSys_YesNo = comboBox_CoolingSys.SelectedItem.ToString();
@@ -854,15 +854,15 @@ namespace FIPSGuideTool
 
 		}
 
-		private void comboBox12_DropDownClosed(object sender, EventArgs e)
+		private void comboBox_ExcComponents_DropDownClosed(object sender, EventArgs e)
 		{
-			if (comboBox12.SelectedItem.ToString() == "Yes")
+			if (comboBox_ExcComponents.SelectedItem.ToString() == "Yes")
 			{
 				ExcludedComponents f1 = new ExcludedComponents();
 				f1.ShowDialog();
 
 			}
-			else if (comboBox12.SelectedItem.ToString() == "No")
+			else if (comboBox_ExcComponents.SelectedItem.ToString() == "No")
 			{
 				ExcludedComponents f1 = new ExcludedComponents();
 				TE010808_excld = "N/A";
@@ -907,6 +907,34 @@ namespace FIPSGuideTool
 				txt_CoolingSys.Text = "N/A";
 				CoolingSys_YesNo = "No";
 			}
+		}
+
+		private void btn_TE010812_Click(object sender, EventArgs e)
+		{
+			textBoxTE010808.Visible = false;
+			textBoxTE010901.Visible = false;
+			textBoxTE010812.Visible = true;
+			textBoxTE010802.Visible = false;
+			SpecificationsAssertions f1 = new SpecificationsAssertions();
+			f1.populateSpecLevel1234();
+
+			textBoxTE010812.Text = SpecificationsAssertions.TE010812_txt;
+		}
+
+		private void comboBox_ExcComponents_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			//if (comboBox_ExcComponents.SelectedItem.ToString() == "Yes")
+			//{
+			//	ExcludedComponents f1 = new ExcludedComponents();
+			//	f1.ShowDialog();
+			//}
+			//else if (comboBox_ExcComponents.SelectedItem.ToString() == "No")
+			//{
+			//	txt_CoolingSys.Visible = false;
+			//	label27.Visible = false;
+			//	txt_CoolingSys.Text = "N/A";
+			//	CoolingSys_YesNo = "No";
+			//}
 		}
 	}
 }

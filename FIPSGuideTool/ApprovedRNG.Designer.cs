@@ -51,6 +51,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "ApprovedRNG";
 			this.Text = "Approved RNG Functions";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ApprovedRNG_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ApprovedRNG_FormClosed);
 			this.Load += new System.EventHandler(this.ApprovedRNG_Load);
 			this.ResumeLayout(false);

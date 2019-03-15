@@ -29,19 +29,32 @@ namespace FIPSGuideTool
 
 		private void KeyProtStratg_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				KeyManagement.CSPProtcStratg = txtBox_CSPProtcStratg.Text;
+				CSPProtcStratg = txtBox_CSPProtcStratg.Text;
+
+				Properties.Settings.Default.CSPProtcStratg = CSPProtcStratg;
+				Properties.Settings.Default.Save();
+
+				KeyManagementAssertions f1 = new KeyManagementAssertions();
+				f1.populateKeyManagementLevel1234();
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 
 		private void KeyProtStratg_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			KeyManagement.CSPProtcStratg = txtBox_CSPProtcStratg.Text;
-			CSPProtcStratg = txtBox_CSPProtcStratg.Text;
-		
-			Properties.Settings.Default.CSPProtcStratg = CSPProtcStratg;
-			Properties.Settings.Default.Save();
 
-			KeyManagementAssertions f1 = new KeyManagementAssertions();
-			f1.populateKeyManagementLevel1234();
 		}
 	}
 }

@@ -32,6 +32,7 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.textBoxTE071301 = new System.Windows.Forms.TextBox();
 			this.btn_refresh = new System.Windows.Forms.Button();
+			this.panel2 = new System.Windows.Forms.Panel();
 			this.comboBox_FullEntropyOutput = new System.Windows.Forms.ComboBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.txtBox_MaxEntropy = new System.Windows.Forms.TextBox();
@@ -42,13 +43,12 @@
 			this.label12 = new System.Windows.Forms.Label();
 			this.txtBox_DRBGOutputLength = new System.Windows.Forms.TextBox();
 			this.label13 = new System.Windows.Forms.Label();
+			this.btn_TE071301 = new System.Windows.Forms.Button();
+			this.panel3 = new System.Windows.Forms.Panel();
 			this.comboBox_DerivFunc = new System.Windows.Forms.ComboBox();
 			this.comboBox_DRBG_Type = new System.Windows.Forms.ComboBox();
 			this.txtBox_AlgDRBGDepends = new System.Windows.Forms.TextBox();
-			this.panel2 = new System.Windows.Forms.Panel();
 			this.txtBox_NoBitsPersonalStr = new System.Windows.Forms.TextBox();
-			this.btn_TE071301 = new System.Windows.Forms.Button();
-			this.panel3 = new System.Windows.Forms.Panel();
 			this.txtBox_NoBitsAdditInput = new System.Windows.Forms.TextBox();
 			this.txtBox_NoBitsNonce = new System.Windows.Forms.TextBox();
 			this.txtBox_NoBitsEntropyInput = new System.Windows.Forms.TextBox();
@@ -111,18 +111,40 @@
 			this.btn_refresh.UseWaitCursor = true;
 			this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
 			// 
+			// panel2
+			// 
+			this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel2.BackColor = System.Drawing.Color.PaleGoldenrod;
+			this.panel2.Controls.Add(this.comboBox_FullEntropyOutput);
+			this.panel2.Controls.Add(this.label9);
+			this.panel2.Controls.Add(this.txtBox_MaxEntropy);
+			this.panel2.Controls.Add(this.label10);
+			this.panel2.Controls.Add(this.txtBox_MinEntropy);
+			this.panel2.Controls.Add(this.label11);
+			this.panel2.Controls.Add(this.comboBox_Standard);
+			this.panel2.Controls.Add(this.label12);
+			this.panel2.Controls.Add(this.txtBox_DRBGOutputLength);
+			this.panel2.Controls.Add(this.label13);
+			this.panel2.Location = new System.Drawing.Point(1035, 12);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(877, 498);
+			this.panel2.TabIndex = 91;
+			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+			// 
 			// comboBox_FullEntropyOutput
 			// 
 			this.comboBox_FullEntropyOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_FullEntropyOutput.FormattingEnabled = true;
 			this.comboBox_FullEntropyOutput.Items.AddRange(new object[] {
             " ",
-            "Fully",
-            "Partially"});
+            "fully",
+            "partially"});
 			this.comboBox_FullEntropyOutput.Location = new System.Drawing.Point(443, 431);
 			this.comboBox_FullEntropyOutput.Name = "comboBox_FullEntropyOutput";
 			this.comboBox_FullEntropyOutput.Size = new System.Drawing.Size(208, 37);
 			this.comboBox_FullEntropyOutput.TabIndex = 49;
+			this.comboBox_FullEntropyOutput.SelectedIndexChanged += new System.EventHandler(this.comboBox_FullEntropyOutput_SelectedIndexChanged);
 			// 
 			// label9
 			// 
@@ -178,12 +200,13 @@
 			this.comboBox_Standard.FormattingEnabled = true;
 			this.comboBox_Standard.Items.AddRange(new object[] {
             " ",
-            "Per IG 7.15 (using statistical analysis from NIST SP 800-90B)",
-            "Per NIST SP 800-90B"});
+            "IG 7.15 (using statistical analysis from NIST SP 800-90B)",
+            "NIST SP 800-90B"});
 			this.comboBox_Standard.Location = new System.Drawing.Point(443, 127);
 			this.comboBox_Standard.Name = "comboBox_Standard";
 			this.comboBox_Standard.Size = new System.Drawing.Size(388, 37);
 			this.comboBox_Standard.TabIndex = 46;
+			this.comboBox_Standard.SelectedIndexChanged += new System.EventHandler(this.comboBox_Standard_SelectedIndexChanged);
 			// 
 			// label12
 			// 
@@ -213,72 +236,6 @@
 			this.label13.Size = new System.Drawing.Size(243, 29);
 			this.label13.TabIndex = 44;
 			this.label13.Text = "Full entropy output?\r\n";
-			// 
-			// comboBox_DerivFunc
-			// 
-			this.comboBox_DerivFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_DerivFunc.FormattingEnabled = true;
-			this.comboBox_DerivFunc.Items.AddRange(new object[] {
-            " ",
-            "Yes",
-            "No"});
-			this.comboBox_DerivFunc.Location = new System.Drawing.Point(682, 431);
-			this.comboBox_DerivFunc.Name = "comboBox_DerivFunc";
-			this.comboBox_DerivFunc.Size = new System.Drawing.Size(155, 37);
-			this.comboBox_DerivFunc.TabIndex = 34;
-			// 
-			// comboBox_DRBG_Type
-			// 
-			this.comboBox_DRBG_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_DRBG_Type.FormattingEnabled = true;
-			this.comboBox_DRBG_Type.Items.AddRange(new object[] {
-            " ",
-            "CTR",
-            "HASH",
-            "HMAC"});
-			this.comboBox_DRBG_Type.Location = new System.Drawing.Point(682, 382);
-			this.comboBox_DRBG_Type.Name = "comboBox_DRBG_Type";
-			this.comboBox_DRBG_Type.Size = new System.Drawing.Size(155, 37);
-			this.comboBox_DRBG_Type.TabIndex = 33;
-			// 
-			// txtBox_AlgDRBGDepends
-			// 
-			this.txtBox_AlgDRBGDepends.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBox_AlgDRBGDepends.Location = new System.Drawing.Point(682, 322);
-			this.txtBox_AlgDRBGDepends.Multiline = true;
-			this.txtBox_AlgDRBGDepends.Name = "txtBox_AlgDRBGDepends";
-			this.txtBox_AlgDRBGDepends.Size = new System.Drawing.Size(155, 48);
-			this.txtBox_AlgDRBGDepends.TabIndex = 32;
-			// 
-			// panel2
-			// 
-			this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.panel2.BackColor = System.Drawing.Color.PaleGoldenrod;
-			this.panel2.Controls.Add(this.comboBox_FullEntropyOutput);
-			this.panel2.Controls.Add(this.label9);
-			this.panel2.Controls.Add(this.txtBox_MaxEntropy);
-			this.panel2.Controls.Add(this.label10);
-			this.panel2.Controls.Add(this.txtBox_MinEntropy);
-			this.panel2.Controls.Add(this.label11);
-			this.panel2.Controls.Add(this.comboBox_Standard);
-			this.panel2.Controls.Add(this.label12);
-			this.panel2.Controls.Add(this.txtBox_DRBGOutputLength);
-			this.panel2.Controls.Add(this.label13);
-			this.panel2.Location = new System.Drawing.Point(1035, 12);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(877, 498);
-			this.panel2.TabIndex = 91;
-			this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-			// 
-			// txtBox_NoBitsPersonalStr
-			// 
-			this.txtBox_NoBitsPersonalStr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBox_NoBitsPersonalStr.Location = new System.Drawing.Point(682, 262);
-			this.txtBox_NoBitsPersonalStr.Multiline = true;
-			this.txtBox_NoBitsPersonalStr.Name = "txtBox_NoBitsPersonalStr";
-			this.txtBox_NoBitsPersonalStr.Size = new System.Drawing.Size(155, 48);
-			this.txtBox_NoBitsPersonalStr.TabIndex = 31;
 			// 
 			// btn_TE071301
 			// 
@@ -322,6 +279,53 @@
 			this.panel3.TabIndex = 90;
 			this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
 			// 
+			// comboBox_DerivFunc
+			// 
+			this.comboBox_DerivFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_DerivFunc.FormattingEnabled = true;
+			this.comboBox_DerivFunc.Items.AddRange(new object[] {
+            " ",
+            "with a derivation function",
+            "no derivation function"});
+			this.comboBox_DerivFunc.Location = new System.Drawing.Point(682, 431);
+			this.comboBox_DerivFunc.Name = "comboBox_DerivFunc";
+			this.comboBox_DerivFunc.Size = new System.Drawing.Size(155, 37);
+			this.comboBox_DerivFunc.TabIndex = 34;
+			this.comboBox_DerivFunc.SelectedIndexChanged += new System.EventHandler(this.comboBox_DerivFunc_SelectedIndexChanged);
+			// 
+			// comboBox_DRBG_Type
+			// 
+			this.comboBox_DRBG_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_DRBG_Type.FormattingEnabled = true;
+			this.comboBox_DRBG_Type.Items.AddRange(new object[] {
+            " ",
+            "CTR",
+            "HASH",
+            "HMAC"});
+			this.comboBox_DRBG_Type.Location = new System.Drawing.Point(682, 382);
+			this.comboBox_DRBG_Type.Name = "comboBox_DRBG_Type";
+			this.comboBox_DRBG_Type.Size = new System.Drawing.Size(155, 37);
+			this.comboBox_DRBG_Type.TabIndex = 33;
+			this.comboBox_DRBG_Type.SelectedIndexChanged += new System.EventHandler(this.comboBox_DRBG_Type_SelectedIndexChanged);
+			// 
+			// txtBox_AlgDRBGDepends
+			// 
+			this.txtBox_AlgDRBGDepends.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBox_AlgDRBGDepends.Location = new System.Drawing.Point(682, 322);
+			this.txtBox_AlgDRBGDepends.Multiline = true;
+			this.txtBox_AlgDRBGDepends.Name = "txtBox_AlgDRBGDepends";
+			this.txtBox_AlgDRBGDepends.Size = new System.Drawing.Size(155, 48);
+			this.txtBox_AlgDRBGDepends.TabIndex = 32;
+			// 
+			// txtBox_NoBitsPersonalStr
+			// 
+			this.txtBox_NoBitsPersonalStr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtBox_NoBitsPersonalStr.Location = new System.Drawing.Point(682, 262);
+			this.txtBox_NoBitsPersonalStr.Multiline = true;
+			this.txtBox_NoBitsPersonalStr.Name = "txtBox_NoBitsPersonalStr";
+			this.txtBox_NoBitsPersonalStr.Size = new System.Drawing.Size(155, 48);
+			this.txtBox_NoBitsPersonalStr.TabIndex = 31;
+			// 
 			// txtBox_NoBitsAdditInput
 			// 
 			this.txtBox_NoBitsAdditInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,9 +359,9 @@
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label8.Location = new System.Drawing.Point(24, 420);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(318, 58);
+			this.label8.Size = new System.Drawing.Size(236, 29);
 			this.label8.TabIndex = 22;
-			this.label8.Text = "With a derivation function?\r\n\r\n";
+			this.label8.Text = "Derivation function:";
 			// 
 			// label7
 			// 

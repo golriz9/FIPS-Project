@@ -30,11 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Algorithms));
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-			this.btn_SHA = new System.Windows.Forms.Button();
-			this.btn_SHS = new System.Windows.Forms.Button();
-			this.textBox_certSHA3 = new System.Windows.Forms.TextBox();
-			this.textBox_certSHS = new System.Windows.Forms.TextBox();
-			this.checkBox_SHS = new System.Windows.Forms.CheckBox();
+			this.panel1 = new System.Windows.Forms.Panel();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.btn_CompVL = new System.Windows.Forms.Button();
 			this.btn_KDF135 = new System.Windows.Forms.Button();
@@ -48,18 +44,6 @@
 			this.textBox_certKDF108 = new System.Windows.Forms.TextBox();
 			this.checkBox_KDF108 = new System.Windows.Forms.CheckBox();
 			this.checkBox_KDF135 = new System.Windows.Forms.CheckBox();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.checkBox_SHA3 = new System.Windows.Forms.CheckBox();
-			this.btn_XTS = new System.Windows.Forms.Button();
-			this.btn_GCM = new System.Windows.Forms.Button();
-			this.textBox_certGCM = new System.Windows.Forms.TextBox();
-			this.checkBox_XTS = new System.Windows.Forms.CheckBox();
-			this.checkBox_GCM = new System.Windows.Forms.CheckBox();
-			this.btn_AES = new System.Windows.Forms.Button();
-			this.textBox_certAES = new System.Windows.Forms.TextBox();
-			this.textBox_certDRBG = new System.Windows.Forms.TextBox();
-			this.checkBox_DRBG = new System.Windows.Forms.CheckBox();
-			this.textBox_certXTS = new System.Windows.Forms.TextBox();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.btn_ECC = new System.Windows.Forms.Button();
 			this.btn_FFC = new System.Windows.Forms.Button();
@@ -67,11 +51,27 @@
 			this.textBox_certKASFFC = new System.Windows.Forms.TextBox();
 			this.checkBox_KASECC = new System.Windows.Forms.CheckBox();
 			this.checkBox_KASFFC = new System.Windows.Forms.CheckBox();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.btn_SHA = new System.Windows.Forms.Button();
+			this.btn_SHS = new System.Windows.Forms.Button();
+			this.textBox_certSHA3 = new System.Windows.Forms.TextBox();
+			this.textBox_certSHS = new System.Windows.Forms.TextBox();
+			this.checkBox_SHA3 = new System.Windows.Forms.CheckBox();
+			this.checkBox_SHS = new System.Windows.Forms.CheckBox();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.btn_DRBG = new System.Windows.Forms.Button();
-			this.checkBox_AES = new System.Windows.Forms.CheckBox();
-			this.panel1 = new System.Windows.Forms.Panel();
+			this.textBox_certDRBG = new System.Windows.Forms.TextBox();
+			this.checkBox_DRBG = new System.Windows.Forms.CheckBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btn_XTS = new System.Windows.Forms.Button();
+			this.btn_GCM = new System.Windows.Forms.Button();
+			this.textBox_certXTS = new System.Windows.Forms.TextBox();
+			this.textBox_certGCM = new System.Windows.Forms.TextBox();
+			this.checkBox_XTS = new System.Windows.Forms.CheckBox();
+			this.checkBox_GCM = new System.Windows.Forms.CheckBox();
+			this.btn_AES = new System.Windows.Forms.Button();
+			this.textBox_certAES = new System.Windows.Forms.TextBox();
+			this.checkBox_AES = new System.Windows.Forms.CheckBox();
 			this.textBox_certTDES = new System.Windows.Forms.TextBox();
 			this.btn_TDES = new System.Windows.Forms.Button();
 			this.checkBox_TDES = new System.Windows.Forms.CheckBox();
@@ -100,12 +100,13 @@
 			this.textBox_Algs = new System.Windows.Forms.TextBox();
 			this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
 			this.txtBox_OtherAlgs = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.flowLayoutPanel1.SuspendLayout();
-			this.groupBox5.SuspendLayout();
-			this.groupBox2.SuspendLayout();
-			this.groupBox3.SuspendLayout();
-			this.groupBox4.SuspendLayout();
 			this.panel1.SuspendLayout();
+			this.groupBox5.SuspendLayout();
+			this.groupBox3.SuspendLayout();
+			this.groupBox2.SuspendLayout();
+			this.groupBox4.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.groupBox7.SuspendLayout();
 			this.groupBox6.SuspendLayout();
@@ -125,60 +126,22 @@
 			this.flowLayoutPanel1.Size = new System.Drawing.Size(2276, 1449);
 			this.flowLayoutPanel1.TabIndex = 0;
 			// 
-			// btn_SHA
+			// panel1
 			// 
-			this.btn_SHA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_SHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_SHA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_SHA.Location = new System.Drawing.Point(798, 89);
-			this.btn_SHA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_SHA.Name = "btn_SHA";
-			this.btn_SHA.Size = new System.Drawing.Size(196, 58);
-			this.btn_SHA.TabIndex = 162;
-			this.btn_SHA.Text = "SHA-3";
-			this.btn_SHA.UseVisualStyleBackColor = false;
-			// 
-			// btn_SHS
-			// 
-			this.btn_SHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_SHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_SHS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_SHS.Location = new System.Drawing.Point(798, 32);
-			this.btn_SHS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_SHS.Name = "btn_SHS";
-			this.btn_SHS.Size = new System.Drawing.Size(196, 58);
-			this.btn_SHS.TabIndex = 161;
-			this.btn_SHS.Text = "SHS";
-			this.btn_SHS.UseVisualStyleBackColor = false;
-			// 
-			// textBox_certSHA3
-			// 
-			this.textBox_certSHA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox_certSHA3.Location = new System.Drawing.Point(25, 100);
-			this.textBox_certSHA3.Multiline = true;
-			this.textBox_certSHA3.Name = "textBox_certSHA3";
-			this.textBox_certSHA3.Size = new System.Drawing.Size(197, 38);
-			this.textBox_certSHA3.TabIndex = 164;
-			// 
-			// textBox_certSHS
-			// 
-			this.textBox_certSHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox_certSHS.Location = new System.Drawing.Point(25, 44);
-			this.textBox_certSHS.Multiline = true;
-			this.textBox_certSHS.Name = "textBox_certSHS";
-			this.textBox_certSHS.Size = new System.Drawing.Size(197, 38);
-			this.textBox_certSHS.TabIndex = 163;
-			// 
-			// checkBox_SHS
-			// 
-			this.checkBox_SHS.AutoSize = true;
-			this.checkBox_SHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBox_SHS.Location = new System.Drawing.Point(252, 49);
-			this.checkBox_SHS.Name = "checkBox_SHS";
-			this.checkBox_SHS.Size = new System.Drawing.Size(91, 33);
-			this.checkBox_SHS.TabIndex = 159;
-			this.checkBox_SHS.Text = "SHS";
-			this.checkBox_SHS.UseVisualStyleBackColor = true;
+			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
+			this.panel1.Controls.Add(this.groupBox5);
+			this.panel1.Controls.Add(this.groupBox3);
+			this.panel1.Controls.Add(this.groupBox2);
+			this.panel1.Controls.Add(this.groupBox4);
+			this.panel1.Controls.Add(this.groupBox1);
+			this.panel1.Controls.Add(this.groupBox7);
+			this.panel1.Controls.Add(this.groupBox6);
+			this.panel1.Location = new System.Drawing.Point(3, 3);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(2261, 845);
+			this.panel1.TabIndex = 148;
 			// 
 			// groupBox5
 			// 
@@ -215,6 +178,7 @@
 			this.btn_CompVL.TabIndex = 205;
 			this.btn_CompVL.Text = "CVL";
 			this.btn_CompVL.UseVisualStyleBackColor = false;
+			this.btn_CompVL.Click += new System.EventHandler(this.btn_CompVL_Click);
 			// 
 			// btn_KDF135
 			// 
@@ -228,6 +192,7 @@
 			this.btn_KDF135.TabIndex = 204;
 			this.btn_KDF135.Text = "KDF 135";
 			this.btn_KDF135.UseVisualStyleBackColor = false;
+			this.btn_KDF135.Click += new System.EventHandler(this.btn_KDF135_Click);
 			// 
 			// textBox_certCVL
 			// 
@@ -259,6 +224,7 @@
 			this.btn_KeyWrap.TabIndex = 198;
 			this.btn_KeyWrap.Text = "Key Wrap";
 			this.btn_KeyWrap.UseVisualStyleBackColor = false;
+			this.btn_KeyWrap.Click += new System.EventHandler(this.btn_KeyWrap_Click);
 			// 
 			// checkBox_CVL
 			// 
@@ -270,6 +236,7 @@
 			this.checkBox_CVL.TabIndex = 200;
 			this.checkBox_CVL.Text = "Component Validation List";
 			this.checkBox_CVL.UseVisualStyleBackColor = true;
+			this.checkBox_CVL.CheckedChanged += new System.EventHandler(this.checkBox_CVL_CheckedChanged);
 			// 
 			// checkBox_KeyWrap
 			// 
@@ -281,6 +248,7 @@
 			this.checkBox_KeyWrap.TabIndex = 199;
 			this.checkBox_KeyWrap.Text = "Key Wrap";
 			this.checkBox_KeyWrap.UseVisualStyleBackColor = true;
+			this.checkBox_KeyWrap.CheckedChanged += new System.EventHandler(this.checkBox_KeyWrap_CheckedChanged);
 			// 
 			// btn_KDF108
 			// 
@@ -294,6 +262,7 @@
 			this.btn_KDF108.TabIndex = 195;
 			this.btn_KDF108.Text = "KDF 108";
 			this.btn_KDF108.UseVisualStyleBackColor = false;
+			this.btn_KDF108.Click += new System.EventHandler(this.btn_KDF108_Click);
 			// 
 			// textBox_certKDF135
 			// 
@@ -323,6 +292,7 @@
 			this.checkBox_KDF108.TabIndex = 193;
 			this.checkBox_KDF108.Text = "KDF (SP800-108)";
 			this.checkBox_KDF108.UseVisualStyleBackColor = true;
+			this.checkBox_KDF108.CheckedChanged += new System.EventHandler(this.checkBox_KDF108_CheckedChanged);
 			// 
 			// checkBox_KDF135
 			// 
@@ -334,142 +304,7 @@
 			this.checkBox_KDF135.TabIndex = 194;
 			this.checkBox_KDF135.Text = "KDF (SP800-135)";
 			this.checkBox_KDF135.UseVisualStyleBackColor = true;
-			// 
-			// groupBox2
-			// 
-			this.groupBox2.BackColor = System.Drawing.Color.PaleGoldenrod;
-			this.groupBox2.Controls.Add(this.btn_SHA);
-			this.groupBox2.Controls.Add(this.btn_SHS);
-			this.groupBox2.Controls.Add(this.textBox_certSHA3);
-			this.groupBox2.Controls.Add(this.textBox_certSHS);
-			this.groupBox2.Controls.Add(this.checkBox_SHA3);
-			this.groupBox2.Controls.Add(this.checkBox_SHS);
-			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox2.Location = new System.Drawing.Point(23, 321);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(1020, 155);
-			this.groupBox2.TabIndex = 195;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Integrity";
-			// 
-			// checkBox_SHA3
-			// 
-			this.checkBox_SHA3.AutoSize = true;
-			this.checkBox_SHA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBox_SHA3.Location = new System.Drawing.Point(252, 102);
-			this.checkBox_SHA3.Name = "checkBox_SHA3";
-			this.checkBox_SHA3.Size = new System.Drawing.Size(113, 33);
-			this.checkBox_SHA3.TabIndex = 160;
-			this.checkBox_SHA3.Text = "SHA-3";
-			this.checkBox_SHA3.UseVisualStyleBackColor = true;
-			// 
-			// btn_XTS
-			// 
-			this.btn_XTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_XTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_XTS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_XTS.Location = new System.Drawing.Point(798, 211);
-			this.btn_XTS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_XTS.Name = "btn_XTS";
-			this.btn_XTS.Size = new System.Drawing.Size(196, 58);
-			this.btn_XTS.TabIndex = 189;
-			this.btn_XTS.Text = "XTS";
-			this.btn_XTS.UseVisualStyleBackColor = false;
-			// 
-			// btn_GCM
-			// 
-			this.btn_GCM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_GCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_GCM.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_GCM.Location = new System.Drawing.Point(798, 152);
-			this.btn_GCM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_GCM.Name = "btn_GCM";
-			this.btn_GCM.Size = new System.Drawing.Size(196, 58);
-			this.btn_GCM.TabIndex = 188;
-			this.btn_GCM.Text = "GCM";
-			this.btn_GCM.UseVisualStyleBackColor = false;
-			// 
-			// textBox_certGCM
-			// 
-			this.textBox_certGCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox_certGCM.Location = new System.Drawing.Point(25, 162);
-			this.textBox_certGCM.Multiline = true;
-			this.textBox_certGCM.Name = "textBox_certGCM";
-			this.textBox_certGCM.Size = new System.Drawing.Size(197, 38);
-			this.textBox_certGCM.TabIndex = 190;
-			// 
-			// checkBox_XTS
-			// 
-			this.checkBox_XTS.AutoSize = true;
-			this.checkBox_XTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBox_XTS.Location = new System.Drawing.Point(252, 224);
-			this.checkBox_XTS.Name = "checkBox_XTS";
-			this.checkBox_XTS.Size = new System.Drawing.Size(91, 33);
-			this.checkBox_XTS.TabIndex = 187;
-			this.checkBox_XTS.Text = "XTS";
-			this.checkBox_XTS.UseVisualStyleBackColor = true;
-			// 
-			// checkBox_GCM
-			// 
-			this.checkBox_GCM.AutoSize = true;
-			this.checkBox_GCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBox_GCM.Location = new System.Drawing.Point(252, 165);
-			this.checkBox_GCM.Name = "checkBox_GCM";
-			this.checkBox_GCM.Size = new System.Drawing.Size(97, 33);
-			this.checkBox_GCM.TabIndex = 186;
-			this.checkBox_GCM.Text = "GCM";
-			this.checkBox_GCM.UseVisualStyleBackColor = true;
-			// 
-			// btn_AES
-			// 
-			this.btn_AES.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_AES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_AES.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_AES.Location = new System.Drawing.Point(798, 96);
-			this.btn_AES.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_AES.Name = "btn_AES";
-			this.btn_AES.Size = new System.Drawing.Size(196, 58);
-			this.btn_AES.TabIndex = 161;
-			this.btn_AES.Text = "AES";
-			this.btn_AES.UseVisualStyleBackColor = false;
-			// 
-			// textBox_certAES
-			// 
-			this.textBox_certAES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox_certAES.Location = new System.Drawing.Point(25, 106);
-			this.textBox_certAES.Multiline = true;
-			this.textBox_certAES.Name = "textBox_certAES";
-			this.textBox_certAES.Size = new System.Drawing.Size(197, 38);
-			this.textBox_certAES.TabIndex = 162;
-			// 
-			// textBox_certDRBG
-			// 
-			this.textBox_certDRBG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox_certDRBG.Location = new System.Drawing.Point(25, 42);
-			this.textBox_certDRBG.Multiline = true;
-			this.textBox_certDRBG.Name = "textBox_certDRBG";
-			this.textBox_certDRBG.Size = new System.Drawing.Size(197, 38);
-			this.textBox_certDRBG.TabIndex = 162;
-			// 
-			// checkBox_DRBG
-			// 
-			this.checkBox_DRBG.AutoSize = true;
-			this.checkBox_DRBG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBox_DRBG.Location = new System.Drawing.Point(252, 44);
-			this.checkBox_DRBG.Name = "checkBox_DRBG";
-			this.checkBox_DRBG.Size = new System.Drawing.Size(111, 33);
-			this.checkBox_DRBG.TabIndex = 160;
-			this.checkBox_DRBG.Text = "DRBG";
-			this.checkBox_DRBG.UseVisualStyleBackColor = true;
-			// 
-			// textBox_certXTS
-			// 
-			this.textBox_certXTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox_certXTS.Location = new System.Drawing.Point(25, 221);
-			this.textBox_certXTS.Multiline = true;
-			this.textBox_certXTS.Name = "textBox_certXTS";
-			this.textBox_certXTS.Size = new System.Drawing.Size(197, 38);
-			this.textBox_certXTS.TabIndex = 191;
+			this.checkBox_KDF135.CheckedChanged += new System.EventHandler(this.checkBox_KDF135_CheckedChanged);
 			// 
 			// groupBox3
 			// 
@@ -500,6 +335,7 @@
 			this.btn_ECC.TabIndex = 187;
 			this.btn_ECC.Text = "KAS ECC";
 			this.btn_ECC.UseVisualStyleBackColor = false;
+			this.btn_ECC.Click += new System.EventHandler(this.btn_ECC_Click);
 			// 
 			// btn_FFC
 			// 
@@ -513,6 +349,7 @@
 			this.btn_FFC.TabIndex = 186;
 			this.btn_FFC.Text = "KAS FFC";
 			this.btn_FFC.UseVisualStyleBackColor = false;
+			this.btn_FFC.Click += new System.EventHandler(this.btn_FFC_Click);
 			// 
 			// textBox_certKASECC
 			// 
@@ -542,6 +379,7 @@
 			this.checkBox_KASECC.TabIndex = 185;
 			this.checkBox_KASECC.Text = "KAS ECC";
 			this.checkBox_KASECC.UseVisualStyleBackColor = true;
+			this.checkBox_KASECC.CheckedChanged += new System.EventHandler(this.checkBox_KASECC_CheckedChanged);
 			// 
 			// checkBox_KASFFC
 			// 
@@ -553,6 +391,94 @@
 			this.checkBox_KASFFC.TabIndex = 184;
 			this.checkBox_KASFFC.Text = "KAS FFC";
 			this.checkBox_KASFFC.UseVisualStyleBackColor = true;
+			this.checkBox_KASFFC.CheckedChanged += new System.EventHandler(this.checkBox_KASFFC_CheckedChanged);
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.BackColor = System.Drawing.Color.PaleGoldenrod;
+			this.groupBox2.Controls.Add(this.btn_SHA);
+			this.groupBox2.Controls.Add(this.btn_SHS);
+			this.groupBox2.Controls.Add(this.textBox_certSHA3);
+			this.groupBox2.Controls.Add(this.textBox_certSHS);
+			this.groupBox2.Controls.Add(this.checkBox_SHA3);
+			this.groupBox2.Controls.Add(this.checkBox_SHS);
+			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.groupBox2.Location = new System.Drawing.Point(23, 321);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(1020, 155);
+			this.groupBox2.TabIndex = 195;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Integrity";
+			// 
+			// btn_SHA
+			// 
+			this.btn_SHA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_SHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_SHA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_SHA.Location = new System.Drawing.Point(798, 89);
+			this.btn_SHA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_SHA.Name = "btn_SHA";
+			this.btn_SHA.Size = new System.Drawing.Size(196, 58);
+			this.btn_SHA.TabIndex = 162;
+			this.btn_SHA.Text = "SHA-3";
+			this.btn_SHA.UseVisualStyleBackColor = false;
+			this.btn_SHA.Click += new System.EventHandler(this.btn_SHA_Click);
+			// 
+			// btn_SHS
+			// 
+			this.btn_SHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_SHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_SHS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_SHS.Location = new System.Drawing.Point(798, 32);
+			this.btn_SHS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_SHS.Name = "btn_SHS";
+			this.btn_SHS.Size = new System.Drawing.Size(196, 58);
+			this.btn_SHS.TabIndex = 161;
+			this.btn_SHS.Text = "SHS";
+			this.btn_SHS.UseVisualStyleBackColor = false;
+			this.btn_SHS.Click += new System.EventHandler(this.btn_SHS_Click);
+			// 
+			// textBox_certSHA3
+			// 
+			this.textBox_certSHA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox_certSHA3.Location = new System.Drawing.Point(25, 100);
+			this.textBox_certSHA3.Multiline = true;
+			this.textBox_certSHA3.Name = "textBox_certSHA3";
+			this.textBox_certSHA3.Size = new System.Drawing.Size(197, 38);
+			this.textBox_certSHA3.TabIndex = 164;
+			// 
+			// textBox_certSHS
+			// 
+			this.textBox_certSHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox_certSHS.Location = new System.Drawing.Point(25, 44);
+			this.textBox_certSHS.Multiline = true;
+			this.textBox_certSHS.Name = "textBox_certSHS";
+			this.textBox_certSHS.Size = new System.Drawing.Size(197, 38);
+			this.textBox_certSHS.TabIndex = 163;
+			// 
+			// checkBox_SHA3
+			// 
+			this.checkBox_SHA3.AutoSize = true;
+			this.checkBox_SHA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBox_SHA3.Location = new System.Drawing.Point(252, 102);
+			this.checkBox_SHA3.Name = "checkBox_SHA3";
+			this.checkBox_SHA3.Size = new System.Drawing.Size(113, 33);
+			this.checkBox_SHA3.TabIndex = 160;
+			this.checkBox_SHA3.Text = "SHA-3";
+			this.checkBox_SHA3.UseVisualStyleBackColor = true;
+			this.checkBox_SHA3.CheckedChanged += new System.EventHandler(this.checkBox_SHA3_CheckedChanged);
+			// 
+			// checkBox_SHS
+			// 
+			this.checkBox_SHS.AutoSize = true;
+			this.checkBox_SHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBox_SHS.Location = new System.Drawing.Point(252, 49);
+			this.checkBox_SHS.Name = "checkBox_SHS";
+			this.checkBox_SHS.Size = new System.Drawing.Size(91, 33);
+			this.checkBox_SHS.TabIndex = 159;
+			this.checkBox_SHS.Text = "SHS";
+			this.checkBox_SHS.UseVisualStyleBackColor = true;
+			this.checkBox_SHS.CheckedChanged += new System.EventHandler(this.checkBox_SHS_CheckedChanged);
 			// 
 			// groupBox4
 			// 
@@ -580,34 +506,28 @@
 			this.btn_DRBG.TabIndex = 161;
 			this.btn_DRBG.Text = "DRBG";
 			this.btn_DRBG.UseVisualStyleBackColor = false;
+			this.btn_DRBG.Click += new System.EventHandler(this.btn_DRBG_Click);
 			// 
-			// checkBox_AES
+			// textBox_certDRBG
 			// 
-			this.checkBox_AES.AutoSize = true;
-			this.checkBox_AES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.checkBox_AES.Location = new System.Drawing.Point(252, 109);
-			this.checkBox_AES.Name = "checkBox_AES";
-			this.checkBox_AES.Size = new System.Drawing.Size(89, 33);
-			this.checkBox_AES.TabIndex = 160;
-			this.checkBox_AES.Text = "AES";
-			this.checkBox_AES.UseVisualStyleBackColor = true;
+			this.textBox_certDRBG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox_certDRBG.Location = new System.Drawing.Point(25, 42);
+			this.textBox_certDRBG.Multiline = true;
+			this.textBox_certDRBG.Name = "textBox_certDRBG";
+			this.textBox_certDRBG.Size = new System.Drawing.Size(197, 38);
+			this.textBox_certDRBG.TabIndex = 162;
 			// 
-			// panel1
+			// checkBox_DRBG
 			// 
-			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
-			this.panel1.Controls.Add(this.groupBox5);
-			this.panel1.Controls.Add(this.groupBox3);
-			this.panel1.Controls.Add(this.groupBox2);
-			this.panel1.Controls.Add(this.groupBox4);
-			this.panel1.Controls.Add(this.groupBox1);
-			this.panel1.Controls.Add(this.groupBox7);
-			this.panel1.Controls.Add(this.groupBox6);
-			this.panel1.Location = new System.Drawing.Point(3, 3);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(2261, 845);
-			this.panel1.TabIndex = 148;
+			this.checkBox_DRBG.AutoSize = true;
+			this.checkBox_DRBG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBox_DRBG.Location = new System.Drawing.Point(252, 44);
+			this.checkBox_DRBG.Name = "checkBox_DRBG";
+			this.checkBox_DRBG.Size = new System.Drawing.Size(111, 33);
+			this.checkBox_DRBG.TabIndex = 160;
+			this.checkBox_DRBG.Text = "DRBG";
+			this.checkBox_DRBG.UseVisualStyleBackColor = true;
+			this.checkBox_DRBG.CheckedChanged += new System.EventHandler(this.checkBox_DRBG_CheckedChanged);
 			// 
 			// groupBox1
 			// 
@@ -632,6 +552,111 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Encryption";
 			// 
+			// btn_XTS
+			// 
+			this.btn_XTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_XTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_XTS.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_XTS.Location = new System.Drawing.Point(798, 210);
+			this.btn_XTS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_XTS.Name = "btn_XTS";
+			this.btn_XTS.Size = new System.Drawing.Size(196, 58);
+			this.btn_XTS.TabIndex = 189;
+			this.btn_XTS.Text = "XTS";
+			this.btn_XTS.UseVisualStyleBackColor = false;
+			this.btn_XTS.Click += new System.EventHandler(this.btn_XTS_Click);
+			// 
+			// btn_GCM
+			// 
+			this.btn_GCM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_GCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_GCM.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_GCM.Location = new System.Drawing.Point(798, 152);
+			this.btn_GCM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_GCM.Name = "btn_GCM";
+			this.btn_GCM.Size = new System.Drawing.Size(196, 58);
+			this.btn_GCM.TabIndex = 188;
+			this.btn_GCM.Text = "GCM";
+			this.btn_GCM.UseVisualStyleBackColor = false;
+			this.btn_GCM.Click += new System.EventHandler(this.btn_GCM_Click);
+			// 
+			// textBox_certXTS
+			// 
+			this.textBox_certXTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox_certXTS.Location = new System.Drawing.Point(25, 221);
+			this.textBox_certXTS.Multiline = true;
+			this.textBox_certXTS.Name = "textBox_certXTS";
+			this.textBox_certXTS.Size = new System.Drawing.Size(197, 38);
+			this.textBox_certXTS.TabIndex = 191;
+			// 
+			// textBox_certGCM
+			// 
+			this.textBox_certGCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox_certGCM.Location = new System.Drawing.Point(25, 162);
+			this.textBox_certGCM.Multiline = true;
+			this.textBox_certGCM.Name = "textBox_certGCM";
+			this.textBox_certGCM.Size = new System.Drawing.Size(197, 38);
+			this.textBox_certGCM.TabIndex = 190;
+			// 
+			// checkBox_XTS
+			// 
+			this.checkBox_XTS.AutoSize = true;
+			this.checkBox_XTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBox_XTS.Location = new System.Drawing.Point(252, 224);
+			this.checkBox_XTS.Name = "checkBox_XTS";
+			this.checkBox_XTS.Size = new System.Drawing.Size(91, 33);
+			this.checkBox_XTS.TabIndex = 187;
+			this.checkBox_XTS.Text = "XTS";
+			this.checkBox_XTS.UseVisualStyleBackColor = true;
+			this.checkBox_XTS.CheckedChanged += new System.EventHandler(this.checkBox_XTS_CheckedChanged);
+			// 
+			// checkBox_GCM
+			// 
+			this.checkBox_GCM.AutoSize = true;
+			this.checkBox_GCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBox_GCM.Location = new System.Drawing.Point(252, 165);
+			this.checkBox_GCM.Name = "checkBox_GCM";
+			this.checkBox_GCM.Size = new System.Drawing.Size(97, 33);
+			this.checkBox_GCM.TabIndex = 186;
+			this.checkBox_GCM.Text = "GCM";
+			this.checkBox_GCM.UseVisualStyleBackColor = true;
+			this.checkBox_GCM.CheckedChanged += new System.EventHandler(this.checkBox_GCM_CheckedChanged);
+			// 
+			// btn_AES
+			// 
+			this.btn_AES.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_AES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_AES.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_AES.Location = new System.Drawing.Point(798, 96);
+			this.btn_AES.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_AES.Name = "btn_AES";
+			this.btn_AES.Size = new System.Drawing.Size(196, 58);
+			this.btn_AES.TabIndex = 161;
+			this.btn_AES.Text = "AES";
+			this.btn_AES.UseVisualStyleBackColor = false;
+			this.btn_AES.Click += new System.EventHandler(this.btn_AES_Click);
+			// 
+			// textBox_certAES
+			// 
+			this.textBox_certAES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox_certAES.Location = new System.Drawing.Point(25, 106);
+			this.textBox_certAES.Multiline = true;
+			this.textBox_certAES.Name = "textBox_certAES";
+			this.textBox_certAES.Size = new System.Drawing.Size(197, 38);
+			this.textBox_certAES.TabIndex = 162;
+			// 
+			// checkBox_AES
+			// 
+			this.checkBox_AES.AutoSize = true;
+			this.checkBox_AES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.checkBox_AES.Location = new System.Drawing.Point(252, 109);
+			this.checkBox_AES.Name = "checkBox_AES";
+			this.checkBox_AES.Size = new System.Drawing.Size(89, 33);
+			this.checkBox_AES.TabIndex = 160;
+			this.checkBox_AES.Text = "AES";
+			this.checkBox_AES.UseVisualStyleBackColor = true;
+			this.checkBox_AES.CheckedChanged += new System.EventHandler(this.checkBox_AES_CheckedChanged);
+			// 
 			// textBox_certTDES
 			// 
 			this.textBox_certTDES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -653,6 +678,7 @@
 			this.btn_TDES.TabIndex = 158;
 			this.btn_TDES.Text = "TDES";
 			this.btn_TDES.UseVisualStyleBackColor = false;
+			this.btn_TDES.Click += new System.EventHandler(this.btn_TDES_Click);
 			// 
 			// checkBox_TDES
 			// 
@@ -664,6 +690,7 @@
 			this.checkBox_TDES.TabIndex = 157;
 			this.checkBox_TDES.Text = "Triple-DES";
 			this.checkBox_TDES.UseVisualStyleBackColor = true;
+			this.checkBox_TDES.CheckedChanged += new System.EventHandler(this.checkBox_TDES_CheckedChanged);
 			// 
 			// groupBox7
 			// 
@@ -697,6 +724,7 @@
 			this.btn_RSA.TabIndex = 169;
 			this.btn_RSA.Text = "RSA";
 			this.btn_RSA.UseVisualStyleBackColor = false;
+			this.btn_RSA.Click += new System.EventHandler(this.btn_RSA_Click);
 			// 
 			// checkBox_ECDSA
 			// 
@@ -708,6 +736,7 @@
 			this.checkBox_ECDSA.TabIndex = 173;
 			this.checkBox_ECDSA.Text = "ECDSA";
 			this.checkBox_ECDSA.UseVisualStyleBackColor = true;
+			this.checkBox_ECDSA.CheckedChanged += new System.EventHandler(this.checkBox_ECDSA2_CheckedChanged);
 			// 
 			// btn_ECDSA
 			// 
@@ -721,6 +750,7 @@
 			this.btn_ECDSA.TabIndex = 168;
 			this.btn_ECDSA.Text = "ECDSA";
 			this.btn_ECDSA.UseVisualStyleBackColor = false;
+			this.btn_ECDSA.Click += new System.EventHandler(this.btn_ECDSA_Click);
 			// 
 			// btn_DSA
 			// 
@@ -734,6 +764,7 @@
 			this.btn_DSA.TabIndex = 167;
 			this.btn_DSA.Text = "DSA";
 			this.btn_DSA.UseVisualStyleBackColor = false;
+			this.btn_DSA.Click += new System.EventHandler(this.btn_DSA_Click);
 			// 
 			// textBox_certRSA
 			// 
@@ -772,6 +803,7 @@
 			this.checkBox_RSA.TabIndex = 166;
 			this.checkBox_RSA.Text = "RSA";
 			this.checkBox_RSA.UseVisualStyleBackColor = true;
+			this.checkBox_RSA.CheckedChanged += new System.EventHandler(this.checkBox_RSA2_CheckedChanged);
 			// 
 			// checkBox_DSA
 			// 
@@ -783,6 +815,7 @@
 			this.checkBox_DSA.TabIndex = 165;
 			this.checkBox_DSA.Text = "DSA";
 			this.checkBox_DSA.UseVisualStyleBackColor = true;
+			this.checkBox_DSA.CheckedChanged += new System.EventHandler(this.checkBox_DSA2_CheckedChanged);
 			// 
 			// groupBox6
 			// 
@@ -816,6 +849,7 @@
 			this.btn_CMAC.TabIndex = 183;
 			this.btn_CMAC.Text = "CMAC";
 			this.btn_CMAC.UseVisualStyleBackColor = false;
+			this.btn_CMAC.Click += new System.EventHandler(this.btn_CMAC_Click);
 			// 
 			// textBox_certCMAC
 			// 
@@ -836,6 +870,7 @@
 			this.checkBox_CMAC.TabIndex = 182;
 			this.checkBox_CMAC.Text = "CMAC";
 			this.checkBox_CMAC.UseVisualStyleBackColor = true;
+			this.checkBox_CMAC.CheckedChanged += new System.EventHandler(this.checkBox_CMAC_CheckedChanged);
 			// 
 			// btn_CCM
 			// 
@@ -849,6 +884,7 @@
 			this.btn_CCM.TabIndex = 172;
 			this.btn_CCM.Text = "CCM";
 			this.btn_CCM.UseVisualStyleBackColor = false;
+			this.btn_CCM.Click += new System.EventHandler(this.btn_CCM_Click);
 			// 
 			// textBox_certCCM
 			// 
@@ -869,6 +905,7 @@
 			this.checkBox_CCM.TabIndex = 171;
 			this.checkBox_CCM.Text = "CCM";
 			this.checkBox_CCM.UseVisualStyleBackColor = true;
+			this.checkBox_CCM.CheckedChanged += new System.EventHandler(this.checkBox_CCM_CheckedChanged);
 			// 
 			// btn_HMAC
 			// 
@@ -882,6 +919,7 @@
 			this.btn_HMAC.TabIndex = 169;
 			this.btn_HMAC.Text = "HMAC";
 			this.btn_HMAC.UseVisualStyleBackColor = false;
+			this.btn_HMAC.Click += new System.EventHandler(this.btn_HMAC_Click);
 			// 
 			// textBox_certHMAC
 			// 
@@ -902,6 +940,7 @@
 			this.checkBox_HMAC.TabIndex = 168;
 			this.checkBox_HMAC.Text = "HMAC";
 			this.checkBox_HMAC.UseVisualStyleBackColor = true;
+			this.checkBox_HMAC.CheckedChanged += new System.EventHandler(this.checkBox_HMAC_CheckedChanged);
 			// 
 			// flowLayoutPanel2
 			// 
@@ -925,6 +964,7 @@
 			this.btn_refresh.TabIndex = 148;
 			this.btn_refresh.Text = "Refresh";
 			this.btn_refresh.UseVisualStyleBackColor = false;
+			this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
 			// 
 			// textBox_Algs
 			// 
@@ -940,6 +980,7 @@
 			// flowLayoutPanel3
 			// 
 			this.flowLayoutPanel3.Controls.Add(this.txtBox_OtherAlgs);
+			this.flowLayoutPanel3.Controls.Add(this.label1);
 			this.flowLayoutPanel3.Location = new System.Drawing.Point(1090, 854);
 			this.flowLayoutPanel3.Name = "flowLayoutPanel3";
 			this.flowLayoutPanel3.Size = new System.Drawing.Size(1174, 377);
@@ -956,6 +997,16 @@
 			this.txtBox_OtherAlgs.Size = new System.Drawing.Size(1065, 275);
 			this.txtBox_OtherAlgs.TabIndex = 153;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(3, 281);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(238, 29);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "Allowed Algorithms";
+			// 
 			// Algorithms
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -970,15 +1021,15 @@
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Algorithms_FormClosing_1);
 			this.Load += new System.EventHandler(this.Algorithms_Load);
 			this.flowLayoutPanel1.ResumeLayout(false);
+			this.panel1.ResumeLayout(false);
 			this.groupBox5.ResumeLayout(false);
 			this.groupBox5.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox2.PerformLayout();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			this.groupBox2.PerformLayout();
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
-			this.panel1.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox7.ResumeLayout(false);
@@ -1066,5 +1117,6 @@
 		private System.Windows.Forms.TextBox textBox_Algs;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
 		private System.Windows.Forms.TextBox txtBox_OtherAlgs;
+		private System.Windows.Forms.Label label1;
 	}
 }

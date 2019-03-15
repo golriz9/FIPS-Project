@@ -79,6 +79,7 @@
 			this.btn_MitOtherAttackTEs.TabIndex = 96;
 			this.btn_MitOtherAttackTEs.Text = "A11. Mitigation of Other Attacks";
 			this.btn_MitOtherAttackTEs.UseVisualStyleBackColor = false;
+			this.btn_MitOtherAttackTEs.Click += new System.EventHandler(this.btn_MitOtherAttackTEs_Click);
 			// 
 			// btn_DesAssurTEs
 			// 
@@ -92,6 +93,7 @@
 			this.btn_DesAssurTEs.TabIndex = 95;
 			this.btn_DesAssurTEs.Text = "A10. Design Assurance";
 			this.btn_DesAssurTEs.UseVisualStyleBackColor = false;
+			this.btn_DesAssurTEs.Click += new System.EventHandler(this.btn_DesAssurTEs_Click);
 			// 
 			// btn_SelfTestTEs
 			// 
@@ -105,6 +107,7 @@
 			this.btn_SelfTestTEs.TabIndex = 94;
 			this.btn_SelfTestTEs.Text = "A9. Self Tests";
 			this.btn_SelfTestTEs.UseVisualStyleBackColor = false;
+			this.btn_SelfTestTEs.Click += new System.EventHandler(this.btn_SelfTestTEs_Click);
 			// 
 			// btn_EMI_EMC_TEs
 			// 
@@ -118,6 +121,7 @@
 			this.btn_EMI_EMC_TEs.TabIndex = 93;
 			this.btn_EMI_EMC_TEs.Text = "A8. EMI/EMC";
 			this.btn_EMI_EMC_TEs.UseVisualStyleBackColor = false;
+			this.btn_EMI_EMC_TEs.Click += new System.EventHandler(this.btn_EMI_EMC_TEs_Click);
 			// 
 			// btn_KeyManagTEs
 			// 
@@ -131,6 +135,7 @@
 			this.btn_KeyManagTEs.TabIndex = 92;
 			this.btn_KeyManagTEs.Text = "A7. Key Management";
 			this.btn_KeyManagTEs.UseVisualStyleBackColor = false;
+			this.btn_KeyManagTEs.Click += new System.EventHandler(this.btn_KeyManagTEs_Click);
 			// 
 			// btn_OpEnvTEs
 			// 
@@ -144,6 +149,7 @@
 			this.btn_OpEnvTEs.TabIndex = 91;
 			this.btn_OpEnvTEs.Text = "A6. Operational Environment";
 			this.btn_OpEnvTEs.UseVisualStyleBackColor = false;
+			this.btn_OpEnvTEs.Click += new System.EventHandler(this.btn_OpEnvTEs_Click);
 			// 
 			// btn_PhySecTEs
 			// 
@@ -157,6 +163,7 @@
 			this.btn_PhySecTEs.TabIndex = 90;
 			this.btn_PhySecTEs.Text = "A5. Physical Security";
 			this.btn_PhySecTEs.UseVisualStyleBackColor = false;
+			this.btn_PhySecTEs.Click += new System.EventHandler(this.btn_PhySecTEs_Click);
 			// 
 			// btn_FSMTEs
 			// 
@@ -170,6 +177,7 @@
 			this.btn_FSMTEs.TabIndex = 89;
 			this.btn_FSMTEs.Text = "A4. Finite State Model";
 			this.btn_FSMTEs.UseVisualStyleBackColor = false;
+			this.btn_FSMTEs.Click += new System.EventHandler(this.btn_FSMTEs_Click);
 			// 
 			// btn_RoleServiceTEs
 			// 
@@ -183,6 +191,7 @@
 			this.btn_RoleServiceTEs.TabIndex = 88;
 			this.btn_RoleServiceTEs.Text = "A3. Roles and Services";
 			this.btn_RoleServiceTEs.UseVisualStyleBackColor = false;
+			this.btn_RoleServiceTEs.Click += new System.EventHandler(this.btn_RoleServiceTEs_Click);
 			// 
 			// btn_PortsInterfacesTEs
 			// 
@@ -196,6 +205,7 @@
 			this.btn_PortsInterfacesTEs.TabIndex = 87;
 			this.btn_PortsInterfacesTEs.Text = "A2. Ports and Interfaces";
 			this.btn_PortsInterfacesTEs.UseVisualStyleBackColor = false;
+			this.btn_PortsInterfacesTEs.Click += new System.EventHandler(this.btn_PortsInterfacesTEs_Click);
 			// 
 			// textBox1
 			// 
@@ -223,6 +233,7 @@
 			this.btn_SpecTEs.TabIndex = 85;
 			this.btn_SpecTEs.Text = "A1. Specifications";
 			this.btn_SpecTEs.UseVisualStyleBackColor = false;
+			this.btn_SpecTEs.Click += new System.EventHandler(this.btn_SpecTEs_Click);
 			// 
 			// CrypticTool
 			// 

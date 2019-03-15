@@ -51,6 +51,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "KeyGenSec";
 			this.Text = "Key Generation Security";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KeyGenSec_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KeyGenSec_FormClosed);
 			this.Load += new System.EventHandler(this.KeyGenSec_Load);
 			this.ResumeLayout(false);

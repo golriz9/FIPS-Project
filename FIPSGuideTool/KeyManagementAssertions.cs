@@ -115,6 +115,20 @@ namespace FIPSGuideTool
 				connection.Open();
 				command.Connection = connection;
 
+				NoBitsGenNDRNG = Properties.Settings.Default.NoBitsGenNDRNG.ToString();
+				NoBitsEntropyInput = Properties.Settings.Default.NoBitsEntropyInput.ToString();
+				NoBitsNonce = Properties.Settings.Default.NoBitsNonce.ToString();
+				NoBitsAdditInput = Properties.Settings.Default.NoBitsAdditInput.ToString();
+				NoBitsPersonalStr = Properties.Settings.Default.NoBitsPersonalStr.ToString();
+				AlgDRBGDepends = Properties.Settings.Default.AlgDRBGDepends.ToString();
+				DRBGOutputLength = Properties.Settings.Default.DRBGOutputLength.ToString();
+				MinEntropy = Properties.Settings.Default.MinEntropy.ToString();
+				MaxEntropy = Properties.Settings.Default.MaxEntropy.ToString();
+				DRBG_Type = Properties.Settings.Default.DRBG_Type.ToString();
+				DerivFunc = Properties.Settings.Default.DerivFunc.ToString();
+				StandardEntropy = Properties.Settings.Default.StandardEntropy.ToString();
+				FullEntropyOutput = Properties.Settings.Default.FullEntropyOutput.ToString();
+
 				TE070101 = "The tester verified that the vendor documentation describes the protection of its secret keys and CSPs." +
 				" The documentation describes how these keys and CSPs are protected with logical and physical security mechanisms that" +
 				" prevent unauthorized disclosure, unauthorized modification, and unauthorized substitution. These protections include:"
@@ -308,13 +322,12 @@ namespace FIPSGuideTool
 						"The vendor has provided documentation that explicitly details the architecture of the module's NDRNG. The NDRNG generates " + NoBitsGenNDRNG +
 						" bits to provide a " + NoBitsEntropyInput + "-bit entropy input, and " + NoBitsNonce + " bits for the nonce, " + NoBitsAdditInput +
 						" bits for the additional input, and " + NoBitsPersonalStr + " bits for the personalization string. This input is used to instantiate a "
-						+ MinEntropy + " and " + MaxEntropy + " bits of entropy. The output of the DRBG is " + DerivFunc + " entropic: " + DRBGOutputLength + " bit of entropy are "
 						+ AlgDRBGDepends + " " + DRBG_Type + "-DRBG " + DerivFunc + ", which is used to produce a " + DRBGOutputLength + "-bit output. Based on the " +
 						"vendor''s entropy claim and Penumbra''s assessment of the NDRNG output per " + StandardEntropy  + ", the output of the NDRNG is between "
 						+ MinEntropy + " and " + MaxEntropy + " bits of entropy. The output of the DRBG is " + FullEntropyOutput + " entropic: " + DRBGOutputLength + " bit of entropy are " +
 						"output. Guessing the values of the output of the " + DRBGOutputLength + "-bit DRBG requires 2^" + DRBGOutputLength + " operations. The " + NoBitsEntropyInput + 
 						"-bit seed has at least " + MinEntropy + 
-						"bits of entropy, therefore guessing the seed value requires 2^" + MinEntropy + "operations. " + Environment.NewLine +
+						" bits of entropy, therefore guessing the seed value requires 2^" + MinEntropy + " operations. " + Environment.NewLine +
 						"Please refer to the Penumbra generated Entropy Rationale document provided with this FIPS 140-2 report submission for further details.";
 
 					TE071301_txt = TE071301;

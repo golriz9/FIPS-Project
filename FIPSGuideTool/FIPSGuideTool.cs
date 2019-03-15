@@ -478,5 +478,10 @@ namespace FIPSGuideTool
 			}
 
 		}
+
+		private void btn_SecurityPolicy_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

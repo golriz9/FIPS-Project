@@ -51,6 +51,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "nonApprovedRNG";
 			this.Text = "nonApproved RNGs";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.nonApprovedRNG_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.nonApprovedRNG_FormClosed);
 			this.Load += new System.EventHandler(this.nonApprovedRNG_Load);
 			this.ResumeLayout(false);

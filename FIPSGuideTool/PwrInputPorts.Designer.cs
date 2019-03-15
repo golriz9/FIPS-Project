@@ -113,7 +113,6 @@
 			this.ClientSize = new System.Drawing.Size(1561, 483);
 			this.Controls.Add(this.panel1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MaximizeBox = false;
 			this.Name = "PwrInputPorts";
 			this.Text = "PwrInputPorts";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PwrInputPorts_FormClosing);

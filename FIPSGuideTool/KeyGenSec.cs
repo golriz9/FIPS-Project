@@ -28,14 +28,32 @@ namespace FIPSGuideTool
 
 		private void KeyGenSec_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			KeyManagement.KeyGenSecurity = textBox_KeyGenSecurity.Text;
-			KeyGenSecurity = textBox_KeyGenSecurity.Text;
 
-			Properties.Settings.Default.KeyGenSecurity = KeyGenSecurity;
-			Properties.Settings.Default.Save();
+		}
 
-			KeyManagementAssertions f1 = new KeyManagementAssertions();
-			f1.populateKeyManagementLevel1234();
+		private void KeyGenSec_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				KeyManagement.KeyGenSecurity = textBox_KeyGenSecurity.Text;
+				KeyGenSecurity = textBox_KeyGenSecurity.Text;
+
+				Properties.Settings.Default.KeyGenSecurity = KeyGenSecurity;
+				Properties.Settings.Default.Save();
+
+				KeyManagementAssertions f1 = new KeyManagementAssertions();
+				f1.populateKeyManagementLevel1234();
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 	}
 }

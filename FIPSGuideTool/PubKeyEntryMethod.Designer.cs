@@ -51,6 +51,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "PubKeyEntryMethod";
 			this.Text = "Public Key Entry Methods";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PubKeyEntryMethod_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PubKeyEntryMethod_FormClosed);
 			this.Load += new System.EventHandler(this.PubKeyEntryMethod_Load);
 			this.ResumeLayout(false);

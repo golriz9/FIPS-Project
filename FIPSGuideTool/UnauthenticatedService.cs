@@ -28,10 +28,28 @@ namespace FIPSGuideTool
 
 		private void UnauthenticatedService_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			RolesAndServices.UnauthorizedServices = txtBox_UnauthenticatedServices.Text;
-			UnauthorizedServices = txtBox_UnauthenticatedServices.Text;
-			Properties.Settings.Default.UnauthorizedServices = UnauthorizedServices;
-			Properties.Settings.Default.Save();
+
+		}
+
+		private void UnauthenticatedService_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				RolesAndServices.UnauthorizedServices = txtBox_UnauthenticatedServices.Text;
+				UnauthorizedServices = txtBox_UnauthenticatedServices.Text;
+				Properties.Settings.Default.UnauthorizedServices = UnauthorizedServices;
+				Properties.Settings.Default.Save();
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 	}
 }

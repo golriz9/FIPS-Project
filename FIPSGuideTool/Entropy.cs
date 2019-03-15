@@ -16,7 +16,6 @@ namespace FIPSGuideTool
 	{
 		private OleDbConnection connection = new OleDbConnection();
 		OleDbCommand command = new OleDbCommand();
-		OleDbDataReader dataSearch;
 
 		public static string NoBitsGenNDRNG;
 		public static string NoBitsEntropyInput;
@@ -89,6 +88,7 @@ namespace FIPSGuideTool
 			{
 				label8.Visible = false;
 				comboBox_DerivFunc.Visible = false;
+				comboBox_DerivFunc.SelectedItem = null;
 			}
 		}
 
@@ -174,6 +174,74 @@ namespace FIPSGuideTool
 
 		private void btn_TE071301_Click(object sender, EventArgs e)
 		{
+			NoBitsGenNDRNG = txtBox_NoBitsGenNDRNG.Text;
+			Properties.Settings.Default.NoBitsGenNDRNG = NoBitsGenNDRNG;
+
+			NoBitsEntropyInput = txtBox_NoBitsEntropyInput.Text;
+			Properties.Settings.Default.NoBitsEntropyInput = NoBitsEntropyInput;
+
+			NoBitsNonce = txtBox_NoBitsNonce.Text;
+			Properties.Settings.Default.NoBitsNonce = NoBitsNonce;
+
+			NoBitsAdditInput = txtBox_NoBitsAdditInput.Text;
+			Properties.Settings.Default.NoBitsAdditInput = NoBitsAdditInput;
+
+			NoBitsPersonalStr = txtBox_NoBitsPersonalStr.Text;
+			Properties.Settings.Default.NoBitsPersonalStr = NoBitsPersonalStr;
+
+			AlgDRBGDepends = txtBox_AlgDRBGDepends.Text;
+			Properties.Settings.Default.AlgDRBGDepends = AlgDRBGDepends;
+
+			DRBGOutputLength = txtBox_DRBGOutputLength.Text;
+			Properties.Settings.Default.DRBGOutputLength = DRBGOutputLength;
+
+			MinEntropy = txtBox_MinEntropy.Text;
+			Properties.Settings.Default.MinEntropy = MinEntropy;
+
+			MaxEntropy = txtBox_MaxEntropy.Text;
+			Properties.Settings.Default.MaxEntropy = MaxEntropy;
+
+			if (comboBox_DRBG_Type.SelectedItem != null)
+			{
+				DRBG_Type = comboBox_DRBG_Type.SelectedItem.ToString();
+				Properties.Settings.Default.DRBG_Type = DRBG_Type;
+			}
+
+			if (comboBox_DerivFunc.SelectedItem != null)
+			{
+				DerivFunc = comboBox_DerivFunc.SelectedItem.ToString();
+				Properties.Settings.Default.DerivFunc = DerivFunc;
+			}
+			else
+			{
+				DerivFunc = "";
+				Properties.Settings.Default.DerivFunc = DerivFunc;
+			}
+
+
+			if (comboBox_Standard.SelectedItem != null)
+			{
+				StandardEntropy = comboBox_Standard.SelectedItem.ToString();
+				Properties.Settings.Default.StandardEntropy = StandardEntropy;
+			}
+
+			if (comboBox_FullEntropyOutput.SelectedItem != null)
+			{
+				//if (comboBox_FullEntropyOutput.SelectedItem.ToString() == "fully")
+				//{
+				//	StandardEntropy = "fully";
+				//}
+				//else if (comboBox_FullEntropyOutput.SelectedItem.ToString() == "partially")
+				//{
+				//	StandardEntropy = "partially";
+				//}
+
+				FullEntropyOutput = comboBox_FullEntropyOutput.SelectedItem.ToString();
+				Properties.Settings.Default.FullEntropyOutput = FullEntropyOutput;
+			}
+
+			Properties.Settings.Default.Save();
+
 			textBoxTE071301.Visible = true;
 			KeyManagementAssertions f1 = new KeyManagementAssertions();
 			f1.populateKeyManagementLevel1234();
@@ -183,11 +251,18 @@ namespace FIPSGuideTool
 
 		private void comboBox_DerivFunc_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (comboBox_DerivFunc.SelectedItem.ToString() == "Yes")
+			if (comboBox_DerivFunc.SelectedItem != null)
 			{
-				DerivFunc = "with a derivation function";
+				if (comboBox_DerivFunc.SelectedItem.ToString() == "with a derivation function")
+				{
+					DerivFunc = "with a derivation function";
+				}
+				else if (comboBox_DerivFunc.SelectedItem.ToString() == "no derivation function")
+				{
+					DerivFunc = "no derivation function";
+				}
 			}
-			else if (comboBox_DerivFunc.SelectedItem.ToString() == "No")
+			else if (comboBox_DerivFunc.SelectedItem == null)
 			{
 				DerivFunc = "";
 			}
@@ -195,19 +270,93 @@ namespace FIPSGuideTool
 
 		private void comboBox_FullEntropyOutput_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (comboBox_FullEntropyOutput.SelectedItem.ToString() == "Fully")
+			if (comboBox_FullEntropyOutput.SelectedItem.ToString() == "fully")
 			{
-				FullEntropyOutput = "Fully";
+				StandardEntropy = "fully";
 			}
-			else if (comboBox_FullEntropyOutput.SelectedItem.ToString() == "Partially")
+			else if (comboBox_FullEntropyOutput.SelectedItem.ToString() == "partially")
 			{
-				FullEntropyOutput = "Partially";
+				StandardEntropy = "partially";
 			}
 		}
 
 		private void btn_refresh_Click(object sender, EventArgs e)
 		{
+			NoBitsGenNDRNG = txtBox_NoBitsGenNDRNG.Text;
+			Properties.Settings.Default.NoBitsGenNDRNG = NoBitsGenNDRNG;
 
+			NoBitsEntropyInput = txtBox_NoBitsEntropyInput.Text;
+			Properties.Settings.Default.NoBitsEntropyInput = NoBitsEntropyInput;
+
+			NoBitsNonce = txtBox_NoBitsNonce.Text;
+			Properties.Settings.Default.NoBitsNonce = NoBitsNonce;
+
+			NoBitsAdditInput = txtBox_NoBitsAdditInput.Text;
+			Properties.Settings.Default.NoBitsAdditInput = NoBitsAdditInput;
+
+			NoBitsPersonalStr = txtBox_NoBitsPersonalStr.Text;
+			Properties.Settings.Default.NoBitsPersonalStr = NoBitsPersonalStr;
+
+			AlgDRBGDepends = txtBox_AlgDRBGDepends.Text;
+			Properties.Settings.Default.AlgDRBGDepends = AlgDRBGDepends;
+
+			DRBGOutputLength = txtBox_DRBGOutputLength.Text;
+			Properties.Settings.Default.DRBGOutputLength = DRBGOutputLength;
+
+			MinEntropy = txtBox_MinEntropy.Text;
+			Properties.Settings.Default.MinEntropy = MinEntropy;
+
+			MaxEntropy = txtBox_MaxEntropy.Text;
+			Properties.Settings.Default.MaxEntropy = MaxEntropy;
+
+			if (comboBox_DRBG_Type.SelectedItem != null)
+			{
+				DRBG_Type = comboBox_DRBG_Type.SelectedItem.ToString();
+				Properties.Settings.Default.DRBG_Type = DRBG_Type;
+			}
+
+			if (comboBox_DerivFunc.SelectedItem != null)
+			{
+				//if (comboBox_DerivFunc.SelectedItem.ToString() == "Yes")
+				//{
+				//	DerivFunc = "with a derivation function";
+				//}
+				//else if (comboBox_DerivFunc.SelectedItem.ToString() == "No")
+				//{
+				//	DerivFunc = "";
+				//}
+				DerivFunc = comboBox_DerivFunc.SelectedItem.ToString();
+				Properties.Settings.Default.DerivFunc = DerivFunc;
+			}
+
+			if (comboBox_Standard.SelectedItem != null)
+			{
+				StandardEntropy = comboBox_Standard.SelectedItem.ToString();
+				Properties.Settings.Default.StandardEntropy = StandardEntropy;
+			}
+
+			if (comboBox_FullEntropyOutput.SelectedItem != null)
+			{
+				//if (comboBox_FullEntropyOutput.SelectedItem.ToString() == "fully")
+				//{
+				//	StandardEntropy = "fully";
+				//}
+				//else if (comboBox_FullEntropyOutput.SelectedItem.ToString() == "partially")
+				//{
+				//	StandardEntropy = "partially";
+				//}
+
+				FullEntropyOutput = comboBox_FullEntropyOutput.SelectedItem.ToString();
+				Properties.Settings.Default.FullEntropyOutput = FullEntropyOutput;
+			}
+
+			Properties.Settings.Default.Save();
+
+			textBoxTE071301.Visible = true;
+			KeyManagementAssertions f1 = new KeyManagementAssertions();
+			f1.populateKeyManagementLevel1234();
+
+			textBoxTE071301.Text = KeyManagementAssertions.TE071301_txt;
 		}
 
 		private void panel2_Paint(object sender, PaintEventArgs e)
@@ -223,6 +372,18 @@ namespace FIPSGuideTool
 		private void panel3_Paint(object sender, PaintEventArgs e)
 		{
 
+		}
+
+		private void comboBox_Standard_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (comboBox_Standard.SelectedItem.ToString() == "IG 7.15 (using statistical analysis from NIST SP 800-90B)")
+			{
+				StandardEntropy = "IG 7.15 (using statistical analysis from NIST SP 800-90B)";
+			}
+			else if (comboBox_Standard.SelectedItem.ToString() == "NIST SP 800-90B")
+			{
+				StandardEntropy = "NIST SP 800-90B";
+			}
 		}
 	}
 }

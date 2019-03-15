@@ -30,6 +30,36 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuleSpecs));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+			this.btn_FWVersion = new System.Windows.Forms.Button();
+			this.btn_FullyCustom = new System.Windows.Forms.Button();
+			this.btn_otherComponents = new System.Windows.Forms.Button();
+			this.btn_ROMFlash = new System.Windows.Forms.Button();
+			this.btn_Processors = new System.Windows.Forms.Button();
+			this.btn_SemiCustom = new System.Windows.Forms.Button();
+			this.btn_nonModFWSW = new System.Windows.Forms.Button();
+			this.btn_activeCompon = new System.Windows.Forms.Button();
+			this.btn_PhyExtConn = new System.Windows.Forms.Button();
+			this.btn_PwrSupply = new System.Windows.Forms.Button();
+			this.btn_ModFWSW = new System.Windows.Forms.Button();
+			this.btn_RAM = new System.Windows.Forms.Button();
+			this.txt_CoolingSys = new System.Windows.Forms.TextBox();
+			this.label27 = new System.Windows.Forms.Label();
+			this.comboBox_CoolingSys = new System.Windows.Forms.ComboBox();
+			this.label26 = new System.Windows.Forms.Label();
+			this.textBoxTE010802 = new System.Windows.Forms.TextBox();
+			this.comboBox_ExcComponents = new System.Windows.Forms.ComboBox();
+			this.label25 = new System.Windows.Forms.Label();
+			this.btn_save = new System.Windows.Forms.Button();
+			this.btn_TE010901 = new System.Windows.Forms.Button();
+			this.textBoxTE010808 = new System.Windows.Forms.TextBox();
+			this.btn_refresh = new System.Windows.Forms.Button();
+			this.btn_TE010802 = new System.Windows.Forms.Button();
+			this.textBoxTE010812 = new System.Windows.Forms.TextBox();
+			this.btn_TE010808 = new System.Windows.Forms.Button();
+			this.btn_TE010812 = new System.Windows.Forms.Button();
+			this.textBoxTE010901 = new System.Windows.Forms.TextBox();
+			this.groupBox_secLevel = new System.Windows.Forms.GroupBox();
 			this.comboBox11 = new System.Windows.Forms.ComboBox();
 			this.comboBox10 = new System.Windows.Forms.ComboBox();
 			this.comboBox9 = new System.Windows.Forms.ComboBox();
@@ -52,39 +82,9 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.txt_CoolingSys = new System.Windows.Forms.TextBox();
-			this.label27 = new System.Windows.Forms.Label();
-			this.comboBox_CoolingSys = new System.Windows.Forms.ComboBox();
-			this.label26 = new System.Windows.Forms.Label();
-			this.textBoxTE010802 = new System.Windows.Forms.TextBox();
-			this.comboBox12 = new System.Windows.Forms.ComboBox();
-			this.label25 = new System.Windows.Forms.Label();
-			this.btn_save = new System.Windows.Forms.Button();
-			this.btn_TE010901 = new System.Windows.Forms.Button();
-			this.textBoxTE010808 = new System.Windows.Forms.TextBox();
-			this.btn_refresh = new System.Windows.Forms.Button();
-			this.btn_TE010802 = new System.Windows.Forms.Button();
-			this.textBoxTE010812 = new System.Windows.Forms.TextBox();
-			this.btn_TE010808 = new System.Windows.Forms.Button();
-			this.btn_TE010812 = new System.Windows.Forms.Button();
-			this.textBoxTE010901 = new System.Windows.Forms.TextBox();
-			this.groupBox_secLevel = new System.Windows.Forms.GroupBox();
-			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-			this.btn_otherComponents = new System.Windows.Forms.Button();
-			this.btn_FWVersion = new System.Windows.Forms.Button();
-			this.btn_ModFWSW = new System.Windows.Forms.Button();
-			this.btn_nonModFWSW = new System.Windows.Forms.Button();
-			this.btn_PhyExtConn = new System.Windows.Forms.Button();
-			this.btn_PwrSupply = new System.Windows.Forms.Button();
-			this.btn_activeCompon = new System.Windows.Forms.Button();
-			this.btn_RAM = new System.Windows.Forms.Button();
-			this.btn_FullyCustom = new System.Windows.Forms.Button();
-			this.btn_ROMFlash = new System.Windows.Forms.Button();
-			this.btn_SemiCustom = new System.Windows.Forms.Button();
-			this.btn_Processors = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
-			this.groupBox_secLevel.SuspendLayout();
 			this.flowLayoutPanel1.SuspendLayout();
+			this.groupBox_secLevel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -96,7 +96,7 @@
 			this.panel1.Controls.Add(this.comboBox_CoolingSys);
 			this.panel1.Controls.Add(this.label26);
 			this.panel1.Controls.Add(this.textBoxTE010802);
-			this.panel1.Controls.Add(this.comboBox12);
+			this.panel1.Controls.Add(this.comboBox_ExcComponents);
 			this.panel1.Controls.Add(this.label25);
 			this.panel1.Controls.Add(this.btn_save);
 			this.panel1.Controls.Add(this.btn_TE010901);
@@ -111,8 +111,491 @@
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(2033, 1271);
+			this.panel1.Size = new System.Drawing.Size(1924, 1050);
 			this.panel1.TabIndex = 0;
+			this.panel1.UseWaitCursor = true;
+			// 
+			// flowLayoutPanel1
+			// 
+			this.flowLayoutPanel1.Controls.Add(this.btn_FWVersion);
+			this.flowLayoutPanel1.Controls.Add(this.btn_FullyCustom);
+			this.flowLayoutPanel1.Controls.Add(this.btn_otherComponents);
+			this.flowLayoutPanel1.Controls.Add(this.btn_ROMFlash);
+			this.flowLayoutPanel1.Controls.Add(this.btn_Processors);
+			this.flowLayoutPanel1.Controls.Add(this.btn_SemiCustom);
+			this.flowLayoutPanel1.Controls.Add(this.btn_nonModFWSW);
+			this.flowLayoutPanel1.Controls.Add(this.btn_activeCompon);
+			this.flowLayoutPanel1.Controls.Add(this.btn_PhyExtConn);
+			this.flowLayoutPanel1.Controls.Add(this.btn_PwrSupply);
+			this.flowLayoutPanel1.Controls.Add(this.btn_ModFWSW);
+			this.flowLayoutPanel1.Controls.Add(this.btn_RAM);
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(1099, 410);
+			this.flowLayoutPanel1.TabIndex = 146;
+			this.flowLayoutPanel1.UseWaitCursor = true;
+			// 
+			// btn_FWVersion
+			// 
+			this.btn_FWVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_FWVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_FWVersion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_FWVersion.Location = new System.Drawing.Point(4, 5);
+			this.btn_FWVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_FWVersion.Name = "btn_FWVersion";
+			this.btn_FWVersion.Size = new System.Drawing.Size(240, 126);
+			this.btn_FWVersion.TabIndex = 160;
+			this.btn_FWVersion.Text = "Firmware Version";
+			this.btn_FWVersion.UseVisualStyleBackColor = false;
+			this.btn_FWVersion.UseWaitCursor = true;
+			this.btn_FWVersion.Click += new System.EventHandler(this.btn_FWVersion_Click);
+			// 
+			// btn_FullyCustom
+			// 
+			this.btn_FullyCustom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_FullyCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_FullyCustom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_FullyCustom.Location = new System.Drawing.Point(252, 5);
+			this.btn_FullyCustom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_FullyCustom.Name = "btn_FullyCustom";
+			this.btn_FullyCustom.Size = new System.Drawing.Size(270, 126);
+			this.btn_FullyCustom.TabIndex = 154;
+			this.btn_FullyCustom.Text = "Fully-custom ICs";
+			this.btn_FullyCustom.UseVisualStyleBackColor = false;
+			this.btn_FullyCustom.UseWaitCursor = true;
+			this.btn_FullyCustom.Click += new System.EventHandler(this.btn_FullyCustom_Click);
+			// 
+			// btn_otherComponents
+			// 
+			this.btn_otherComponents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_otherComponents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_otherComponents.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_otherComponents.Location = new System.Drawing.Point(530, 5);
+			this.btn_otherComponents.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_otherComponents.Name = "btn_otherComponents";
+			this.btn_otherComponents.Size = new System.Drawing.Size(301, 126);
+			this.btn_otherComponents.TabIndex = 161;
+			this.btn_otherComponents.Text = "Other Components";
+			this.btn_otherComponents.UseVisualStyleBackColor = false;
+			this.btn_otherComponents.UseWaitCursor = true;
+			this.btn_otherComponents.Click += new System.EventHandler(this.btn_otherComponents_Click);
+			// 
+			// btn_ROMFlash
+			// 
+			this.btn_ROMFlash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_ROMFlash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_ROMFlash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_ROMFlash.Location = new System.Drawing.Point(839, 5);
+			this.btn_ROMFlash.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_ROMFlash.Name = "btn_ROMFlash";
+			this.btn_ROMFlash.Size = new System.Drawing.Size(240, 126);
+			this.btn_ROMFlash.TabIndex = 151;
+			this.btn_ROMFlash.Text = "ROM or FLASH";
+			this.btn_ROMFlash.UseVisualStyleBackColor = false;
+			this.btn_ROMFlash.UseWaitCursor = true;
+			this.btn_ROMFlash.Click += new System.EventHandler(this.btn_ROMFlash_Click);
+			// 
+			// btn_Processors
+			// 
+			this.btn_Processors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_Processors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Processors.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_Processors.Location = new System.Drawing.Point(4, 141);
+			this.btn_Processors.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_Processors.Name = "btn_Processors";
+			this.btn_Processors.Size = new System.Drawing.Size(240, 126);
+			this.btn_Processors.TabIndex = 150;
+			this.btn_Processors.Text = "Processors";
+			this.btn_Processors.UseVisualStyleBackColor = false;
+			this.btn_Processors.UseWaitCursor = true;
+			this.btn_Processors.Click += new System.EventHandler(this.btn_Processors_Click);
+			// 
+			// btn_SemiCustom
+			// 
+			this.btn_SemiCustom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_SemiCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_SemiCustom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_SemiCustom.Location = new System.Drawing.Point(252, 141);
+			this.btn_SemiCustom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_SemiCustom.Name = "btn_SemiCustom";
+			this.btn_SemiCustom.Size = new System.Drawing.Size(270, 126);
+			this.btn_SemiCustom.TabIndex = 153;
+			this.btn_SemiCustom.Text = "Semi-custom ICs";
+			this.btn_SemiCustom.UseVisualStyleBackColor = false;
+			this.btn_SemiCustom.UseWaitCursor = true;
+			this.btn_SemiCustom.Click += new System.EventHandler(this.btn_SemiCustom_Click);
+			// 
+			// btn_nonModFWSW
+			// 
+			this.btn_nonModFWSW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_nonModFWSW.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_nonModFWSW.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_nonModFWSW.Location = new System.Drawing.Point(530, 141);
+			this.btn_nonModFWSW.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_nonModFWSW.Name = "btn_nonModFWSW";
+			this.btn_nonModFWSW.Size = new System.Drawing.Size(301, 126);
+			this.btn_nonModFWSW.TabIndex = 158;
+			this.btn_nonModFWSW.Text = "Non-modifiable FW/SW";
+			this.btn_nonModFWSW.UseVisualStyleBackColor = false;
+			this.btn_nonModFWSW.UseWaitCursor = true;
+			this.btn_nonModFWSW.Click += new System.EventHandler(this.btn_nonModFWSW_Click);
+			// 
+			// btn_activeCompon
+			// 
+			this.btn_activeCompon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_activeCompon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_activeCompon.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_activeCompon.Location = new System.Drawing.Point(839, 141);
+			this.btn_activeCompon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_activeCompon.Name = "btn_activeCompon";
+			this.btn_activeCompon.Size = new System.Drawing.Size(240, 126);
+			this.btn_activeCompon.TabIndex = 155;
+			this.btn_activeCompon.Text = "Other active components";
+			this.btn_activeCompon.UseVisualStyleBackColor = false;
+			this.btn_activeCompon.UseWaitCursor = true;
+			this.btn_activeCompon.Click += new System.EventHandler(this.btn_activeCompon_Click);
+			// 
+			// btn_PhyExtConn
+			// 
+			this.btn_PhyExtConn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_PhyExtConn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_PhyExtConn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_PhyExtConn.Location = new System.Drawing.Point(4, 277);
+			this.btn_PhyExtConn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_PhyExtConn.Name = "btn_PhyExtConn";
+			this.btn_PhyExtConn.Size = new System.Drawing.Size(240, 126);
+			this.btn_PhyExtConn.TabIndex = 157;
+			this.btn_PhyExtConn.Text = "External connector";
+			this.btn_PhyExtConn.UseVisualStyleBackColor = false;
+			this.btn_PhyExtConn.UseWaitCursor = true;
+			this.btn_PhyExtConn.Click += new System.EventHandler(this.btn_PhyExtConn_Click);
+			// 
+			// btn_PwrSupply
+			// 
+			this.btn_PwrSupply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_PwrSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_PwrSupply.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_PwrSupply.Location = new System.Drawing.Point(252, 277);
+			this.btn_PwrSupply.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_PwrSupply.Name = "btn_PwrSupply";
+			this.btn_PwrSupply.Size = new System.Drawing.Size(270, 126);
+			this.btn_PwrSupply.TabIndex = 156;
+			this.btn_PwrSupply.Text = "Power Supply";
+			this.btn_PwrSupply.UseVisualStyleBackColor = false;
+			this.btn_PwrSupply.UseWaitCursor = true;
+			this.btn_PwrSupply.Click += new System.EventHandler(this.btn_PwrSupply_Click);
+			// 
+			// btn_ModFWSW
+			// 
+			this.btn_ModFWSW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_ModFWSW.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_ModFWSW.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_ModFWSW.Location = new System.Drawing.Point(530, 277);
+			this.btn_ModFWSW.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_ModFWSW.Name = "btn_ModFWSW";
+			this.btn_ModFWSW.Size = new System.Drawing.Size(301, 126);
+			this.btn_ModFWSW.TabIndex = 159;
+			this.btn_ModFWSW.Text = "Modifiable FW/SW";
+			this.btn_ModFWSW.UseVisualStyleBackColor = false;
+			this.btn_ModFWSW.UseWaitCursor = true;
+			this.btn_ModFWSW.Click += new System.EventHandler(this.btn_ModFWSW_Click);
+			// 
+			// btn_RAM
+			// 
+			this.btn_RAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_RAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_RAM.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_RAM.Location = new System.Drawing.Point(839, 277);
+			this.btn_RAM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_RAM.Name = "btn_RAM";
+			this.btn_RAM.Size = new System.Drawing.Size(240, 126);
+			this.btn_RAM.TabIndex = 152;
+			this.btn_RAM.Text = "RAM";
+			this.btn_RAM.UseVisualStyleBackColor = false;
+			this.btn_RAM.UseWaitCursor = true;
+			this.btn_RAM.Click += new System.EventHandler(this.btn_RAM_Click);
+			// 
+			// txt_CoolingSys
+			// 
+			this.txt_CoolingSys.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txt_CoolingSys.Location = new System.Drawing.Point(627, 588);
+			this.txt_CoolingSys.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.txt_CoolingSys.Multiline = true;
+			this.txt_CoolingSys.Name = "txt_CoolingSys";
+			this.txt_CoolingSys.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.txt_CoolingSys.Size = new System.Drawing.Size(458, 84);
+			this.txt_CoolingSys.TabIndex = 132;
+			this.txt_CoolingSys.UseWaitCursor = true;
+			// 
+			// label27
+			// 
+			this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label27.AutoSize = true;
+			this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label27.Location = new System.Drawing.Point(298, 588);
+			this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label27.Name = "label27";
+			this.label27.Size = new System.Drawing.Size(199, 29);
+			this.label27.TabIndex = 131;
+			this.label27.Text = "Cooling system:";
+			this.label27.UseWaitCursor = true;
+			// 
+			// comboBox_CoolingSys
+			// 
+			this.comboBox_CoolingSys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.comboBox_CoolingSys.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_CoolingSys.FormattingEnabled = true;
+			this.comboBox_CoolingSys.Items.AddRange(new object[] {
+            "",
+            "Yes",
+            "No"});
+			this.comboBox_CoolingSys.Location = new System.Drawing.Point(743, 536);
+			this.comboBox_CoolingSys.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.comboBox_CoolingSys.Name = "comboBox_CoolingSys";
+			this.comboBox_CoolingSys.Size = new System.Drawing.Size(144, 37);
+			this.comboBox_CoolingSys.TabIndex = 129;
+			this.comboBox_CoolingSys.UseWaitCursor = true;
+			this.comboBox_CoolingSys.SelectedIndexChanged += new System.EventHandler(this.comboBox_CoolingSys_SelectedIndexChanged);
+			// 
+			// label26
+			// 
+			this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label26.AutoSize = true;
+			this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label26.Location = new System.Drawing.Point(19, 536);
+			this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label26.Name = "label26";
+			this.label26.Size = new System.Drawing.Size(466, 29);
+			this.label26.TabIndex = 130;
+			this.label26.Text = "Does module contain cooling systems?";
+			this.label26.UseWaitCursor = true;
+			// 
+			// textBoxTE010802
+			// 
+			this.textBoxTE010802.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxTE010802.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBoxTE010802.Location = new System.Drawing.Point(24, 789);
+			this.textBoxTE010802.Multiline = true;
+			this.textBoxTE010802.Name = "textBoxTE010802";
+			this.textBoxTE010802.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBoxTE010802.Size = new System.Drawing.Size(1696, 246);
+			this.textBoxTE010802.TabIndex = 135;
+			this.textBoxTE010802.UseWaitCursor = true;
+			// 
+			// comboBox_ExcComponents
+			// 
+			this.comboBox_ExcComponents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.comboBox_ExcComponents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_ExcComponents.FormattingEnabled = true;
+			this.comboBox_ExcComponents.Items.AddRange(new object[] {
+            "",
+            "Yes",
+            "No"});
+			this.comboBox_ExcComponents.Location = new System.Drawing.Point(743, 435);
+			this.comboBox_ExcComponents.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.comboBox_ExcComponents.Name = "comboBox_ExcComponents";
+			this.comboBox_ExcComponents.Size = new System.Drawing.Size(144, 37);
+			this.comboBox_ExcComponents.TabIndex = 133;
+			this.comboBox_ExcComponents.UseWaitCursor = true;
+			this.comboBox_ExcComponents.SelectedIndexChanged += new System.EventHandler(this.comboBox_ExcComponents_SelectedIndexChanged);
+			this.comboBox_ExcComponents.DropDownClosed += new System.EventHandler(this.comboBox_ExcComponents_DropDownClosed);
+			// 
+			// label25
+			// 
+			this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label25.AutoSize = true;
+			this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label25.Location = new System.Drawing.Point(130, 437);
+			this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label25.Name = "label25";
+			this.label25.Size = new System.Drawing.Size(342, 29);
+			this.label25.TabIndex = 134;
+			this.label25.Text = "Is any component excluded?";
+			this.label25.UseWaitCursor = true;
+			// 
+			// btn_save
+			// 
+			this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_save.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_save.Location = new System.Drawing.Point(1736, 862);
+			this.btn_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_save.Name = "btn_save";
+			this.btn_save.Size = new System.Drawing.Size(168, 63);
+			this.btn_save.TabIndex = 145;
+			this.btn_save.Text = "Save";
+			this.btn_save.UseVisualStyleBackColor = false;
+			this.btn_save.UseWaitCursor = true;
+			this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+			// 
+			// btn_TE010901
+			// 
+			this.btn_TE010901.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_TE010901.BackColor = System.Drawing.Color.Maroon;
+			this.btn_TE010901.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_TE010901.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_TE010901.Location = new System.Drawing.Point(1160, 662);
+			this.btn_TE010901.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_TE010901.Name = "btn_TE010901";
+			this.btn_TE010901.Size = new System.Drawing.Size(240, 76);
+			this.btn_TE010901.TabIndex = 143;
+			this.btn_TE010901.Text = "TE.01.09.01";
+			this.btn_TE010901.UseVisualStyleBackColor = false;
+			this.btn_TE010901.UseWaitCursor = true;
+			this.btn_TE010901.Click += new System.EventHandler(this.btn_TE010901_Click);
+			// 
+			// textBoxTE010808
+			// 
+			this.textBoxTE010808.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxTE010808.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBoxTE010808.Location = new System.Drawing.Point(24, 789);
+			this.textBoxTE010808.Multiline = true;
+			this.textBoxTE010808.Name = "textBoxTE010808";
+			this.textBoxTE010808.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBoxTE010808.Size = new System.Drawing.Size(1696, 246);
+			this.textBoxTE010808.TabIndex = 142;
+			this.textBoxTE010808.UseWaitCursor = true;
+			// 
+			// btn_refresh
+			// 
+			this.btn_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btn_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_refresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_refresh.Location = new System.Drawing.Point(1736, 789);
+			this.btn_refresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_refresh.Name = "btn_refresh";
+			this.btn_refresh.Size = new System.Drawing.Size(168, 63);
+			this.btn_refresh.TabIndex = 136;
+			this.btn_refresh.Text = "Refresh";
+			this.btn_refresh.UseVisualStyleBackColor = false;
+			this.btn_refresh.UseWaitCursor = true;
+			this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+			// 
+			// btn_TE010802
+			// 
+			this.btn_TE010802.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_TE010802.BackColor = System.Drawing.Color.Maroon;
+			this.btn_TE010802.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_TE010802.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_TE010802.Location = new System.Drawing.Point(1160, 576);
+			this.btn_TE010802.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_TE010802.Name = "btn_TE010802";
+			this.btn_TE010802.Size = new System.Drawing.Size(240, 76);
+			this.btn_TE010802.TabIndex = 138;
+			this.btn_TE010802.Text = "TE.01.08.02";
+			this.btn_TE010802.UseVisualStyleBackColor = false;
+			this.btn_TE010802.UseWaitCursor = true;
+			this.btn_TE010802.Click += new System.EventHandler(this.btn_TE010802_Click);
+			// 
+			// textBoxTE010812
+			// 
+			this.textBoxTE010812.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxTE010812.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBoxTE010812.Location = new System.Drawing.Point(24, 789);
+			this.textBoxTE010812.Multiline = true;
+			this.textBoxTE010812.Name = "textBoxTE010812";
+			this.textBoxTE010812.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBoxTE010812.Size = new System.Drawing.Size(1696, 246);
+			this.textBoxTE010812.TabIndex = 141;
+			this.textBoxTE010812.UseWaitCursor = true;
+			// 
+			// btn_TE010808
+			// 
+			this.btn_TE010808.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_TE010808.BackColor = System.Drawing.Color.Maroon;
+			this.btn_TE010808.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_TE010808.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_TE010808.Location = new System.Drawing.Point(1405, 576);
+			this.btn_TE010808.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_TE010808.Name = "btn_TE010808";
+			this.btn_TE010808.Size = new System.Drawing.Size(240, 76);
+			this.btn_TE010808.TabIndex = 140;
+			this.btn_TE010808.Text = "TE.01.08.08";
+			this.btn_TE010808.UseVisualStyleBackColor = false;
+			this.btn_TE010808.UseWaitCursor = true;
+			this.btn_TE010808.Click += new System.EventHandler(this.btn_TE010808_Click);
+			// 
+			// btn_TE010812
+			// 
+			this.btn_TE010812.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_TE010812.BackColor = System.Drawing.Color.Maroon;
+			this.btn_TE010812.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_TE010812.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btn_TE010812.Location = new System.Drawing.Point(1650, 576);
+			this.btn_TE010812.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.btn_TE010812.Name = "btn_TE010812";
+			this.btn_TE010812.Size = new System.Drawing.Size(240, 76);
+			this.btn_TE010812.TabIndex = 139;
+			this.btn_TE010812.Text = "TE.01.08.12";
+			this.btn_TE010812.UseVisualStyleBackColor = false;
+			this.btn_TE010812.UseWaitCursor = true;
+			this.btn_TE010812.Click += new System.EventHandler(this.btn_TE010812_Click);
+			// 
+			// textBoxTE010901
+			// 
+			this.textBoxTE010901.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxTE010901.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBoxTE010901.Location = new System.Drawing.Point(25, 789);
+			this.textBoxTE010901.Multiline = true;
+			this.textBoxTE010901.Name = "textBoxTE010901";
+			this.textBoxTE010901.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBoxTE010901.Size = new System.Drawing.Size(1696, 246);
+			this.textBoxTE010901.TabIndex = 144;
+			this.textBoxTE010901.UseWaitCursor = true;
+			// 
+			// groupBox_secLevel
+			// 
+			this.groupBox_secLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox_secLevel.Controls.Add(this.comboBox11);
+			this.groupBox_secLevel.Controls.Add(this.comboBox10);
+			this.groupBox_secLevel.Controls.Add(this.comboBox9);
+			this.groupBox_secLevel.Controls.Add(this.comboBox8);
+			this.groupBox_secLevel.Controls.Add(this.comboBox7);
+			this.groupBox_secLevel.Controls.Add(this.comboBox6);
+			this.groupBox_secLevel.Controls.Add(this.comboBox5);
+			this.groupBox_secLevel.Controls.Add(this.comboBox4);
+			this.groupBox_secLevel.Controls.Add(this.comboBox3);
+			this.groupBox_secLevel.Controls.Add(this.comboBox2);
+			this.groupBox_secLevel.Controls.Add(this.label12);
+			this.groupBox_secLevel.Controls.Add(this.label11);
+			this.groupBox_secLevel.Controls.Add(this.label10);
+			this.groupBox_secLevel.Controls.Add(this.comboBox1);
+			this.groupBox_secLevel.Controls.Add(this.label9);
+			this.groupBox_secLevel.Controls.Add(this.label8);
+			this.groupBox_secLevel.Controls.Add(this.label7);
+			this.groupBox_secLevel.Controls.Add(this.label6);
+			this.groupBox_secLevel.Controls.Add(this.label5);
+			this.groupBox_secLevel.Controls.Add(this.label4);
+			this.groupBox_secLevel.Controls.Add(this.label1);
+			this.groupBox_secLevel.Controls.Add(this.label2);
+			this.groupBox_secLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.groupBox_secLevel.Location = new System.Drawing.Point(1118, 14);
+			this.groupBox_secLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.groupBox_secLevel.Name = "groupBox_secLevel";
+			this.groupBox_secLevel.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.groupBox_secLevel.Size = new System.Drawing.Size(793, 552);
+			this.groupBox_secLevel.TabIndex = 128;
+			this.groupBox_secLevel.TabStop = false;
+			this.groupBox_secLevel.Text = "Select Security Level";
+			this.groupBox_secLevel.UseWaitCursor = true;
 			// 
 			// comboBox11
 			// 
@@ -125,7 +608,7 @@
             "Level 3",
             "Level 4",
             "N/A"});
-			this.comboBox11.Location = new System.Drawing.Point(680, 472);
+			this.comboBox11.Location = new System.Drawing.Point(604, 472);
 			this.comboBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox11.Name = "comboBox11";
 			this.comboBox11.Size = new System.Drawing.Size(160, 37);
@@ -142,7 +625,7 @@
             "Level 2",
             "Level 3",
             "Level 4"});
-			this.comboBox10.Location = new System.Drawing.Point(680, 429);
+			this.comboBox10.Location = new System.Drawing.Point(604, 429);
 			this.comboBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox10.Name = "comboBox10";
 			this.comboBox10.Size = new System.Drawing.Size(160, 37);
@@ -159,7 +642,7 @@
             "Level 2",
             "Level 3",
             "Level 4"});
-			this.comboBox9.Location = new System.Drawing.Point(680, 386);
+			this.comboBox9.Location = new System.Drawing.Point(604, 386);
 			this.comboBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox9.Name = "comboBox9";
 			this.comboBox9.Size = new System.Drawing.Size(160, 37);
@@ -176,7 +659,7 @@
             "Level 2",
             "Level 3",
             "Level 4"});
-			this.comboBox8.Location = new System.Drawing.Point(680, 343);
+			this.comboBox8.Location = new System.Drawing.Point(604, 343);
 			this.comboBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox8.Name = "comboBox8";
 			this.comboBox8.Size = new System.Drawing.Size(160, 37);
@@ -193,7 +676,7 @@
             "Level 2",
             "Level 3",
             "Level 4"});
-			this.comboBox7.Location = new System.Drawing.Point(680, 300);
+			this.comboBox7.Location = new System.Drawing.Point(604, 300);
 			this.comboBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox7.Name = "comboBox7";
 			this.comboBox7.Size = new System.Drawing.Size(160, 37);
@@ -211,7 +694,7 @@
             "Level 3",
             "Level 4",
             "N/A"});
-			this.comboBox6.Location = new System.Drawing.Point(680, 257);
+			this.comboBox6.Location = new System.Drawing.Point(604, 257);
 			this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox6.Name = "comboBox6";
 			this.comboBox6.Size = new System.Drawing.Size(160, 37);
@@ -229,7 +712,7 @@
             "Level 3",
             "Level 4",
             "N/A"});
-			this.comboBox5.Location = new System.Drawing.Point(680, 214);
+			this.comboBox5.Location = new System.Drawing.Point(604, 214);
 			this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox5.Name = "comboBox5";
 			this.comboBox5.Size = new System.Drawing.Size(160, 37);
@@ -246,7 +729,7 @@
             "Level 2",
             "Level 3",
             "Level 4"});
-			this.comboBox4.Location = new System.Drawing.Point(680, 171);
+			this.comboBox4.Location = new System.Drawing.Point(604, 171);
 			this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox4.Name = "comboBox4";
 			this.comboBox4.Size = new System.Drawing.Size(160, 37);
@@ -263,7 +746,7 @@
             "Level 2",
             "Level 3",
             "Level 4"});
-			this.comboBox3.Location = new System.Drawing.Point(680, 128);
+			this.comboBox3.Location = new System.Drawing.Point(604, 128);
 			this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox3.Name = "comboBox3";
 			this.comboBox3.Size = new System.Drawing.Size(160, 37);
@@ -280,7 +763,7 @@
             "Level 2",
             "Level 3",
             "Level 4"});
-			this.comboBox2.Location = new System.Drawing.Point(680, 85);
+			this.comboBox2.Location = new System.Drawing.Point(604, 85);
 			this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox2.Name = "comboBox2";
 			this.comboBox2.Size = new System.Drawing.Size(160, 37);
@@ -333,7 +816,7 @@
             "Level 2",
             "Level 3",
             "Level 4"});
-			this.comboBox1.Location = new System.Drawing.Point(680, 42);
+			this.comboBox1.Location = new System.Drawing.Point(604, 42);
 			this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(160, 37);
@@ -436,474 +919,13 @@
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			this.label2.UseWaitCursor = true;
 			// 
-			// txt_CoolingSys
-			// 
-			this.txt_CoolingSys.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txt_CoolingSys.Location = new System.Drawing.Point(627, 588);
-			this.txt_CoolingSys.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.txt_CoolingSys.Multiline = true;
-			this.txt_CoolingSys.Name = "txt_CoolingSys";
-			this.txt_CoolingSys.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.txt_CoolingSys.Size = new System.Drawing.Size(458, 84);
-			this.txt_CoolingSys.TabIndex = 132;
-			this.txt_CoolingSys.UseWaitCursor = true;
-			// 
-			// label27
-			// 
-			this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.label27.AutoSize = true;
-			this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label27.Location = new System.Drawing.Point(298, 588);
-			this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label27.Name = "label27";
-			this.label27.Size = new System.Drawing.Size(199, 29);
-			this.label27.TabIndex = 131;
-			this.label27.Text = "Cooling system:";
-			this.label27.UseWaitCursor = true;
-			// 
-			// comboBox_CoolingSys
-			// 
-			this.comboBox_CoolingSys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-			this.comboBox_CoolingSys.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_CoolingSys.FormattingEnabled = true;
-			this.comboBox_CoolingSys.Items.AddRange(new object[] {
-            "",
-            "Yes",
-            "No"});
-			this.comboBox_CoolingSys.Location = new System.Drawing.Point(743, 536);
-			this.comboBox_CoolingSys.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.comboBox_CoolingSys.Name = "comboBox_CoolingSys";
-			this.comboBox_CoolingSys.Size = new System.Drawing.Size(144, 37);
-			this.comboBox_CoolingSys.TabIndex = 129;
-			this.comboBox_CoolingSys.UseWaitCursor = true;
-			this.comboBox_CoolingSys.SelectedIndexChanged += new System.EventHandler(this.comboBox_CoolingSys_SelectedIndexChanged);
-			// 
-			// label26
-			// 
-			this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.label26.AutoSize = true;
-			this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label26.Location = new System.Drawing.Point(19, 536);
-			this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label26.Name = "label26";
-			this.label26.Size = new System.Drawing.Size(466, 29);
-			this.label26.TabIndex = 130;
-			this.label26.Text = "Does module contain cooling systems?";
-			this.label26.UseWaitCursor = true;
-			// 
-			// textBoxTE010802
-			// 
-			this.textBoxTE010802.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBoxTE010802.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTE010802.Location = new System.Drawing.Point(24, 789);
-			this.textBoxTE010802.Multiline = true;
-			this.textBoxTE010802.Name = "textBoxTE010802";
-			this.textBoxTE010802.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBoxTE010802.Size = new System.Drawing.Size(1805, 467);
-			this.textBoxTE010802.TabIndex = 135;
-			this.textBoxTE010802.UseWaitCursor = true;
-			// 
-			// comboBox12
-			// 
-			this.comboBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-			this.comboBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox12.FormattingEnabled = true;
-			this.comboBox12.Items.AddRange(new object[] {
-            "",
-            "Yes",
-            "No"});
-			this.comboBox12.Location = new System.Drawing.Point(743, 435);
-			this.comboBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.comboBox12.Name = "comboBox12";
-			this.comboBox12.Size = new System.Drawing.Size(144, 37);
-			this.comboBox12.TabIndex = 133;
-			this.comboBox12.UseWaitCursor = true;
-			// 
-			// label25
-			// 
-			this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.label25.AutoSize = true;
-			this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label25.Location = new System.Drawing.Point(130, 437);
-			this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label25.Name = "label25";
-			this.label25.Size = new System.Drawing.Size(342, 29);
-			this.label25.TabIndex = 134;
-			this.label25.Text = "Is any component excluded?";
-			this.label25.UseWaitCursor = true;
-			// 
-			// btn_save
-			// 
-			this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_save.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_save.Location = new System.Drawing.Point(1845, 862);
-			this.btn_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_save.Name = "btn_save";
-			this.btn_save.Size = new System.Drawing.Size(168, 63);
-			this.btn_save.TabIndex = 145;
-			this.btn_save.Text = "Save";
-			this.btn_save.UseVisualStyleBackColor = false;
-			this.btn_save.UseWaitCursor = true;
-			// 
-			// btn_TE010901
-			// 
-			this.btn_TE010901.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_TE010901.BackColor = System.Drawing.Color.Maroon;
-			this.btn_TE010901.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_TE010901.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE010901.Location = new System.Drawing.Point(1269, 662);
-			this.btn_TE010901.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_TE010901.Name = "btn_TE010901";
-			this.btn_TE010901.Size = new System.Drawing.Size(240, 76);
-			this.btn_TE010901.TabIndex = 143;
-			this.btn_TE010901.Text = "TE.01.09.01";
-			this.btn_TE010901.UseVisualStyleBackColor = false;
-			this.btn_TE010901.UseWaitCursor = true;
-			// 
-			// textBoxTE010808
-			// 
-			this.textBoxTE010808.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBoxTE010808.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTE010808.Location = new System.Drawing.Point(24, 789);
-			this.textBoxTE010808.Multiline = true;
-			this.textBoxTE010808.Name = "textBoxTE010808";
-			this.textBoxTE010808.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBoxTE010808.Size = new System.Drawing.Size(1805, 467);
-			this.textBoxTE010808.TabIndex = 142;
-			this.textBoxTE010808.UseWaitCursor = true;
-			// 
-			// btn_refresh
-			// 
-			this.btn_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_refresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_refresh.Location = new System.Drawing.Point(1845, 789);
-			this.btn_refresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_refresh.Name = "btn_refresh";
-			this.btn_refresh.Size = new System.Drawing.Size(168, 63);
-			this.btn_refresh.TabIndex = 136;
-			this.btn_refresh.Text = "Refresh";
-			this.btn_refresh.UseVisualStyleBackColor = false;
-			this.btn_refresh.UseWaitCursor = true;
-			// 
-			// btn_TE010802
-			// 
-			this.btn_TE010802.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_TE010802.BackColor = System.Drawing.Color.Maroon;
-			this.btn_TE010802.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_TE010802.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE010802.Location = new System.Drawing.Point(1269, 576);
-			this.btn_TE010802.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_TE010802.Name = "btn_TE010802";
-			this.btn_TE010802.Size = new System.Drawing.Size(240, 76);
-			this.btn_TE010802.TabIndex = 138;
-			this.btn_TE010802.Text = "TE.01.08.02";
-			this.btn_TE010802.UseVisualStyleBackColor = false;
-			this.btn_TE010802.UseWaitCursor = true;
-			// 
-			// textBoxTE010812
-			// 
-			this.textBoxTE010812.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBoxTE010812.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTE010812.Location = new System.Drawing.Point(24, 789);
-			this.textBoxTE010812.Multiline = true;
-			this.textBoxTE010812.Name = "textBoxTE010812";
-			this.textBoxTE010812.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBoxTE010812.Size = new System.Drawing.Size(1805, 467);
-			this.textBoxTE010812.TabIndex = 141;
-			this.textBoxTE010812.UseWaitCursor = true;
-			// 
-			// btn_TE010808
-			// 
-			this.btn_TE010808.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_TE010808.BackColor = System.Drawing.Color.Maroon;
-			this.btn_TE010808.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_TE010808.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE010808.Location = new System.Drawing.Point(1514, 576);
-			this.btn_TE010808.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_TE010808.Name = "btn_TE010808";
-			this.btn_TE010808.Size = new System.Drawing.Size(240, 76);
-			this.btn_TE010808.TabIndex = 140;
-			this.btn_TE010808.Text = "TE.01.08.08";
-			this.btn_TE010808.UseVisualStyleBackColor = false;
-			this.btn_TE010808.UseWaitCursor = true;
-			// 
-			// btn_TE010812
-			// 
-			this.btn_TE010812.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_TE010812.BackColor = System.Drawing.Color.Maroon;
-			this.btn_TE010812.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_TE010812.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_TE010812.Location = new System.Drawing.Point(1759, 576);
-			this.btn_TE010812.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_TE010812.Name = "btn_TE010812";
-			this.btn_TE010812.Size = new System.Drawing.Size(240, 76);
-			this.btn_TE010812.TabIndex = 139;
-			this.btn_TE010812.Text = "TE.01.08.12";
-			this.btn_TE010812.UseVisualStyleBackColor = false;
-			this.btn_TE010812.UseWaitCursor = true;
-			// 
-			// textBoxTE010901
-			// 
-			this.textBoxTE010901.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBoxTE010901.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxTE010901.Location = new System.Drawing.Point(25, 789);
-			this.textBoxTE010901.Multiline = true;
-			this.textBoxTE010901.Name = "textBoxTE010901";
-			this.textBoxTE010901.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBoxTE010901.Size = new System.Drawing.Size(1805, 467);
-			this.textBoxTE010901.TabIndex = 144;
-			this.textBoxTE010901.UseWaitCursor = true;
-			// 
-			// groupBox_secLevel
-			// 
-			this.groupBox_secLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox_secLevel.Controls.Add(this.comboBox11);
-			this.groupBox_secLevel.Controls.Add(this.comboBox10);
-			this.groupBox_secLevel.Controls.Add(this.comboBox9);
-			this.groupBox_secLevel.Controls.Add(this.comboBox8);
-			this.groupBox_secLevel.Controls.Add(this.comboBox7);
-			this.groupBox_secLevel.Controls.Add(this.comboBox6);
-			this.groupBox_secLevel.Controls.Add(this.comboBox5);
-			this.groupBox_secLevel.Controls.Add(this.comboBox4);
-			this.groupBox_secLevel.Controls.Add(this.comboBox3);
-			this.groupBox_secLevel.Controls.Add(this.comboBox2);
-			this.groupBox_secLevel.Controls.Add(this.label12);
-			this.groupBox_secLevel.Controls.Add(this.label11);
-			this.groupBox_secLevel.Controls.Add(this.label10);
-			this.groupBox_secLevel.Controls.Add(this.comboBox1);
-			this.groupBox_secLevel.Controls.Add(this.label9);
-			this.groupBox_secLevel.Controls.Add(this.label8);
-			this.groupBox_secLevel.Controls.Add(this.label7);
-			this.groupBox_secLevel.Controls.Add(this.label6);
-			this.groupBox_secLevel.Controls.Add(this.label5);
-			this.groupBox_secLevel.Controls.Add(this.label4);
-			this.groupBox_secLevel.Controls.Add(this.label1);
-			this.groupBox_secLevel.Controls.Add(this.label2);
-			this.groupBox_secLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox_secLevel.Location = new System.Drawing.Point(1227, 14);
-			this.groupBox_secLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.groupBox_secLevel.Name = "groupBox_secLevel";
-			this.groupBox_secLevel.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.groupBox_secLevel.Size = new System.Drawing.Size(793, 552);
-			this.groupBox_secLevel.TabIndex = 128;
-			this.groupBox_secLevel.TabStop = false;
-			this.groupBox_secLevel.Text = "Select Security Level";
-			this.groupBox_secLevel.UseWaitCursor = true;
-			// 
-			// flowLayoutPanel1
-			// 
-			this.flowLayoutPanel1.Controls.Add(this.btn_FWVersion);
-			this.flowLayoutPanel1.Controls.Add(this.btn_FullyCustom);
-			this.flowLayoutPanel1.Controls.Add(this.btn_otherComponents);
-			this.flowLayoutPanel1.Controls.Add(this.btn_ROMFlash);
-			this.flowLayoutPanel1.Controls.Add(this.btn_Processors);
-			this.flowLayoutPanel1.Controls.Add(this.btn_SemiCustom);
-			this.flowLayoutPanel1.Controls.Add(this.btn_nonModFWSW);
-			this.flowLayoutPanel1.Controls.Add(this.btn_activeCompon);
-			this.flowLayoutPanel1.Controls.Add(this.btn_PhyExtConn);
-			this.flowLayoutPanel1.Controls.Add(this.btn_PwrSupply);
-			this.flowLayoutPanel1.Controls.Add(this.btn_ModFWSW);
-			this.flowLayoutPanel1.Controls.Add(this.btn_RAM);
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(1099, 410);
-			this.flowLayoutPanel1.TabIndex = 146;
-			// 
-			// btn_otherComponents
-			// 
-			this.btn_otherComponents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_otherComponents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_otherComponents.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_otherComponents.Location = new System.Drawing.Point(530, 5);
-			this.btn_otherComponents.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_otherComponents.Name = "btn_otherComponents";
-			this.btn_otherComponents.Size = new System.Drawing.Size(301, 126);
-			this.btn_otherComponents.TabIndex = 161;
-			this.btn_otherComponents.Text = "Other Components";
-			this.btn_otherComponents.UseVisualStyleBackColor = false;
-			this.btn_otherComponents.UseWaitCursor = true;
-			// 
-			// btn_FWVersion
-			// 
-			this.btn_FWVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_FWVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_FWVersion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_FWVersion.Location = new System.Drawing.Point(4, 5);
-			this.btn_FWVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_FWVersion.Name = "btn_FWVersion";
-			this.btn_FWVersion.Size = new System.Drawing.Size(240, 126);
-			this.btn_FWVersion.TabIndex = 160;
-			this.btn_FWVersion.Text = "Firmware Version";
-			this.btn_FWVersion.UseVisualStyleBackColor = false;
-			this.btn_FWVersion.UseWaitCursor = true;
-			// 
-			// btn_ModFWSW
-			// 
-			this.btn_ModFWSW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_ModFWSW.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_ModFWSW.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_ModFWSW.Location = new System.Drawing.Point(530, 277);
-			this.btn_ModFWSW.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_ModFWSW.Name = "btn_ModFWSW";
-			this.btn_ModFWSW.Size = new System.Drawing.Size(301, 126);
-			this.btn_ModFWSW.TabIndex = 159;
-			this.btn_ModFWSW.Text = "Modifiable FW/SW";
-			this.btn_ModFWSW.UseVisualStyleBackColor = false;
-			this.btn_ModFWSW.UseWaitCursor = true;
-			// 
-			// btn_nonModFWSW
-			// 
-			this.btn_nonModFWSW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_nonModFWSW.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_nonModFWSW.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_nonModFWSW.Location = new System.Drawing.Point(530, 141);
-			this.btn_nonModFWSW.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_nonModFWSW.Name = "btn_nonModFWSW";
-			this.btn_nonModFWSW.Size = new System.Drawing.Size(301, 126);
-			this.btn_nonModFWSW.TabIndex = 158;
-			this.btn_nonModFWSW.Text = "Non-modifiable FW/SW";
-			this.btn_nonModFWSW.UseVisualStyleBackColor = false;
-			this.btn_nonModFWSW.UseWaitCursor = true;
-			// 
-			// btn_PhyExtConn
-			// 
-			this.btn_PhyExtConn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_PhyExtConn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_PhyExtConn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_PhyExtConn.Location = new System.Drawing.Point(4, 277);
-			this.btn_PhyExtConn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_PhyExtConn.Name = "btn_PhyExtConn";
-			this.btn_PhyExtConn.Size = new System.Drawing.Size(240, 126);
-			this.btn_PhyExtConn.TabIndex = 157;
-			this.btn_PhyExtConn.Text = "External connector";
-			this.btn_PhyExtConn.UseVisualStyleBackColor = false;
-			this.btn_PhyExtConn.UseWaitCursor = true;
-			// 
-			// btn_PwrSupply
-			// 
-			this.btn_PwrSupply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_PwrSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_PwrSupply.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_PwrSupply.Location = new System.Drawing.Point(252, 277);
-			this.btn_PwrSupply.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_PwrSupply.Name = "btn_PwrSupply";
-			this.btn_PwrSupply.Size = new System.Drawing.Size(270, 126);
-			this.btn_PwrSupply.TabIndex = 156;
-			this.btn_PwrSupply.Text = "Power Supply";
-			this.btn_PwrSupply.UseVisualStyleBackColor = false;
-			this.btn_PwrSupply.UseWaitCursor = true;
-			// 
-			// btn_activeCompon
-			// 
-			this.btn_activeCompon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_activeCompon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_activeCompon.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_activeCompon.Location = new System.Drawing.Point(839, 141);
-			this.btn_activeCompon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_activeCompon.Name = "btn_activeCompon";
-			this.btn_activeCompon.Size = new System.Drawing.Size(240, 126);
-			this.btn_activeCompon.TabIndex = 155;
-			this.btn_activeCompon.Text = "Other active components";
-			this.btn_activeCompon.UseVisualStyleBackColor = false;
-			this.btn_activeCompon.UseWaitCursor = true;
-			// 
-			// btn_RAM
-			// 
-			this.btn_RAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_RAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_RAM.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_RAM.Location = new System.Drawing.Point(839, 277);
-			this.btn_RAM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_RAM.Name = "btn_RAM";
-			this.btn_RAM.Size = new System.Drawing.Size(240, 126);
-			this.btn_RAM.TabIndex = 152;
-			this.btn_RAM.Text = "RAM";
-			this.btn_RAM.UseVisualStyleBackColor = false;
-			this.btn_RAM.UseWaitCursor = true;
-			// 
-			// btn_FullyCustom
-			// 
-			this.btn_FullyCustom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_FullyCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_FullyCustom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_FullyCustom.Location = new System.Drawing.Point(252, 5);
-			this.btn_FullyCustom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_FullyCustom.Name = "btn_FullyCustom";
-			this.btn_FullyCustom.Size = new System.Drawing.Size(270, 126);
-			this.btn_FullyCustom.TabIndex = 154;
-			this.btn_FullyCustom.Text = "Fully-custom ICs";
-			this.btn_FullyCustom.UseVisualStyleBackColor = false;
-			this.btn_FullyCustom.UseWaitCursor = true;
-			// 
-			// btn_ROMFlash
-			// 
-			this.btn_ROMFlash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_ROMFlash.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_ROMFlash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_ROMFlash.Location = new System.Drawing.Point(839, 5);
-			this.btn_ROMFlash.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_ROMFlash.Name = "btn_ROMFlash";
-			this.btn_ROMFlash.Size = new System.Drawing.Size(240, 126);
-			this.btn_ROMFlash.TabIndex = 151;
-			this.btn_ROMFlash.Text = "ROM or FLASH";
-			this.btn_ROMFlash.UseVisualStyleBackColor = false;
-			this.btn_ROMFlash.UseWaitCursor = true;
-			// 
-			// btn_SemiCustom
-			// 
-			this.btn_SemiCustom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_SemiCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_SemiCustom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_SemiCustom.Location = new System.Drawing.Point(252, 141);
-			this.btn_SemiCustom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_SemiCustom.Name = "btn_SemiCustom";
-			this.btn_SemiCustom.Size = new System.Drawing.Size(270, 126);
-			this.btn_SemiCustom.TabIndex = 153;
-			this.btn_SemiCustom.Text = "Semi-custom ICs";
-			this.btn_SemiCustom.UseVisualStyleBackColor = false;
-			this.btn_SemiCustom.UseWaitCursor = true;
-			// 
-			// btn_Processors
-			// 
-			this.btn_Processors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.btn_Processors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_Processors.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-			this.btn_Processors.Location = new System.Drawing.Point(4, 141);
-			this.btn_Processors.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.btn_Processors.Name = "btn_Processors";
-			this.btn_Processors.Size = new System.Drawing.Size(240, 126);
-			this.btn_Processors.TabIndex = 150;
-			this.btn_Processors.Text = "Processors";
-			this.btn_Processors.UseVisualStyleBackColor = false;
-			this.btn_Processors.UseWaitCursor = true;
-			// 
 			// ModuleSpecs
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
 			this.BackColor = System.Drawing.Color.Olive;
-			this.ClientSize = new System.Drawing.Size(2033, 1271);
+			this.ClientSize = new System.Drawing.Size(1924, 1050);
 			this.Controls.Add(this.panel1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "ModuleSpecs";
@@ -913,9 +935,9 @@
 			this.Load += new System.EventHandler(this.ModuleInfo_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			this.flowLayoutPanel1.ResumeLayout(false);
 			this.groupBox_secLevel.ResumeLayout(false);
 			this.groupBox_secLevel.PerformLayout();
-			this.flowLayoutPanel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -928,7 +950,7 @@
 		private System.Windows.Forms.ComboBox comboBox_CoolingSys;
 		private System.Windows.Forms.Label label26;
 		public System.Windows.Forms.TextBox textBoxTE010802;
-		private System.Windows.Forms.ComboBox comboBox12;
+		private System.Windows.Forms.ComboBox comboBox_ExcComponents;
 		private System.Windows.Forms.Label label25;
 		private System.Windows.Forms.Button btn_save;
 		private System.Windows.Forms.Button btn_TE010901;

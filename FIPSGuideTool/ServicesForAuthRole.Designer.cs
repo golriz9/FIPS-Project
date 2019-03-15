@@ -52,6 +52,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "ServicesForAuthRole";
 			this.Text = "Services Allocated by Authorized Roles";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServicesForAuthRole_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ServicesForAuthRole_FormClosed);
 			this.Load += new System.EventHandler(this.ServicesForAuthRole_Load);
 			this.ResumeLayout(false);

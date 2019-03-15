@@ -28,14 +28,32 @@ namespace FIPSGuideTool
 
 		private void AppKeyEstablishment_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			KeyManagement.AppKeyEstab = textBox_AppKeyEstab.Text;
-			AppKeyEstab = textBox_AppKeyEstab.Text;
 
-			Properties.Settings.Default.AppKeyEstab = AppKeyEstab;
-			Properties.Settings.Default.Save();
+		}
 
-			KeyManagementAssertions f1 = new KeyManagementAssertions();
-			f1.populateKeyManagementLevel1234();
+		private void AppKeyEstablishment_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				KeyManagement.AppKeyEstab = textBox_AppKeyEstab.Text;
+				AppKeyEstab = textBox_AppKeyEstab.Text;
+
+				Properties.Settings.Default.AppKeyEstab = AppKeyEstab;
+				Properties.Settings.Default.Save();
+
+				KeyManagementAssertions f1 = new KeyManagementAssertions();
+				f1.populateKeyManagementLevel1234();
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 	}
 }

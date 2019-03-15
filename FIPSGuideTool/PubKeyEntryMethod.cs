@@ -28,15 +28,33 @@ namespace FIPSGuideTool
 
 		private void PubKeyEntryMethod_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			PubKeyEntry = txtBox_PubKeyEntryMethod.Text;
-			KeyManagement.PubKeyEntry = txtBox_PubKeyEntryMethod.Text;
 
-			Properties.Settings.Default.PubKeyEntry = PubKeyEntry;
-			Properties.Settings.Default.Save();
 
-			KeyManagementAssertions f1 = new KeyManagementAssertions();
-			f1.populateKeyManagementLevel1234();
+		}
 
+		private void PubKeyEntryMethod_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				PubKeyEntry = txtBox_PubKeyEntryMethod.Text;
+				KeyManagement.PubKeyEntry = txtBox_PubKeyEntryMethod.Text;
+
+				Properties.Settings.Default.PubKeyEntry = PubKeyEntry;
+				Properties.Settings.Default.Save();
+
+				KeyManagementAssertions f1 = new KeyManagementAssertions();
+				f1.populateKeyManagementLevel1234();
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 	}
 }

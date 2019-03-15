@@ -52,6 +52,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "UnauthenticatedService";
 			this.Text = "Unauthenticated Service";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UnauthenticatedService_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UnauthenticatedService_FormClosed);
 			this.Load += new System.EventHandler(this.UnauthenticatedService_Load);
 			this.ResumeLayout(false);

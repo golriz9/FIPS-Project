@@ -28,10 +28,31 @@ namespace FIPSGuideTool
 
 		private void ServicesForAuthRole_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			RolesAndServices.ServicesListForAuthRole = txtBox_ServicesListForAuthRole.Text;
-			ServicesListForAuthRole = txtBox_ServicesListForAuthRole.Text;
-			Properties.Settings.Default.ServicesListForAuthRole = ServicesListForAuthRole;
-			Properties.Settings.Default.Save();			
+					
+		}
+
+		private void ServicesForAuthRole_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Do you want to save the changes?", "Warning",
+			MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				RolesAndServices.ServicesListForAuthRole = txtBox_ServicesListForAuthRole.Text;
+				ServicesListForAuthRole = txtBox_ServicesListForAuthRole.Text;
+				Properties.Settings.Default.ServicesListForAuthRole = ServicesListForAuthRole;
+				Properties.Settings.Default.Save();
+
+				//SpecificationsAssertions f1 = new SpecificationsAssertions();
+				//f1.populateSpecLevel1234();
+			}
+			else if (result == DialogResult.No)
+			{
+				e.Cancel = false;
+			}
+			else if (result == DialogResult.Cancel)
+			{
+				e.Cancel = true;
+			}
 		}
 	}
 }

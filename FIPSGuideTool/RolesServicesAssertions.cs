@@ -47,17 +47,61 @@ namespace FIPSGuideTool
 				connection.Open();
 				command.Connection = connection;
 
-				txt_AS0302           = txt_AS0302.Replace("'", "\''");
-				textBox_TE030301_txt = textBox_TE030301_txt.Replace("'", "\''");
-				textBox_TE030601_txt = textBox_TE030601_txt.Replace("'", "\''");
-				textBox_TE031101_txt = textBox_TE031101_txt.Replace("'", "\''");
-				textBox_TE031102_txt = textBox_TE031102_txt.Replace("'", "\''");
-				textBox_TE031501_txt = textBox_TE031501_txt.Replace("'", "\''");
-				BypassCapability     = BypassCapability.Replace("'", "\''");
-				txt_AS0318           = txt_AS0318.Replace("'", "\''");
-				AuthnType            = AuthnType.Replace("'", "\''");
-				CtrlAccess           = CtrlAccess.Replace("'", "\''");
-				txt_TE032301         = txt_TE032301.Replace("'", "\''");
+				if (txt_AS0302 != null)
+				{
+					txt_AS0302 = txt_AS0302.Replace("'", "\''");
+				}
+
+				if (textBox_TE030301_txt != null)
+				{
+					textBox_TE030301_txt = textBox_TE030301_txt.Replace("'", "\''");
+				}
+
+				if (textBox_TE030601_txt != null)
+				{
+					textBox_TE030601_txt = textBox_TE030601_txt.Replace("'", "\''");
+				}
+
+				if (textBox_TE031101_txt != null)
+				{
+					textBox_TE031101_txt = textBox_TE031101_txt.Replace("'", "\''");
+				}
+
+				if (textBox_TE031102_txt != null)
+				{
+					textBox_TE031102_txt = textBox_TE031102_txt.Replace("'", "\''");
+				}
+
+				if (textBox_TE031501_txt != null)
+				{
+					textBox_TE031501_txt = textBox_TE031501_txt.Replace("'", "\''");
+				}
+
+				if (BypassCapability != null)
+				{
+					BypassCapability = BypassCapability.Replace("'", "\''");
+				}
+
+				if (txt_AS0318 != null)
+				{
+					txt_AS0318 = txt_AS0318.Replace("'", "\''");
+				}
+
+				if (AuthnType != null)
+				{
+					AuthnType = AuthnType.Replace("'", "\''");
+				}
+
+				if (CtrlAccess != null)
+				{
+					CtrlAccess = CtrlAccess.Replace("'", "\''");
+				}
+
+				if (txt_TE032301 != null)
+				{
+					txt_TE032301 = txt_TE032301.Replace("'", "\''");
+				}
+
 
 				string AS0301 = "This assertion is not separately tested.";
 				string TE030201;
